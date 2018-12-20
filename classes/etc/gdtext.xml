@@ -1,0 +1,9 @@
+<conf>
+	<gdtext>
+		<dir>
+			<ttf>/classes/ui/fonts</ttf>
+			<cache>/html/cache</cache>
+		</dir>
+		<key>miologdtext</key>
+	</gdtext>
+</conf>

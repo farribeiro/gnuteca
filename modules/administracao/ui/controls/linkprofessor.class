@@ -1,0 +1,40 @@
+<?php
+MIOLO::Import('modules::administracao::controls::linkobject');class LinkProfessor extends LinkObject
+{
+	public function __construct($name='', $professor)
+	{
+		global $MIOLO;
+		$MIOLO->UsesBusiness('administracao','professor');
+		parent::__construct($name,$professor,'area_mini.png');
+	}
+
+	public function setObjectByValue($value)
+	{
+		global $MIOLO;
+		$this->object = $MIOLO->GetBusiness('administracao','professor');
+		$this->object->GetById((int)$value);
+	}
+
+	public function setAction()
+	{
+		$this->hyperlink->SetAction('administracao','main:professor',$this->object->idprofessor);
+		$this->imagelink->SetAction('administracao','main:professor',$this->object->idprofessor);
+	}
+
+	public function setText()
+	{
+		$this->hyperlink->SetText($this->object->idprofessor);
+		$this->hyperlink->SetText($this->object->idprofessor);
+	}
+
+	public function setNew()
+	{
+		$this->isNewLink = TRUE;
+		$this->hyperlink->SetAction('administracao','main:professor:new');
+		$this->hyperlink->SetText('Inserir Nova Professor');
+		$this->imagelink->SetAction('administracao','main:professor:new');
+	}
+
+
+}
+?>

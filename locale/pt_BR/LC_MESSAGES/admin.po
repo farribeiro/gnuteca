@@ -1,0 +1,228 @@
+# MIOLO Admin Module i18n pt_BR file.
+# Copyleft (L) 2006 Solis - Cooperativa de Solucoes Livres
+# This file is distributed under the same license as the MIOLO package.
+# Vilson Cristiano Gartner <vilson@solis.coop.br>, 2006.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-13 14:16-0300\n"
+"PO-Revision-Date: 2006-10-13 14:16-0300\n"
+"Last-Translator: Vilson Cristiano Gartner <vilson@solis.coop.br>\n"
+"Language-Team: MIOLO <vilson@solis.coop.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:311
+msgid "About to delete user [@1]. Are you sure?"
+msgstr "Confirma exclusão do usuário [@1]?"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:193
+msgid "About to remove group [@1]. Are you sure?"
+msgstr "Confirma exclusão do grupo [@1]?"
+
+#: ../../miolo2/modules/admin/forms/frmAccess.class:7
+msgid "Access"
+msgstr "Acesso"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:47
+#: ../../miolo2/modules/admin/forms/frmUser.class:47
+#: ../../miolo2/modules/admin/forms/frmModule.class:34
+msgid "Add"
+msgstr "Incluir"
+
+#: ../../miolo2/modules/admin/handlers/main.inc:21
+msgid "Administration"
+msgstr "Administração"
+
+#: ../../miolo2/modules/admin/handlers/lookup.inc:21
+msgid "Arquivo modules/@1/classes/lookup.class nÃ£o encontrado.<br>"
+msgstr "Arquivo modules/@1/classes/lookup.class não encontrado.<br>"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:148
+#: ../../miolo2/modules/admin/forms/frmUser.class:229
+#: ../../miolo2/modules/admin/forms/frmUser.class:257
+#: ../../miolo2/modules/admin/forms/frmModule.class:161
+#: ../../miolo2/modules/admin/forms/frmModule.class:186
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:48
+#: ../../miolo2/modules/admin/forms/frmUser.class:48
+#: ../../miolo2/modules/admin/forms/frmModule.class:35
+msgid "Delete"
+msgstr "Deletar"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:187
+#: ../../miolo2/modules/admin/forms/frmUser.class:305
+#: ../../miolo2/modules/admin/forms/frmModule.class:226
+msgid "Deletion canceled."
+msgstr "Exclusão cancelada."
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:26
+msgid "Description"
+msgstr "Descrição"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:46
+#: ../../miolo2/modules/admin/forms/frmUser.class:46
+#: ../../miolo2/modules/admin/forms/frmModule.class:33
+msgid "Edit"
+msgstr "Editar"
+
+#: ../../miolo2/modules/admin/handlers/lookup.inc:22
+msgid "Este arquivo deve implementar a classe Business@1Lookup "
+msgstr "Este arquivo deve implementar a classe Business@1Lookup "
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:35
+#: ../../miolo2/modules/admin/forms/frmGroup.class:108
+msgid "Group"
+msgstr "Grupo"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:155
+msgid "Group [@1] not found!"
+msgstr "Grupo [@1] não encontrado!"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:178
+msgid "Group [@1] successfully deleted!"
+msgstr "Grupo [@1] excluído com sucesso."
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:169
+msgid "Group was not informed!"
+msgstr "Grupo não foi informado!"
+
+#: ../../miolo2/modules/admin/handlers/main.inc:32
+#: ../../miolo2/modules/admin/forms/frmGroup.class:17
+#: ../../miolo2/modules/admin/forms/frmUser.class:26
+#: ../../miolo2/modules/admin/forms/frmUser.class:35
+msgid "Groups"
+msgstr "Grupos"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:107
+#: ../../miolo2/modules/admin/forms/frmModule.class:119
+msgid "Id"
+msgstr "Id"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:49
+#: ../../miolo2/modules/admin/forms/frmUser.class:49
+#: ../../miolo2/modules/admin/forms/frmUser.class:173
+#: ../../miolo2/modules/admin/forms/frmModule.class:36
+#: ../../miolo2/modules/admin/forms/frmModule.class:113
+msgid "List"
+msgstr "Listar"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:113
+msgid "Listing of Access Groups"
+msgstr "Listagem dos Grupos de Acesso"
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:24
+#: ../../miolo2/modules/admin/forms/frmModule.class:112
+msgid "Module"
+msgstr "Módulo"
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:168
+#: ../../miolo2/modules/admin/forms/frmModule.class:237
+msgid "Module [@1] not found!"
+msgstr "Módulo [@1] não foi encontrado"
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:217
+msgid "Module [@1] successfully removed!"
+msgstr "Módulo [@1] excluído com sucesso."
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:94
+msgid "Module successfully updated!"
+msgstr "Módulo atualizado com sucesso."
+
+#: ../../miolo2/modules/admin/handlers/modules.inc:6
+#: ../../miolo2/modules/admin/handlers/main.inc:30
+#: ../../miolo2/modules/admin/forms/frmModule.class:14
+msgid "Modules"
+msgstr "Módulos"
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:134
+msgid "Modules Listing"
+msgstr "Listagem de Módulos"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:33
+#: ../../miolo2/modules/admin/forms/frmModule.class:25
+#: ../../miolo2/modules/admin/forms/frmModule.class:120
+msgid "Name"
+msgstr "Nome"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:118
+msgid "New Record"
+msgstr "Novo Registro"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:34
+msgid "Nick"
+msgstr "Apelido"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:31
+msgid "Password"
+msgstr "Senha"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:31
+msgid "Permissions"
+msgstr "Permissões"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:266
+msgid "Please inform an Username for the new user!"
+msgstr "Por favor, informe o Login para o novo usuário. "
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:195
+msgid "Please, inform an identification (id) for the new module!"
+msgstr "Por favor, informe um id (identificação) para o novo módulo!"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:259
+msgid "Post"
+msgstr "Gravar"
+
+#: ../../miolo2/modules/admin/forms/frmModule.class:232
+msgid "Removing module [@1]. Are you sure?"
+msgstr "Confirma exclusão do módulo [@1]?"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:150
+#: ../../miolo2/modules/admin/forms/frmUser.class:231
+#: ../../miolo2/modules/admin/forms/frmModule.class:163
+#: ../../miolo2/modules/admin/forms/frmModule.class:188
+msgid "Save"
+msgstr "Salvar"
+
+#: ../../miolo2/modules/admin/forms/frmGroup.class:30
+#: ../../miolo2/modules/admin/forms/frmGroup.class:36
+msgid "Transactions"
+msgstr "Transações"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:237
+#: ../../miolo2/modules/admin/forms/frmUser.class:316
+msgid "User [@1] not found!"
+msgstr "Usuário [@1] não foi encontrado!"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:296
+msgid "User [@1] successfully deleted."
+msgstr "Usuário [@1] removido com sucesso."
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:154
+msgid "User successfully updated."
+msgstr "Usuário atualizado com sucesso."
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:30
+#: ../../miolo2/modules/admin/forms/frmUser.class:172
+msgid "Username"
+msgstr "Nome do usuário"
+
+#: ../../miolo2/modules/admin/handlers/users.inc:5
+#: ../../miolo2/modules/admin/handlers/main.inc:31
+#: ../../miolo2/modules/admin/forms/frmUser.class:15
+msgid "Users"
+msgstr "Usuários"
+
+#: ../../miolo2/modules/admin/forms/frmUser.class:195
+msgid "Users Listing"
+msgstr "Listagem de Usuários"
+
+#: ../../miolo2/modules/admin/handlers/lookup.inc:23
+msgid "contendo a funÃ§Ã£o Lookup@2."
+msgstr "contendo a função Lookup@2."

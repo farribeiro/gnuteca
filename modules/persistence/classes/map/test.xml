@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>test</className>
+   <tableName>tb_teste</tableName>
+   <databaseName>persistence</databaseName>
+
+   <attribute>
+      <attributeName>idTest</attributeName>
+	  <columnName>idteste</columnName>
+	  <key>primary</key>
+	  <idgenerator>seq_tb_teste</idgenerator>
+   </attribute>
+   <attribute>
+      <attributeName>questions</attributeName>
+	  <columnName>q1</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>questions</attributeName>
+	  <columnName>q2</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>questions</attributeName>
+	  <columnName>q3</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>questions</attributeName>
+	  <columnName>q4</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>questions</attributeName>
+	  <columnName>q5</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>date</attributeName>
+	  <columnName>data</columnName>
+	  <converterClass>ConverterDate</converterClass>
+   </attribute>
+   <attribute>
+      <attributeName>number</attributeName>
+	  <columnName>numero</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>student</attributeName>
+   </attribute>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>student</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>student</target>
+	  <retrieveAutomatic>false</retrieveAutomatic>
+	  <saveAutomatic>false</saveAutomatic>
+	  <deleteAutomatic>false</deleteAutomatic>
+	  <inverse>true</inverse> 
+	  <entry>
+	     <fromAttribute>number</fromAttribute>
+	     <toAttribute>number</toAttribute>
+      </entry>
+   </association>
+
+</map>

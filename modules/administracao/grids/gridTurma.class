@@ -1,0 +1,31 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkturma');
+class gridTurma extends MDataGrid2
+{
+	function gridTurma()
+	{
+		global $MIOLO;
+		$this->SetFilter(false);
+		$filterNome = Form::GetFormValue('nome');
+		$nome = Util::NVL($filterNome, 'A Definir');
+		$this->AddFilterText('nome','Nome',$nome);
+		$this->SetIndex(1);
+		$objTurma = $MIOLO->GetBusiness('administracao','turma');
+		$query = $objTurma->listbyDescricao($nome);
+		$linkTurma = new LinkTurma('linkTurma','%0%');
+		$column = new MDataGridControl($linkTurma,'','Código','right',true,'100%');
+		$columns = array(
+			$column,
+		);
+		$href_grid = $MIOLO->GetCurrentURL();
+		parent::__construct($query, $columns, $href_grid, 25);
+		$this->SetLinkType('hyperlink');
+	}
+	function GenerateFooter()
+	{
+		if(!$this->data)
+			$footer[] = $this->GenerateEmptyMsg();
+		return $footer;
+	}
+}
+?>

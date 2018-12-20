@@ -1,0 +1,41 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkaluno');
+class frmAlunoFind extends Form
+{
+	var $aluno;
+	function frmAlunoFind()
+	{
+		global $MIOLO;
+		$this->Form('aluno');
+		$this->SetClose($MIOLO->GetActionURL($module,'main'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $module, $page;
+		$ui = $MIOLO->GetUI();
+		$grid = $ui->GetGrid('administracao','gridAluno'); 
+		$grid->SetTitle(NULL);
+		$btnFind = new ButtonFind('');
+		$newLink = new LinkAluno('lnkNew',FALSE);
+		$newLink->setNew();
+		$fields = array(
+				array(
+					new MTextField('nome','','Código ou Título',45),
+					$btnFind,
+				),
+				$newLink,
+				$grid
+			);
+		$this->SetFields($fields);
+		$this->defaultButton = false;
+	}
+	function btnFind_click()
+	{
+		global $MIOLO,$aluno ;
+		$ui = $MIOLO->GetUI();
+		$aluno = $this->getFormValue('nome',$value=NULL);
+	}
+}
+?>
+

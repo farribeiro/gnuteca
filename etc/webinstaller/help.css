@@ -1,0 +1,15 @@
+.help-box {  
+    background-image: url(/images/miolo_icon.png);
+    background-repeat: no-repeat; 
+    background-color: rgb(150,190,255);
+    border-bottom: 3px solid threedshadow;
+    border-left: 1px solid threedshadow;
+    border-right: 3px solid threedshadow;
+    border-top: 1px solid threedshadow;
+    padding: 3px;
+    position: absolute;
+    text-indent: 16px;
+    visibility: hidden;
+    width: 200px;
+    /*z-index: 10;*/
+}

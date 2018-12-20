@@ -1,0 +1,165 @@
+<?php
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# @title
+#   MIOLO Configuration File
+#
+# @description
+#   This file contains the configuration for all the MIOLO's environment
+#   like paths, module's DB settings, login style
+#
+# @topics   miolo
+#
+# @created
+#   2001/08/14
+#
+# @organisation
+#   MIOLO - Miolo Development Team - UNIVATES Centro Universitario
+#
+# @legal
+#   CopyLeft (L) 2001-2002 UNIVATES, Lajeado/RS - Brasil
+#   Licensed under GPL (see COPYING.TXT or FSF at www.fsf.org for
+#   further details)
+#
+# @contributors
+#   Vilson Cristiano Gartner [author] [vgartner@univates.br]
+#   Thomas Spriestersbach    [author] [ts@interact2000.com.br]
+# 
+# @maintainers
+#   Vilson Cristiano Gartner [author] [vgartner@univates.br]
+#   Thomas Spriestersbach    [author] [ts@interact2000.com.br]
+#
+# @history
+#   See history in CVS repository:
+#   http://codigolivre.org.br/cvs/?group_id=70
+#
+# @Id $Id: miolo.conf,v 1.9 2003/08/15 02:11:09 vgartner Exp $
+#---------------------------------------------------------------------
+
+//Standart settings
+
+// where the miolo classes are located
+$MIOLOCONF['home']['miolo']      = '/home/$usuario/public_html/miolo/classes'; 
+// modules directory
+$MIOLOCONF['home']['modules']    = '/home/$usuario/public_html/miolo/modules'; 
+// in this dir we will find the *.conf files
+$MIOLOCONF['home']['etc']        = '/home/$usuario/public_html/miolo/etc/miolo'; 
+$MIOLOCONF['home']['logs']       = '/home/$usuario/public_html/miolo/logs';
+//visible web dir
+$MIOLOCONF['home']['html']       = '/home/$usuario/public_html/miolo/html'; 
+$MIOLOCONF['home']['themes']     = '/home/$usuario/public_html/miolo/classes/themes';
+$MIOLOCONF['home']['url']        = "http://{$_SERVER['HTTP_HOST']}";
+$MIOLOCONF['home']['url.themes'] = '/themes';
+$MIOLOCONF['home']['url.reports'] = '/reports';
+// UFJF
+$MIOLOCONF['home']['reports']       = '/home/$usuario/public_html/miolo/html/reports'; 
+$MIOLOCONF['home']['images']        = '/home/$usuario/public_html/miolo/html/images'; 
+
+
+//Items of the Main Menu
+$MIOLOCONF['menu']['tutorial']   = 'Tutorial';
+//$MIOLOCONF['menu']['qualitas']   = 'Qualitas';
+$MIOLOCONF['menu']['labjor']     = 'LabJor';
+//$MIOLOCONF['menu']['locadora']     = 'Locadora';
+$MIOLOCONF['menu']['-']            = '';
+
+
+//MIOLO Default Language
+$MIOLOCONF['i18n']['language']   = 'pt_BR';
+$MIOLOCONF['i18n']['locale']     = '/home/$usuario/public_html/miolo/locale';
+
+//theme settings
+$MIOLOCONF['theme']['main']      = 'kenobi';
+$MIOLOCONF['theme']['lookup']    = 'kenobi';
+$MIOLOCONF['theme']['title']     = 'Miolo Web Applications';
+
+// PHP-Nuke themes wrapper sample
+// $MIOLOCONF['theme']['main']      = 'php-nuke';
+// $MIOLOCONF['theme']['lookup']    = 'vilson';
+// $MIOLOCONF['theme']['php-nuke']  = 'Univates';
+
+//Name of the module wich should be called as the Main Page
+$MIOLOCONF['options']['startup']  = 'common';
+//Scramble the URL addresses
+$MIOLOCONF['options']['scramble'] = false;
+// dispatch - main dispatcher which is called from within generated URLs 
+$MIOLOCONF['options']['dispatch'] = 'handler.php';
+$MIOLOCONF['options']['index']    = 'index.html';
+// UFJF
+$MIOLOCONF['options']['authmd5']    = false;
+$MIOLOCONF['options']['dbsession']    = false;
+
+
+
+// wether to show debug info or not 
+$MIOLOCONF['options']['debug']    = false;
+
+// whether to dump internal information or not; define any remote IP for
+// which you would like the debug output to appear
+//-$MIOLOCONF['options']['dump']['peer'] = array('127.0.0.1', '192.168.0.40', '192.168.0.1');
+//$MIOLOCONF['options']['dump']['peer'] = array('200.131.19.248');
+// MIOLO sends debug messages though this port;
+// To disable this feature (needed when behind a firewall) use = 0
+//$MIOLOCONF['trace_port'] = 9999;
+//$MIOLOCONF['trace_port'] = 0;
+
+/*
+$MIOLOCONF['options']['dump']['profile']   = false;
+$MIOLOCONF['options']['dump']['uses']      = false;
+$MIOLOCONF['options']['dump']['trace']     = false;
+$MIOLOCONF['options']['dump']['handlers']  = false;
+*/
+
+$MIOLOCONF['options']['dump']['profile']   = true;
+$MIOLOCONF['options']['dump']['uses']      = true;
+$MIOLOCONF['options']['dump']['trace']     = true;
+$MIOLOCONF['options']['dump']['handlers']  = true;
+
+
+// host based access control
+$MIOLOCONF['hosts']['allow'] = array('192.168.0.0-50', '127.0.0.2-10', '192.168.0.53');
+$MIOLOCONF['hosts']['deny']  = array('192.168.0.40', '127.0.0.0');
+
+//DB Settings
+$MIOLOCONF['DB']['common']['system']   = ''; 
+$MIOLOCONF['DB']['common']['host']     = ''; 
+$MIOLOCONF['DB']['common']['name']     = ''; 
+$MIOLOCONF['DB']['common']['user']     = ''; 
+$MIOLOCONF['DB']['common']['password'] = ''; 
+
+
+// $MIOLOCONF['DB']['common']  = $MIOLOCONF['DB']['bis'];
+
+//
+// whether to check login or not  
+// whether to automatic login (and which) or not
+// 
+//  check    shared    auto     result
+//  -------------------------------------------------------------------
+//  true     true      false    user must exist in cmn_users (most cases use this)
+//  true     false     false    user must exist in DB and in cmn_users
+//  false    true      false    user not required in cmn_users
+//  true     true      true     user predefined user must exist in cmn_users
+//  false    true      true     user predefined user not required in cmn_users
+//
+$MIOLOCONF['login']['check']               = true;
+$MIOLOCONF['login']['shared']              = true;
+$MIOLOCONF['login']['auto']                = false;
+
+//$MIOLOCONF['login']['auto']                = 'public1';
+
+// predefine automatic logins like this
+$MIOLOCONF['login']['public1']['id']       = 'guest';
+$MIOLOCONF['login']['public1']['password'] = 'guest';
+$MIOLOCONF['login']['public1']['name']     = 'Public Users';
+
+$MIOLOCONF['login']['public2']['id']       = 'vilson';
+$MIOLOCONF['login']['public2']['password'] = 'teste123';
+$MIOLOCONF['login']['public2']['name']     = "Vilson's Automatic Login";
+
+if ($module == '') $module = $MIOLOCONF['options']['startup'];
+
+include $MIOLOCONF['home']['etc']. '/'. $module . '.conf';
+
+// Starts the whole thing
+include $MIOLOCONF['home']['miolo'].'/startup.inc';
+?>

@@ -1,0 +1,36 @@
+<?
+class frmTurmaDel extends Mform
+{
+	protected $objTurma;
+	function __construct($objTurma)
+	{
+		$this->objTurma=$objTurma;
+		parent::__construct('Excluir Turma');
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO;
+		$turmaId = $this->objTurma->idturma;
+		$action_sim = $MIOLO->GetActionURL('administracao','main:turma',$this->objTurma->idturma,array('form'=>'excluir','conf'=>'sim'));
+		$action_nao = $MIOLO->GetActionURL('administracao','main:turma',$this->objTurma->idturma);
+		$conf=$this->GetFormValue('conf');
+		if ($conf=='sim')
+		{
+			try
+			{
+				$this->objTurma->Delete();
+				$MIOLO->Information('Turma excluido com sucesso',$MIOLO->GetActionURL('administracao','main:turma:find'));
+			}
+			catch (Exception $e)
+			{
+				$MIOLO->Error($e->GetMessage(),$MIOLO->GetActionURL('administracao','main:turma',$this->objTurma->idturma));
+			}
+		}else
+		{
+			$MIOLO->Question("Tem certeza que deseja excluir o turma [{$this->objTurma->nome}]?",$action_sim,$action_nao);
+		}
+	}
+}
+?>
+

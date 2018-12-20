@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Order Tree</title>
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8081/scripts/dojoroot/dijit/themes/tundra/tundra.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8081/themes/mystica/miolo.css">
+
+
+    <script type="text/javascript" src="/scripts/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dijit.Tree");
+
+/*
+       var teste_Store = new dojo.data.ItemFileReadStore(
+		{
+			data: { 
+				identifier: 'id', 
+				label: 'description', 
+				items: [ 
+					{ description:'Control1',id:'1',
+					  children: [
+						{ description:'Control11',id:'6',
+						  children: [ 
+							{description:'Control111',id:'11'}, 
+							{description:'Control112',id:'12'},
+							{description:'Control113',id:'13'}
+						  ]
+						},
+						{ description:'Control12',id:'14',
+						  children: [ 
+						    {description:'Control121',id:'15'}
+						  ]
+						}
+					  ]
+					}
+				]
+			}
+		});
+*/
+dojo.require("dijit.Tree");
+dojo.require("dojo.data.ItemFileReadStore");
+frm__mainForm_tree1_Store = new dojo.data.ItemFileReadStore({data: { { description:'Alunos',id: '0', children: [{ description:'A',id: '1', children: [{ description:'ADRIANA LUISA ZIGLER DE OLIVEIRA',id: '2'},{ description:'ALESANDRO TEIXEIRA MORAES',id: '3'},{ description:'ALESSANDRA CAMPOS CIMINO',id: '4'},{ description:'ALESSANDRA DE SOUZA GOMES ALMEIDA',id: '5'},{ description:'ALESSANDRA FERNANDES RIBEIRO',id: '6'},{ description:'ALESSANDRA GOMES SILVA',id: '7'},{ description:'ALESSANDRA TASSI DE PAULA',id: '8'},{ description:'ALINE APARECIDA BERNO',id: '9'},{ description:'ALINE DANIELLE DA SILVEIRA',id: '10'},{ description:'ALINE FARIA CRUZ',id: '11'},{ description:'ALINE RIOS DE FREITAS',id: '12'},{ description:'ALYNE SCHREIDER',id: '13'},{ description:'AMANDA CAMPOS SOUZA',id: '14'},{ description:'AMANDA DE SOUZA SANTOS',id: '15'},{ description:'AMARILDO DE PAULA BATISTA',id: '16'},{ description:'ANA CAROLINA AMARAL DE SAO JOSE',id: '17'},{ description:'ANA CAROLINA MARQUES CODOGNOTTO',id: '18'},{ description:'ANA CLAUDIA ESTEVES PEREIRA BASTOS',id: '19'},{ description:'ANA LUCIA DE ANDRADE',id: '20'},{ description:'ANA REGINA BORGES',id: '21'},{ description:'ANDREA CRISTINA DE ALMEIDA',id: '22'},{ description:'ANDREIA ZIMMERMANN',id: '23'},{ description:'ANNA ELISA SAD CAMPOS',id: '24'},{ description:'APARECIDA FATIMA DE OLIVEIRA',id: '25'},{ description:'APARECIDA REGIANE GIRON',id: '26'},{ description:'ARUANA ANDRADE DE MAGALHAES SCOFIELD',id: '27'}]},{ description:'B',id: '28', children: [{ description:'BIANCA RIBEIRO MENDES MONTES',id: '29'},{ description:'BRUNA PINHEIRO PASCOTTO',id: '30'}]},{ description:'C',id: '31', children: [{ description:'CAMILA MESSIAS RAMOS',id: '32'},{ description:'CAMILA TOLEDO DE SOUZA',id: '33'},{ description:'CARLOS ALEXANDRE CARNEIRO LELIS',id: '34'},{ description:'CAROLINA XAVIER DO NASCIMENTO',id: '35'},{ description:'CATARINA DORNELAS',id: '36'},{ description:'CELIA REGINA PAIS DE OLIVEIRA',id: '37'},{ description:'CHRISTIANNY CORREA GHIRLINZONI',id: '38'},{ description:'CINARA GOMES ALEIXO',id: '39'},{ description:'CLAUDIA GUILHERME FAGUNDES BELLO',id: '40'},{ description:'CRISTINA DE SOUZA MONTES',id: '41'},{ description:'CRISTINA ROCHA AMARAL',id: '42'}]},{ description:'D',id: '43', children: [{ description:'DAISE LUCIDE BARBOSA',id: '44'},{ description:'DANIELA DE MELO ALVIM MACHADO',id: '45'},{ description:'DANIELE COSTA DE CARVALHO',id: '46'},{ description:'DEBORA GOTARDELO AUDEBERT DELAGE',id: '47'},{ description:'DEBORAH MIRANDA SERRAO',id: '48'},{ description:'DELMAR TEIXEIRA GOMES',id: '49'},{ description:'DENISE MARIA LESSA DE LIMA',id: '50'},{ description:'DEUZIMAR SILVEIRA DE MELLO OLIVEIRA',id: '51'},{ description:'DILENE MARIA SANTIAGO FERRARI',id: '52'}]},{ description:'E',id: '53', children: [{ description:'EDICY ELISA RENAULT MACHADO',id: '54'},{ description:'EDILEIA LIMA DE AQUINO',id: '55'},{ description:'EDILENE COSTA DUARTE DE ANDRADE',id: '56'},{ description:'EDILENI RODRIGUES SILVA GONDIM SIMAO',id: '57'},{ description:'EDNEI MACHADO DE OLIVEIRA',id: '58'},{ description:'ELAINE ARAUJO SILVA',id: '59'},{ description:'ELAINE CRISTINA SANTOS BARBOSA',id: '60'},{ description:'ELAINE DUTRA FIALHO',id: '61'},{ description:'ELENIR PEREIRA DE PAIVA',id: '62'},{ description:'ELIANA LIGIA CARVALHO CERUTTI PEREIRA',id: '63'},{ description:'ELIANE OLIVEIRA PINHEIRO',id: '64'},{ description:'ELIEZER SILVA DE LACERDA',id: '65'},{ description:'ELIS REGINA DE OLIVEIRA',id: '66'},{ description:'ELOIZA AUGUSTA GOMES',id: '67'}]},{ description:'F',id: '68', children: [{ description:'FABIANA FERREIRA DE MELLO',id: '69'},{ description:'FABIO DA COSTA CARBOGIM',id: '70'},{ description:'FABRICIO LUIS DA SILVA',id: '71'},{ description:'FABRICIO VIEIRA',id: '72'},{ description:'FATIMA MARIA CHAMHUM DE ALMEIDA PAULA',id: '73'},{ description:'FERNANDA CRISTINA ZIMMERMANN FRANCO',id: '74'},{ description:'FERNANDA DE VASCONCELOS FREIRE',id: '75'},{ description:'FERNANDA G F MENDONCA',id: '76'},{ description:'FERNANDA MAZZONI DA COSTA',id: '77'},{ description:'FERNANDA RIBEIRO DE ANDRADE',id: '78'},{ description:'FLAVIA CRISTINA DUARTE SILVA',id: '79'},{ description:'FRANCIANE DE OLIVEIRA MARTINS',id: '80'}]},{ description:'G',id: '81', children: [{ description:'GENEZIELLY RAPOSO FERREIRA',id: '82'},{ description:'GERALDO CESAR DOS SANTOS',id: '83'},{ description:'GIANNI PIRES DUQUE SALES',id: '84'},{ description:'GISELE DE PAULA ABRAHAO',id: '85'},{ description:'GISELLE BANDEIRA DE OLIVEIRA',id: '86'},{ description:'GLAUCO MENDONCA ROCHA',id: '87'}]},{ description:'H',id: '88', children: [{ description:'HERICA SILVA DUTRA',id: '89'}]},{ description:'I',id: '90', children: [{ description:'INES RODRIGUES DE SOUZA',id: '91'},{ description:'IRENE DUARTE SOUZA',id: '92'},{ description:'IRLA SAAR RIBEIRO CERQUEIRA',id: '93'},{ description:'IZAURA RAIMUNDA TEIXEIRA LAUDEANO',id: '94'}]},{ description:'J',id: '95', children: [{ description:'JANE EIRE URZEDO',id: '96'},{ description:'JAQUELINE VIEIRA AGUIAR',id: '97'},{ description:'JOELMA ELIZABETH PORTES DOS REIS',id: '98'},{ description:'JOSE AUGUSTO MELADO',id: '99'},{ description:'JOSE RICARDO RIBEIRO RAPOSO',id: '100'},{ description:'JULIANA DA ROCHA REIS',id: '101'}]},{ description:'K',id: '102', children: [{ description:'KATIA APARECIDA PEDRETTI',id: '103'},{ description:'KATIA DE LANDA MORAES',id: '104'},{ description:'KATIA PACHECO PERENSIM',id: '105'},{ description:'KECIA FABIANA ANTUNES MAURICIO',id: '106'},{ description:'KELLEN TELES LOPES',id: '107'},{ description:'KELLI BORGES DOS SANTOS',id: '108'},{ description:'KELY CRISTINE BATISTA',id: '109'}]},{ description:'L',id: '110', children: [{ description:'LECIANA DE OLIVEIRA LAMBERT',id: '111'},{ description:'LEONARDO NEVES FONSECA',id: '112'},{ description:'LEONARDO SANTANA ROCHA',id: '113'},{ description:'LILIAN BARBOSA DE SOUZA',id: '114'},{ description:'LILIANE ALVES DA ROCHA RANGEL',id: '115'},{ description:'LILIANE CRISTINA REZENDE FERREIRA',id: '116'},{ description:'LILIANE SILVA MARTINS',id: '117'},{ description:'LIVIA GOMES DA SILVA',id: '118'},{ description:'LIVIA MARIA DE AZEVEDO FRANCO',id: '119'},{ description:'LUCIA HELENA NOVELLINO PEREIRA',id: '120'},{ description:'LUCIANA DO NASCIMENTO CAMPISSI',id: '121'},{ description:'LUCIANE APARECIDA SANDI',id: '122'},{ description:'LUCIANE RIBEIRO',id: '123'},{ description:'LUCILEIA LINO NEPOMUCENO',id: '124'},{ description:'LUCIMARA KELLY DE CASTRO',id: '125'},{ description:'LUCINEIME DO CARMO DE JESUS',id: '126'},{ description:'LUIS ALBERTO MONTIJO VASQUES',id: '127'},{ description:'LUIS FERNANDO DA SILVA ALVES',id: '128'},{ description:'LUZIANNE BENETTE FARAGE MOREIRA',id: '129'}]},{ description:'M',id: '130', children: [{ description:'MARA LUCIA WELERSON SOTT DALDEGAN',id: '131'},{ description:'MARCELO JOSE DA COSTA',id: '132'},{ description:'MARCELO LEITE DE PAULA BATISTA',id: '133'},{ description:'MARCIA MIYUKI AMANUMA FRANCO DE OLIVEIRA',id: '134'},{ description:'MARCILENE CHAVES COSTA',id: '135'},{ description:'MARCILIA DE FATIMA VILELA PAULA FONSECA',id: '136'},{ description:'MARGARETE MOREIRA COUTINHO',id: '137'},{ description:'MARGARETH ALVES MENEZES',id: '138'},{ description:'MARIA APARECIDA FACHINI SPADA',id: '139'},{ description:'MARIA APARECIDAD GUEDES COUTO',id: '140'},{ description:'MARIA AUXILIADOR PADULA',id: '141'},{ description:'MARIA CAMILA FERREIRA NUNES',id: '142'},{ description:'MARIA DE FATIMA VIEIRA',id: '143'},{ description:'MARIA DO SOCORRO LINA VAN KEULEN',id: '144'},{ description:'MARIA JOSE LOPES D A SILVA',id: '145'},{ description:'MARIA LUISA RIETRA MARZANO',id: '146'},{ description:'MARIA LUIZA MAGALHAES DE OLIVEIRA BALDIOTI',id: '147'},{ description:'MARIA TEREZA AGUIAR CASTILHO NETA',id: '148'},{ description:'MARILENE VARGAS DA SILVA',id: '149'},{ description:'MARLUCI DE OLIVEIRA',id: '150'},{ description:'MAURICIO VIANNA DA COSTA',id: '151'},{ description:'MAYLA ELISA CRUZ',id: '152'},{ description:'MELINA PEREIRA FARIA',id: '153'},{ description:'MELISSA TERESINHA NASCIMENTO LOPES',id: '154'},{ description:'MICHELE STHERLING',id: '155'},{ description:'MICHELI MOREIRA EGYDIO',id: '156'},{ description:'MICHELLE RODRIGUES DE AMORIM',id: '157'},{ description:'MONICA CECILIA GOULART DE OLIVEIRA',id: '158'},{ description:'MONICA OLIVEIRA FERREIRA',id: '159'}]},{ description:'N',id: '160', children: [{ description:'NILZA ROCHA DE SOUZA',id: '161'}]},{ description:'P',id: '162', children: [{ description:'PATRICIA DO CARMO MELLO',id: '163'},{ description:'PATRICIA RODRIGUES MARTINS',id: '164'},{ description:'PAULA MORAES REZENDE',id: '165'},{ description:'PAULO SERGIO GOMES DE OLIVEIRA',id: '166'},{ description:'PAULO SERGIO PINTO',id: '167'},{ description:'POLLYANNA FAITANIN',id: '168'},{ description:'PRISCILA FERNANDA NERY DE SOUZA',id: '169'}]},{ description:'R',id: '170', children: [{ description:'RACHEL MONTEIRO JUNQUEIRA',id: '171'},{ description:'RAFAELA LUCIA COELHO DOS SANTOS',id: '172'},{ description:'RAQUEL DE SOUZA LIMA',id: '173'},{ description:'REJANE DA CUNHA VIEIRA',id: '174'},{ description:'REJANE RODRIGUES RIBEIRO',id: '175'},{ description:'RENATA ALMEIDA DE MATOS',id: '176'},{ description:'RENATA CRISTINA CONDE',id: '177'},{ description:'RENATA HELOISA DE CERQUEIRA',id: '178'},{ description:'RENATA SIQUEIRA JULIO',id: '179'},{ description:'RILSE MARA HERONDINO',id: '180'},{ description:'RITA APARECIDA GUEDES MATTOSINHOS',id: '181'},{ description:'ROBERTA APARECIDA DAVILA MOTTA',id: '182'},{ description:'ROBERTA FERREIRA SCHAEFER',id: '183'},{ description:'ROBERTA LOPES MARQUES',id: '184'},{ description:'ROBERTA TEIXEIRA PRADO',id: '185'},{ description:'ROGINNER FERNANDO MOREIRA CRISTIANO',id: '186'},{ description:'RONYLLA RODRIGUES GANDA',id: '187'},{ description:'ROSANE RODRIGUES DE CASTRO',id: '188'},{ description:'ROSANGELA APARECIDA ELERATI SILVA',id: '189'},{ description:'ROSANGELA DE ANDRADE CARDOSO VICENTE',id: '190'},{ description:'ROSANGELA DE FATIMA DOS REIS',id: '191'},{ description:'ROSILENE DO CARMO SIQUEIRA',id: '192'},{ description:'ROSIMERE APARECIDA DA SILVEIRA',id: '193'},{ description:'RUI CARLOS ROCHA',id: '194'}]},{ description:'S',id: '195', children: [{ description:'SABRINA VIEIRA CENTELLAS',id: '196'},{ description:'SANDRA LUCIA DA ROCHA DANIEL',id: '197'},{ description:'SANDRO HENRIQUE GUEDES MENDONCA',id: '198'},{ description:'SANISE LIVIA CARDOSO',id: '199'},{ description:'SIDNEY SOUSA AUGUSTO',id: '200'},{ description:'SILVIA ALVES DE OLIVEIRA',id: '201'},{ description:'SILVIA RAQUEL PERES TOLEDO',id: '202'},{ description:'SUELI MEDINA VASCONCELOS SILVA',id: '203'}]},{ description:'T',id: '204', children: [{ description:'TAMARA FERREIRA BARBOSA',id: '205'},{ description:'TANIA CONCOLATO GREGGIO',id: '206'},{ description:'TATIANA NATALINA SEVIDANES BOUSADA',id: '207'},{ description:'TERESA CRISTINA SILVA PALERMO',id: '208'},{ description:'TEREZINHA APARECIDA VIEIRA',id: '209'},{ description:'THANIA MARIA CARVALHO DAMASCENO',id: '210'}]},{ description:'V',id: '211', children: [{ description:'VALDILANE APARECIDA NUNES DE MOURA',id: '212'},{ description:'VALERIA CHIAVEGATTO CAMPOS MUNIZ',id: '213'},{ description:'VALESCA NUNES DOS REIS',id: '214'},{ description:'VALTER ADRIANO PAULINO DE CAMPOS',id: '215'},{ description:'VANDER LUCIO TAFURI AMARAL',id: '216'},{ description:'VANIA MARIA DOS SANTOS MATOS',id: '217'},{ description:'VERA NEUZA LEMOS',id: '218'},{ description:'VERONICA MATILDE DA CONCEICAO',id: '219'},{ description:'VIRGINIA CARLOS DOS REIS',id: '220'},{ description:'VIVIAN LOUISE MANULLI LESSA',id: '221'},{ description:'VIVIANE DE SOUZA MACHADO',id: '222'},{ description:'VIVIANE NUNES DE PAULA',id: '223'}]},{ description:'W',id: '224', children: [{ description:'WAGNER JAERNEVAY SILVEIRA',id: '225'},{ description:'WILLENA BRAGA D`APPARECIDA',id: '226'}]}]} }});
+frm__mainForm_tree1_Model = new dijit.tree.ForestStoreModel({rootLabel: 'BaseControl', store: frm__mainForm_tree3_Store});
+function frm__mainForm_tree1_getIconClass(item,opened) {
+ var cls = (!item || this.model.mayHaveChildren(item)) ? opened ? 'dijitFolderOpened':'dijitFolderClosed' : 'dijitLeaf';
+ return cls + this.layout;
+}
+function frm__mainForm_tree1_onClick(item,node) {
+
+}
+
+
+/*
+       var teste_Model = new dijit.tree.ForestStoreModel({
+			rootLabel: 'BaseControl',
+			store: teste_Store
+		});
+ function aaa(item,opened) {
+               var cls = (!item || this.model.mayHaveChildren(item)) ? opened ? "dijitFolderOpened":"dijitFolderClosed" : "dijitLeaf"; 
+			   return cls + this.layout;
+			}
+*/
+		dojo.addOnLoad(function(){
+    		 new dijit.Tree({'model': frm__mainForm_tree1_Model,'getIconClass':frm__mainForm_tree1_getIconClass, 'layout':'0',showRoot:false},dojo.byId("myTree"));
+	    	 var myTree = dijit.byId("myTree");
+			 alert(myTree.showRoot);
+		});
+
+		/*
+		teste_Show = function() {
+          var placeHolder = dojo.byId("myTree");
+		  placeHolder.replaceChild(teste_Tree.domNode,placeHolder);
+		};
+		*/
+//		dojo.addOnLoad(teste_Show);
+
+     </script>
+</head>
+<body class="m-theme-body">
+   
+   <div id="myTree"></div>
+
+   
+</body></html>        

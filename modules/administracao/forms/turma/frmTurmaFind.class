@@ -1,0 +1,41 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkturma');
+class frmTurmaFind extends Form
+{
+	var $turma;
+	function frmTurmaFind()
+	{
+		global $MIOLO;
+		$this->Form('turma');
+		$this->SetClose($MIOLO->GetActionURL($module,'main'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $module, $page;
+		$ui = $MIOLO->GetUI();
+		$grid = $ui->GetGrid('administracao','gridTurma'); 
+		$grid->SetTitle(NULL);
+		$btnFind = new ButtonFind('');
+		$newLink = new LinkTurma('lnkNew',FALSE);
+		$newLink->setNew();
+		$fields = array(
+				array(
+					new MTextField('nome','','Código ou Título',45),
+					$btnFind,
+				),
+				$newLink,
+				$grid
+			);
+		$this->SetFields($fields);
+		$this->defaultButton = false;
+	}
+	function btnFind_click()
+	{
+		global $MIOLO,$turma ;
+		$ui = $MIOLO->GetUI();
+		$turma = $this->getFormValue('nome',$value=NULL);
+	}
+}
+?>
+

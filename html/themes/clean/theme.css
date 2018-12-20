@@ -1,0 +1,1981 @@
+/******************************************************************************
+ * CLEAN - theme.css
+ ******************************************************************************/
+
+/******************************************************************************
+ * Containers
+ ******************************************************************************/
+ 
+body
+{
+	background:    #FFF;
+    font-family:   verdana,  helvetica, arial, geneva, tahoma, sans-serif;
+    font-size:     70%;
+    margin:        0px;
+    padding:       0px;
+	color:         #000;
+}
+
+h1
+{
+    font-size: 12px;
+    font-weight:   bold;
+	color: #000;
+	margin: 0px 0px 10px 0px;
+}
+
+h2
+{
+    font-size: 11px;
+    font-weight:   bold;
+	color: #000;
+	margin: 0px 0px 0px 15px;
+}
+
+h3
+{
+    font-size: 11px;
+    font-weight:   normal;
+	color: #900;
+	margin: 0px 0px 0px 35px;
+	display:inline;
+}
+
+h4
+{
+    font-size: 10px;
+    font-weight:   normal;
+	color: #000;
+	margin: 0px 0px 0px 45px;
+	padding: 0px;
+	display:inline;
+}
+
+fieldset
+{
+    font-size: 11px;
+    font-weight:   normal;
+	padding: 5px;
+}
+
+#container
+{
+	width:         100%;
+}
+
+#topContainer
+{
+	margin:        0px;
+	padding:       0px;
+	background:    #FFF;
+	height:        45px;
+	border-bottom:    2px solid #990000;
+}
+
+#topContainer .topLogo
+{
+    float:         left;
+	width:         65px;
+	margin:        0px;
+	padding:       0px;
+	background:    #FFF;
+}
+
+#topContainer .topText
+{
+    float:         right;
+	width:         685px;
+	margin:        0px;
+	padding:       0px;
+    background:    #FFF;
+	text-align:    right;
+}
+
+#topContainer .topText h1
+{
+    font-size:     14px;
+    font-weight:   bold;
+    color:         #990000;
+	margin : 0px;
+}	
+
+#topContainer .topText h2
+{
+    font-size:     12px;
+    font-weight:   bold;
+    color:         #666;
+	margin : 0px;
+}	
+
+#moduleContainer
+{
+    background:    #eee;
+	padding:       2px;
+    font-size:     11px;
+    font-weight:   bold;
+	text-align:    right;
+}
+
+#topMenuContainer
+{
+    background-color:    #CCC;
+	border-bottom:    1px solid #eee;
+	padding: 0px;
+}
+
+#menuContainer
+{
+    float:         left;
+    background:    #f7f7f7;
+	width:		   150px;
+	padding: 0px;
+}
+
+#contentContainer
+{
+    float:         left;
+	width:         100%px;
+	height:        auto;
+	text-align:    left;
+    margin-left:   8px;
+    margin-right:  8px;
+    margin-top:    8px;
+    margin-bottom: 8px;
+}
+
+#contentFullContainer
+{
+	height:        auto;
+	text-align:    left;
+    margin-left:   8px;
+    margin-right:  8px;
+    margin-top:    8px;
+    margin-bottom: 8px;
+}
+
+#bottomContainer
+{
+    clear:         both;
+	text-align:    center;
+}
+
+/******************************************************************************
+ * alert div
+ ******************************************************************************/
+div.alert { 
+    clear: both;
+	line-height: 20px; 
+	height: 20px;
+    padding:         2px;
+    font-size:       11px;
+    font-weight:     bold;
+    color:           red;
+	background-color: white;
+    text-align:    center;
+} 
+/******************************************************************************
+ * spacer div
+ ******************************************************************************/
+div.spacer { 
+    clear: both;
+	line-height: 0px; 
+} 
+/******************************************************************************
+ * hr
+ ******************************************************************************/
+.hr { 
+    width: 100%; 
+    height: 0px; 
+    border-bottom: 1px solid #CCC; 
+	line-height: 0px; 
+    font-size: 0px; 
+	margin: 0px;
+} 
+
+/******************************************************************************
+ * separator
+ ******************************************************************************/
+.separator { 
+    width: 95%;
+    font-size:        11px;
+    padding:          2px;
+	margin:           0px 0px 2px 0px;
+    font-weight:      normal;
+} 
+
+/******************************************************************************
+ * htmlArea
+ ******************************************************************************/
+#htmlarea { 
+    margin: 15px;
+    width:90%;   
+} 
+
+/******************************************************************************
+ * topMenu
+ ******************************************************************************/
+
+.topMenuBox
+{
+  background-color: #fff;
+  background-image: none;
+  padding:         2px;
+  margin: 0px;
+  font-size:       10px;
+  font-weight:     normal;
+  color:           #900;
+  text-align:    left;
+}
+
+.topMenuBox li
+{
+    padding-left: 5px;   
+}
+
+.topMenuBox ul 
+{ 
+    list-style: none; 
+    padding: 0px;
+    margin: 0px;
+}
+
+.topMenuBox ul li
+{ 
+    display: inline;
+}
+
+.topMenuCurrent
+{
+  background-color: #FFF;
+  padding:         2px;
+  font-size:       10px;
+  font-weight:     bold;
+  color:           #900;
+}
+
+.topMenuLink
+{ 	
+  text-decoration: none;  
+  color:           #900;
+}
+    
+.topMenuLink:link, .topMenuLink:visited
+{ 
+  color:           #900;
+}
+
+.topMenuLink:active, .topMenuLink:hover
+{
+  color:           #900;
+  text-decoration: underline;
+}
+
+/******************************************************************************
+ * Menu e submenu
+ ******************************************************************************/
+
+.menuBox
+{
+	margin: 0px;
+	padding: 3px 0px 3px 0px;
+    background-color: #eee;
+	width:		   100%;
+}
+
+.menuBox li a.menuLink
+{
+	padding-left: 14px;
+    background-image: url(../../images/bullet.gif);
+    background-repeat: no-repeat; 
+    background-position: .5em .5em;
+ color:           #000000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: none;
+}
+
+.menuBox li div.menuTitle
+{ color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-align:       center; 
+  background-color: #D0D0D0;
+  padding: 2px;   
+  border-top:    2px solid #999;
+}
+
+.menuBox li div.hr
+{ 
+  background-color: #999;
+}
+
+.menuBox ul li 
+{ 
+	width: 100%;
+    margin: 1px 0px 1px 0px;
+}
+
+.menuBox ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menuBox li a.menuLink:link
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: none
+}
+
+.menuBox li a.menuLink:visited
+{
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: none
+}
+
+.menuBox li a.menuLink:hover
+{
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: underline
+}
+
+.menuBox li a.menuLink:active
+{
+  color:           #ff0000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: underline
+}
+
+.submenuBox
+{
+	margin-left: 15px;
+	padding: 0px;
+    background-color: #EEE;
+}
+
+.submenubox li a.menuLink
+{
+    padding-left: 10px;   
+    background-image: url(../../images/seta.jpg);
+    background-repeat: no-repeat; 
+    background-position: 0 .3em;
+}
+
+.submenubox ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.submenuTitle
+{ color:            #000000;
+  font-weight:      bold;
+  font-size:        10px;
+  text-decoration:  none;
+  text-align:       center; 
+  background-color: #CCC;
+  vertical-align:   top;
+}
+
+.submenuText
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       10px;
+  text-decoration: none
+  margin-left:     16px; 
+}
+
+/******************************************************************************
+ * statusBar
+ ******************************************************************************/
+
+.statusBar
+{
+  background-color: #e0e0e0;
+  width: 750px;
+  margin-top:    10px;
+  border-top:    1px solid #999999;
+  border-bottom:    2px solid #990000;
+}
+
+.statusBar li
+{
+  background-color: #e0e0e0;
+  text-align:   center;
+  border-right:      solid #555555 1px;
+  border-left:     solid #ffffff 1px;
+  font-size:        10px;
+  font-weight:      normal;  
+  color:            black;
+  margin: 3px 0px 3px 0px;
+  padding: 0px 6px 6px 6px;
+}
+
+/*** Tan hack for IE ***/
+/*
+* html .statusBar li
+{
+  padding: 0px 6px 6px 6px;
+}
+*/
+.statusBar ul 
+{ 
+    list-style: none; 
+    padding: 0px;
+    margin: 0px;
+    text-align:   center;
+    height: 19px;
+}
+
+.statusBar ul li
+{ 
+    display: inline;
+}
+
+/******************************************************************************
+ * moduleHeader
+ ******************************************************************************/
+
+.moduleHeader
+{
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-decoration:  none;
+}
+/******************************************************************************
+ * contentHeader
+ ******************************************************************************/
+
+.contentHeader
+{
+  background-color: #FFFFFF;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        13px;
+  margin:           2px 0px 5px 0px;
+  text-decoration:  none;
+}
+/******************************************************************************
+ * form
+ ******************************************************************************/
+
+/*
+.formBox
+{
+  background-color: #ffffff;
+  padding:          1px;
+  border:           1px solid #c0c0c0;
+  width:            95%; 
+}
+*/
+
+.formTitle
+{
+  background-color: #c0c0c0;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  padding:          2px;
+  text-decoration:  none;
+}
+
+.formBody
+{
+   font-size:        11px;
+   padding:          3px;
+   font-weight:      normal;
+   background-color: #f7f7f7;
+}
+
+div.formRow
+{
+   clear: both;
+   padding-top: 3px;
+   width: 100%;
+}
+
+div.formRow span.horizontal
+{
+  float: left;
+  padding-right: 5px; 
+}
+
+div.formRow span.label 
+{
+  float: left;
+  padding-right: 5px; 
+  width: 15%;
+}
+
+div.formRow span.field 
+{
+  float: right;
+  width: 80%;
+}
+
+.formReadOnly
+{
+  color:            #000000;
+  font-size:        11px;
+  font-weight:      bold;
+}
+
+.formBaseLabel
+{
+   height: 15px;
+}
+
+.formLabel
+{
+  color:            #000000;
+  font-size:        11px;
+  font-weight:      normal;
+}
+
+.formLabelText
+{
+  color:            #000000;
+  font-size:        11px;
+  font-weight:      bold;
+}
+
+.formFieldBox
+{
+   padding:          2px;
+}
+
+.formButtonBox
+{
+   padding:          3px;
+   clear: left;
+}
+
+.formButtonBox li .hr
+{
+    margin: 5px 0px 5px 0px;   
+}
+
+.formButtonBox li button
+{
+    margin: 2px 10px 2px 0px;   
+}
+
+.formButtonBox ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.formButtonBox ul li
+{ 
+    display: inline;
+}
+
+
+.formHint
+{
+  background-color: #FEFBD8;
+  font-size:        9px;
+  border:           solid #c0c0c0 1px;
+  color:            #990000;
+}
+
+.formText
+{
+  font-size:        11px;
+  font-weight: normal; 
+}
+
+.formButton {  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+	height: 19px;
+}
+
+.findButton {  
+    background-image: url(../../images/button_select.png);
+    background-repeat: no-repeat; 
+	background-color: #ededed;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+	width: 17px;
+	height: 17px;
+	text-align: middle;
+	vertical-align:middle;
+}
+
+.formField {  
+	font-size: 11px; 
+	font-weight: normal; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+	vertical-align: top;
+}
+
+.formMultiLineField {  
+	font-size: 11px; 
+	font-weight: normal; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+	vertical-align: top;
+}
+
+.formFieldErr {  
+    color: #FF0000;
+	font-size: 11px; 
+	font-weight: normal; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+}
+
+.formCombo {  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+}
+
+.formRadioButtonGroup {  
+  color:            #000000;
+  font-size:        11px;
+  font-weight: normal; 
+  margin-top:       1px;
+  margin-bottom:    1px;
+  vertical-align:20%;
+}
+
+.formCheckBoxGroup {  
+  color:            black;
+  font-size:        11px;
+  font-weight:      normal; 
+  margin-top:       2px;
+  margin-bottom:    1px;
+  vertical-align:20%;
+}
+
+.formImageLabel
+{
+  color:            #000000;
+  font-size:        10px;
+  text-align:       center;
+  margin: 3px 3px 3px 3px;
+  display:block;
+}
+
+.formErrors
+{
+  background-color: #990000;
+  border:           1px solid #000000;
+  padding:          6px;
+  color:            #ffffff;
+}
+
+div.formScrollable .label
+{
+  color:            #000000;
+  font-size:        11px;
+  font-weight:      normal;
+}
+
+div.formScrollable .field
+{
+  background-color: #EDEDED; 
+  border:           solid #c0c0c0 1px;
+  overflow:auto;
+}
+
+
+div.formMultiTextField
+{
+   position:relative;
+}    
+
+div.formMultiTextField .select
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+	height:80px;
+	margin-bottom: 5px;
+}
+
+div.formMultiTextField .label
+{
+  color:            #000000;
+  font-size:        9px;
+  margin-top:       1px;
+  margin-bottom:    1px;
+  vertical-align:   top;
+}
+
+div.formMultiTextField .textfield 
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+	margin-bottom: 10px;
+}
+
+div.formMultiTextField .combo
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED; 
+	border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+	margin-bottom: 10px;
+}
+
+div.formMultiTextField .button {  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED;
+    border: 1px solid #CCCCCC;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    margin: 0px 5px 5px 0px;
+	width: 70px;
+	text-align: center;
+	vertical-align:top;
+}
+
+div.formMultiTextField .buttonPosH
+{  
+    float:left;
+	width: 85px;
+}
+
+div.formMultiTextField .fieldPosH
+{  
+    float:left;
+	width: 200px;
+}
+
+div.formMultiTextField .selectPosH
+{  
+    float:left;
+}
+
+div.formMultiTextField .selection
+{  
+    float:left;
+	width: 300px;
+}
+
+div.formMultiTextField fieldset
+{  
+    padding: 10px;
+	border: 1px solid #CCC;
+}
+
+/******************************************************************************
+ * Theme
+ ******************************************************************************/
+
+.themeBody
+{
+/*  background-image: url("miolo-bg.gif");*/
+  font-size:        12px;
+  margin:           0px;
+  padding:          0px;
+}
+
+.themePage
+{
+}
+
+.themeContent
+{
+  font-size:        11px;
+  color:           #000000;
+  font-weight:     normal;
+  width:            100%;
+  vertical-align:   top;
+  text-align:       center;
+}
+
+.themeBox
+{
+  background-color: #dddddd;
+  border: 1px #CCCCCC solid;
+}
+
+.themeBox .title
+{
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-decoration:  none;
+  height: 15px;
+  display: block;
+}
+
+/*** Tan hack for IE ***/
+* html .themeBox .title
+{
+  margin-right: -3px;
+}
+
+.themeBox .content
+{
+  background-color: #ffffff;
+  font-size:        11px;
+  font-weight:      normal;
+  margin:          1px;
+  padding:          5px;
+}
+
+/******************************************************************************
+ * ThemeTable
+ ******************************************************************************/
+
+.themeTableTitle
+{
+}
+
+.themeTableBody
+{
+  background-color: #ffffff;
+}
+
+.themeTable
+{ 
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none
+}
+
+.themeTableRow
+{
+}
+
+.themeTableCell
+{
+}
+/******************************************************************************
+ * TableRaw
+ ******************************************************************************/
+
+.tableraw
+{
+  background-color: #335599;
+  padding:          4px;
+}
+
+.tablerawTitle
+{ 
+  background-color: #FFFFFF;
+  color:           #335599;
+  font-weight:     bold;
+  font-size:       12px;
+  text-decoration: none;
+  text-align:      center;
+}
+
+.tablerawColTitle
+{ 
+  background-color: #FFFFFF;
+  color:           #000000;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none
+  text-align:      left;
+}
+
+.tablerawRow
+{
+  background-color: #FFFFFF;
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none
+}
+
+.tablerawCell
+{
+}
+
+/******************************************************************************
+ * Box
+ ******************************************************************************/
+.box
+{
+/*  background-color: #ffffff;*/
+  padding:          1px;
+  border:           2px outset #c0c0c0;
+  height: 1%; /* the Holly Hack */
+}
+
+.boxModal
+{
+/*  background-color: #ffffff;*/
+  padding:          1px;
+  border-left:      thin outset;
+  border-bottom:    thin outset;
+  border-right:     thin outset;
+  border-top:       thin outset;
+  width:            100%;
+}
+
+.boxTitle
+{
+  background-color: #c0c0c0;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        12px;
+  text-decoration:  none;
+  height:20px;
+  vertical-align:   top;
+}
+
+.boxTitle .caption
+{
+  text-align: left;
+  padding-top:2px;
+  float: left; 
+  width: 80%;
+}
+
+.boxTitle .icon
+{
+  float: left; 
+  padding-top:2px;
+  padding-left:2px;
+  width:20px;
+}
+
+.boxTitle .button
+{
+  float: right; 
+  padding-right: 2px;
+  width:20px;
+  text-align:right;
+}
+
+.boxTitleModal
+{
+  background-color: #006;
+  color:            #fff;
+}
+
+.boxContent
+{
+  font-size:        11px;
+  font-weight:      normal;
+  padding:          8px;
+}
+
+/******************************************************************************
+ * Panel
+ ******************************************************************************/
+
+/*
+.panelBox
+{
+  background-color: #c0c0c0;
+  padding:          1px;
+  border:           1px solid #c0c0c0;
+  width:            100%; 
+  height: 70px;
+}
+*/
+.panelTitle
+{
+  background-color: #c0c0c0;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-decoration:  none;
+  height:15px;
+}
+
+/* Tan hack for IE/Win */
+
+* html div.panelBody 
+{
+   height: 1%;
+}
+
+.panelBody
+{
+   font-size:        11px;
+   padding:          3px;
+   background-color: #f7f7f7;
+}
+
+.panelControlBox
+{
+   margin:          2px 2px 2px 2px;
+}
+
+/******************************************************************************
+ * tabPage
+ ******************************************************************************/
+
+.tabPage {
+   width: 100%;
+   height: 24px;
+   background-color: white;
+   float:left;
+}
+
+.tabPage .space {
+   width: 2px;
+   height: 24px;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.tabPage .vertical1A {
+   width: 1px;
+   height: 23px;
+   background-color: black;
+   border-top: 2px solid #EEE;
+   float:left;
+}
+
+.tabPage .vertical2A {
+   width: 1px;
+   height: 23px;
+   background-color: #EEE;
+   border-top: 1px solid black;
+   float:left;
+   margin-top:1px;
+}
+
+.tabPage .vertical3A {
+   width: 1px;
+   height: 23px;
+   background-color: black;
+   border-top: 1px solid #EEE;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.tabPage .vertical4A {
+   width: 1px;
+   height: 22px;
+   background-color: #CCC;
+   float:left;
+   border-bottom: 1px solid black;
+   margin-top:2px;
+}
+
+.tabPage .vertical1B {
+   width: 1px;
+   height: 22px;
+   background-color: #CCC;
+   margin-top: 2px;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.tabPage .vertical2B {
+   width: 1px;
+   height: 22px;
+   background-color: #EEE;
+   border-top: 1px solid #CCC;
+   float:left;
+   margin-top:1px;
+   border-bottom: 1px solid black;
+}
+
+.tabPage .contentA {
+   width: 100px;
+   height: 24px;
+   background-color: #E0E0E0;
+   border-top: 1px solid black;
+   text-align: center;
+   vertical-align: middle; 
+   float:left;
+}
+
+.tabPage .contentB {
+   width: 100px;
+   height: 23px;
+   background-color: #EEE;
+   border-top: 1px solid #CCC;
+   border-bottom: 1px solid black;
+   text-align: center;
+   vertical-align: baseline; 
+   float:left;
+}
+
+.tabPage .contentC {
+   width:auto;
+   border-top: 24px solid white;
+   border-bottom: 1px solid black;
+   margin:0;
+   padding:0;
+}
+
+.tabPageLink
+{ color:           #000000;
+  font-weight:     bold;
+  font-size:       9pt;
+  text-decoration: none
+  vertical-align: middle; 
+}
+    
+.tabPageLinkDisable
+{ color:           #999999;
+  font-weight:     bold;
+  font-size:       9pt;
+  text-decoration: none
+  vertical-align: middle; 
+}
+
+.tabPageLink:link
+{ color:           #666666;
+  font-weight:     bold;
+  text-decoration: none;
+}
+
+.tabPageLink:visited
+{ color:           #666666;
+  font-weight:     bold;
+  text-decoration: none;
+}
+
+.tabPageLink:active
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.tabPageLink:hover
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.tabFormBox
+{
+  background-color: #ffffff;
+  padding:          1px;
+  width:            95%; 
+}
+
+.tabFormBody
+{
+  background-color: #E0E0E0;
+/*  _border-top:       solid #555555 1pt;*/
+  border-left:      solid #000000 1pt;
+  border-right:     solid #000000 3pt;
+  border-bottom:    solid #000000 3pt;
+}
+
+.tabFormText
+{
+  color:            #000000;
+  font-size:        11px;
+  margin-top:       1px;
+  margin-bottom:    1px;
+  vertical-align:   top;
+}
+
+.tabFormColor0
+{
+  background-color:           #ffffff;
+}
+
+.tabFormColor1
+{
+  background-color:           #cccccc;
+}
+
+.tabFormColor2
+{
+  background-color:           #333333;
+}
+
+.tabFormColor3
+{
+  background-color:           #e0e0e0;
+}
+
+.tabFormColor4
+{
+  background-color:           #000000;
+}
+
+/******************************************************************************
+ * pageNavigator
+ ******************************************************************************/
+
+.pageNavigator
+{
+  background-color: #c0c0c0;
+  border:           1px solid #c0c0c0;
+  padding:          2px;
+}
+    
+.pageNavigatorText
+{ 	
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  vertical-align: top;
+}
+    
+.pageNavigatorRange
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+}
+
+.pageNavigatorImage
+{
+	border: 0;
+    vertical-align: middle;
+	width: 17px; 
+	display:inline;
+}
+
+.pageNavigatorSelected
+{ color:           #900;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none;
+  margin-left: 5px;
+  vertical-align: top;
+}
+
+.pageNavigatorLink
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: underline;
+  vertical-align:   middle;
+  margin-left: 5px;
+  vertical-align: top;
+}
+    
+.pageNavigatorLink:link, .pageNavigatorLink:visited
+{ color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.pageNavigatorLink:active, .pageNavigatorLink:hover
+{
+  color:           #990000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+/******************************************************************************
+ * Grid
+ ******************************************************************************/
+
+.gridBox
+{
+  background-color: #ffffff;
+  font-size:        11px;
+  border:           1px solid #ddd;
+  width:            100%; 
+}
+
+.gridFont
+{
+  color:            #000000;
+  font-weight:      normal;
+  font-size:        11px;
+  text-decoration:  none;
+}
+
+.gridTitle
+{
+  background-color: #c0c0c0;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  padding:          0px;
+  text-decoration:  none;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.gridTitle .caption
+{
+  text-align: left;
+  padding-top:2px;
+  float: left; 
+  width: 80%;
+}
+
+.gridTitle .icon
+{
+  float: left; 
+  padding-top:2px;
+  padding-left:2px;
+  width:20px;
+}
+
+.gridTitle .button
+{
+  float: right; 
+  padding-right: 2px;
+  width:20px;
+  text-align:right;
+}
+
+.gridLink
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: underline;
+}
+
+.gridLinkDisable
+{ color:           #999999;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: underline;
+}
+
+.gridLink:link
+{ color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.gridLink:visited
+{
+  color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.gridLink:hover
+{
+  color:           #990000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.gridLink:active
+{
+  color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.gridInfo
+{
+  color:           #000000;
+  background-color: #ffffff;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none;
+}
+
+.gridBody
+{
+  border-left:      1px solid #c0c0c0;
+  border-right:     1px solid #c0c0c0;
+  background-color: #fff;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none;
+  padding:          2px;
+}
+
+.gridNavigation
+{
+  background-color: #ffffff;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none;
+  height:           20px;
+  line-height:           20px;
+  position:relative;
+}
+
+.gridHeaderLink
+{
+  background-color: #eeeeee;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none;
+  padding:          4px;
+  height:           20px;
+  text-align: center;
+}
+
+.gridAction
+{
+  height:           15px;
+}
+
+.gridFilter
+{
+  background-color: #ffffff;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none;
+  padding: 4px 4px 0px 4px;
+}
+
+.gridFilter span
+{
+  vertical-align: top;
+}
+
+.gridControls
+{
+  background-color: #c0c0c0;
+  font-size:        11px;
+  padding:          2px;
+  height:           25px;
+}
+
+.gridAttention
+{
+  color:            #990000;
+  font-weight:      bold;  
+  background-color: #ffffff;
+  font-size:        11px;
+  padding:          2px;
+  text-align:       center;
+}
+
+.gridRowHeading
+{
+  background-color: #FFF;
+  height:           20px;
+}
+
+.gridColumnHeading
+{
+  background-color: #ccc;
+  text-align:       center;
+  color:            #000;
+  font-weight:      bold;
+  font-size:        11px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.gridColumnOrder
+{
+  background-color: #CCC;
+  font-weight:      bold;  
+  color:            #000000;
+  text-align:       center;
+  text-decoration:  underline;
+}
+
+.gridColumnLink
+{
+  font-weight:     normal;
+  font-size:        11px;
+  padding:          2px;
+  color:            #000000;
+  text-decoration:  underline;
+}
+
+.gridRow1
+{
+  background-color: #fff;
+  color:            #000000;
+  height:           15px;
+}
+
+.gridRow1Checked
+{
+  background-color: #9999ff;
+  color:            #000000;
+  height:           15px;
+}
+
+.gridRow2
+{
+  background-color: #eee;
+  color:            #000000;
+  height:           15px;
+}
+
+.gridRow2Checked
+{
+  background-color: #CCCCFF;
+  color:            #000000;
+  height:           15px;
+}
+
+.gridColumn
+{
+  padding:          3px;
+}
+
+.gridFooter
+{
+  color:           #000000;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none;
+}
+
+/******************************************************************************
+ * promptBox
+ ******************************************************************************/
+
+.promptBox
+{
+  background-color: #ffffff;
+  text-align:center;
+  width:       310px;
+  margin: 10px 130px 0px 130px;
+}
+
+.promptBoxButton
+{
+   clear: left;
+   text-align: center;
+}
+
+.promptBoxButton li button
+{
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+	height: 17px;
+	width: 80px;
+    margin: 5px;
+}
+
+.promptBoxButton ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.promptBoxButton ul li
+{ 
+    display: inline;
+}
+
+.promptBoxText
+{
+   float:left;
+   text-align: left;
+   padding: 5px 5px 5px 40px;
+   font-size:        11px;
+   font-weight:      bold;
+}
+
+.promptBoxText li
+{
+   background-image: url(../../images/bullet.gif);
+   background-repeat: no-repeat; 
+   background-position: 0 0.5em;
+   margin-left: .7em;
+    padding-left: 10px;   
+}
+
+.promptBoxText ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.promptBoxTitle
+{
+  color:            #ffffff;
+  text-align:       center;
+  font-size:        11px;
+  font-weight:      bold;
+  padding:          2px;
+}
+
+.promptBoxError
+{
+   background-color: #ffffff;
+   border:           1px solid #990000;
+   width:100%;
+   background-image: url(../../images/error.gif);
+   background-repeat: no-repeat; 
+   background-position: 5px 20px;
+}
+
+.promptBoxErrorTitle
+{
+  background-color: #990000;
+}
+
+.promptBoxInformation
+{
+   background-color: #ffffff;
+   border:           1px solid #0000ff;
+   width:100%;
+   background-image: url(../../images/information.gif);
+   background-repeat: no-repeat; 
+   background-position: 5px 20px;
+}
+
+.promptBoxInformationTitle
+{
+  background-color: #0000ff;
+}
+
+.promptBoxConfirmation
+{
+   background-color: #ffffff;
+   border:           1px solid #0000ff;
+   width:100%;
+   background-image: url(../../images/question.gif);
+   background-repeat: no-repeat; 
+   background-position: 5px 20px;
+}
+
+.promptBoxConfirmationTitle
+{
+  background-color: #0000ff;
+}
+
+.promptBoxQuestion
+{
+   background-color: #ffffff;
+   border:           1px solid #006633;
+   width:100%;
+   background-image: url(../../images/question.gif);
+   background-repeat: no-repeat; 
+   background-position: 5px 20px;
+}
+
+.promptBoxQuestionTitle
+{
+  background-color: #006633;
+}
+
+/******************************************************************************
+ * ???
+ ******************************************************************************/
+
+.currentPageNumber
+{
+  color:            #ff0000;
+  font-weight:      bold;
+}
+
+div.statistics
+{
+  position: absolute;
+  width: 500px;
+  left: 10px;
+  overflow:scroll;
+  height:200px;
+}
+
+div.statistics .image
+{
+  text-align: right;
+}
+
+div.statistics .text
+{
+  background-color: #f7f7f7;
+
+  border-top:       solid #555555 1pt;
+  border-bottom:    solid #ffffff 1pt;
+  border-left:      solid #555555 1pt;
+  border-right:     solid #ffffff 1pt;
+  
+  vertical-align:   top;
+  
+  font-size:        10px;
+  font-style:       normal;
+  font-weight:      normal;  
+  color:            #000055;
+  padding:          4pt;  
+}
+
+
+/******************************************************************************
+ * Hyperlink
+ ******************************************************************************/
+
+.Hyperlink
+{ color:           #000000;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: underline;
+}
+
+.Hyperlink:link
+{ color:           #000000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.Hyperlink:visited
+{
+  color:           #000000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.Hyperlink:hover
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.Hyperlink:active
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+/******************************************************************************
+ * LinkButton - LinkButtonGroup
+ ******************************************************************************/
+
+.LinkButton
+{ color:           #000000;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none
+}
+
+.LinkButton:link
+{ color:           #000000;
+  font-weight:     bold;
+  text-decoration: none
+}
+
+.LinkButton:visited
+{
+  color:           #000000;
+  font-weight:     bold;
+  text-decoration: none
+}
+
+.LinkButton:hover
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline
+}
+
+.LinkButton:active
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline
+}
+
+.LinkButtonGroup
+{ color:           #000000;
+  font-weight:     bold;
+  font-size:       11px;
+  text-decoration: none
+}
+
+.LinkButtonGroup:link
+{ color:           #000000;
+  font-weight:     bold;
+  text-decoration: none
+}
+
+.LinkButtonGroup:visited
+{
+  color:           #000000;
+  font-weight:     bold;
+  text-decoration: none
+}
+
+.LinkButtonGroup:hover
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline
+}
+
+.LinkButtonGroup:active
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline
+}
+
+/******************************************************************************
+ * Images
+ ******************************************************************************/
+.centeredImage
+{
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+}
+
+/******************************************************************************
+ * ImageLink
+ ******************************************************************************/
+
+.ImageLink
+{ 
+  text-decoration: none;
+}
+
+/******************************************************************************
+ * ImageLinkLabel
+ ******************************************************************************/
+
+.ImageLinkLabel
+{ color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: underline;
+}
+
+.ImageLinkLabel:link
+{ color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.ImageLinkLabel:visited
+{
+  color:           #000000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.ImageLinkLabel:hover
+{
+  color:           #990000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+.ImageLinkLabel:active
+{
+  color:           #990000;
+  font-weight:     normal;
+  text-decoration: underline;
+}
+
+/******************************************************************************
+ * TreeMenu
+ ******************************************************************************/
+
+.t0i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t0i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t1i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t1i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t2i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t2i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t3i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t3i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+

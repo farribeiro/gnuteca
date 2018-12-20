@@ -1,0 +1,45 @@
+<?
+class frmTurma extends MCompoundForm
+{
+	protected $objTurma;
+	protected $oid;
+	function __construct($objTurma)
+	{
+		$this->objTurma=$objTurma;
+		parent::__construct();
+		$this->SetTitle($this->turma->nome);
+		$this->SetIcon($this->manager->GetUI()->GetImage('administracao','tools1.png'));
+		$this->SetClose($this->manager->GetActionURL('administracao','main:turma:find'));
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $page, $module, $context, $action, $history;
+		Util::SetIfNull($this->oid,$this->objTurma->idturma);
+		parent::CreateFields();
+		$ui = $this->manager->GetUI();
+		$form = Form::GetFormValue('form');
+		switch ($form)
+		{
+			case 'excluir':
+			$this->_form[] = $ui->GetForm('administracao','frmTurmaDel',$this->objTurma,'turma');
+			break;
+			case 'dados':
+			$this->_form[] = $ui->GetForm('administracao','frmTurmaDados',$this->objTurma,'turma');
+			break;
+		}
+		if ($this->_form[0])
+		{
+			$this->_form[0]->SetClose($this->manager->GetActionURL('administracao','main:turma', $objTurma->idturma));
+		}
+		//Panel
+		$action = $this->manager->context->action;
+		$this->_panel[0]=new ActionPanel('pnlCompound','Opções','',false);
+		$panel=$this->_panel[0];
+		$panel->SetIconType('small');
+		$panel->SetTitle('Código: ' . $this->objTurma->idturma);
+		$panel->InsertUserAction(0,'administracao_info',A_EXECUTE,'Excluir',$ui->GetImage('administracao','del.png'),'administracao',$action, $this->oid, array("form"=>"excluir"));
+		$panel->InsertUserAction(0,'administracao_info',A_EXECUTE,'Dados de Turma',$ui->GetImage('administracao','edit.png'),'administracao',$action, $this->oid, array("form"=>"dados"));
+	}
+}
+?>
+

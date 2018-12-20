@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<map>
+	<moduleName>administracao</moduleName>
+	<className>aluno</className>
+	<tableName>adm_aluno</tableName>
+	<databaseName>badministracao</databaseName>
+	<attribute>
+		<attributeName>idaluno</attributeName>
+		<columnName>idaluno</columnName>
+		<key>primary</key>
+		<idgenerator>seq_adm_aluno</idgenerator>
+	</attribute>
+	<attribute>
+		<attributeName>idturma</attributeName>
+		<columnName>idturma</columnName>
+	</attribute>
+	<attribute>
+		<attributeName>nome</attributeName>
+		<columnName>nome</columnName>
+	</attribute>
+	<attribute>
+		<attributeName>turma</attributeName>
+	</attribute>
+	<association>
+		<toClassModule>administracao</toClassModule>
+		<toClassName>turma</toClassName>
+		<cardinality>oneToOne</cardinality>
+		<target>turma</target>
+		<retrieveAutomatic>false</retrieveAutomatic>
+		<saveAutomatic>false</saveAutomatic>
+		<deleteAutomatic>false</deleteAutomatic>
+		<entry>
+			<fromAttribute>idturma</fromAttribute>
+			<toAttribute>idturma</toAttribute>
+		</entry>
+	</association>
+</map>

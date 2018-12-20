@@ -1,0 +1,24 @@
+CREATE TABLE adm_turma (
+	descricao varchar(150),
+	idturma INTEGER NOT NULL PRIMARY KEY
+);
+CREATE TABLE adm_aluno (
+	idaluno INTEGER NOT NULL PRIMARY KEY,
+	idturma INTEGER,
+	nome varchar(150)
+);
+CREATE TABLE adm_professor (
+	idprofessor INTEGER NOT NULL PRIMARY KEY,
+	titulo varchar(150)
+);
+CREATE TABLE adm_turmaprofessor (
+	idturma INTEGER NOT NULL CONSTRAINT FK_ADM_TURMAPROFESSOR_TURMAID REFERENCES adm_turma (idturma),
+	idprofessor INTEGER NOT NULL CONSTRAINT FK_ADM_TURMAPROFESSOR_PROFESSORID REFERENCES adm_professor (idprofessor),
+	primary key(idturma,idprofessor)
+);
+CREATE SEQUENCE seq_adm_turma start with 1;
+CREATE SEQUENCE seq_adm_aluno start with 1;
+CREATE SEQUENCE seq_adm_professor start with 1;
+
+CREATE SEQUENCE seq_adm_turmaprofessor start with 1;
+

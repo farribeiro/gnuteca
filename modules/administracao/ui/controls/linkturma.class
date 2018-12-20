@@ -1,0 +1,40 @@
+<?php
+MIOLO::Import('modules::administracao::controls::linkobject');class LinkTurma extends LinkObject
+{
+	public function __construct($name='', $turma)
+	{
+		global $MIOLO;
+		$MIOLO->UsesBusiness('administracao','turma');
+		parent::__construct($name,$turma,'area_mini.png');
+	}
+
+	public function setObjectByValue($value)
+	{
+		global $MIOLO;
+		$this->object = $MIOLO->GetBusiness('administracao','turma');
+		$this->object->GetById((int)$value);
+	}
+
+	public function setAction()
+	{
+		$this->hyperlink->SetAction('administracao','main:turma',$this->object->idturma);
+		$this->imagelink->SetAction('administracao','main:turma',$this->object->idturma);
+	}
+
+	public function setText()
+	{
+		$this->hyperlink->SetText($this->object->idturma);
+		$this->hyperlink->SetText($this->object->idturma);
+	}
+
+	public function setNew()
+	{
+		$this->isNewLink = TRUE;
+		$this->hyperlink->SetAction('administracao','main:turma:new');
+		$this->hyperlink->SetText('Inserir Nova Turma');
+		$this->imagelink->SetAction('administracao','main:turma:new');
+	}
+
+
+}
+?>

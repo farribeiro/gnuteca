@@ -1,0 +1,99 @@
+<?
+include 'turmametodo.class';
+class BusinessAdministracaoTurma extends MBusiness
+{
+
+
+	var $turmametodo;
+	var $descricao;
+	var $idturma;
+	var $alunos;
+	var $professores;
+
+	function __construct($data=null)
+	{
+		parent::__construct('badministracao', $data);
+		$turmametodo=new turmametodo();
+		$this->descricao		='';
+		$this->idturma		='';
+
+	}
+
+	function getById($id)
+	{
+		$this->idturma = $id;
+		$this->retrieve();
+		return $this;
+	}
+
+	function setData ($data)
+	{
+		$this->descricao		=$data->descricao;
+		$this->idturma		=$data->idturma;
+	}
+
+	function listAll()
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addOrderAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+	function find_idturma_descricao($parametro){
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addOrCriteria('idturma','LIKE',"'$parametro'");
+		return $criteria->retrieveAsQuery();
+	}
+
+	function listByDescricao ($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('idturma','LIKE',"'$parametro'");
+		$criteria->addColumnAttribute('idturma');
+
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getalunos()
+	{
+		$this->retrieveAssociation('alunos');
+	}
+
+	function getprofessores()
+	{
+		$this->retrieveAssociation('professores');
+	}
+
+	function listar($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addColumnAttribute('idturma');
+		$criteria->addColumnAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getdescricao()
+	{
+		return $this->descricao;
+	}
+
+	function getidturma()
+	{
+		return $this->idturma;
+	}
+
+	function setdescricao($descricao)
+	{
+		$this->descricao = $descricao;
+	}
+
+	function setidturma($idturma)
+	{
+		$this->idturma = $idturma;
+	}
+
+
+
+}
+?>

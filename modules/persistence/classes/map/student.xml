@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>student</className>
+   <tableName>tb_aluno</tableName>
+   <databaseName>persistence</databaseName>
+
+   <extends>
+       <moduleName>persistence</moduleName>
+       <className>person</className>
+   </extends>
+
+   <attribute>
+      <attributeName>number</attributeName>
+	  <columnName>numero</columnName>
+	  <key>primary</key>
+   </attribute>
+   <attribute>
+      <attributeName>situation</attributeName>
+	  <columnName>situacao</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>idPerson</attributeName>
+	  <columnName>idpessoa</columnName>
+	  <reference>idPerson</reference> 
+   </attribute>
+
+</map>

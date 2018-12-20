@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>UFJF - SIGA</title>
+<style type="text/css">
+    @import "http://127.0.0.1:8081/scripts/dojoroot/dijit/themes/tundra/tundra.css";
+    @import "http://127.0.0.1:8081/scripts/dojoroot/dojo/resources/dojo.css"
+</style>
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8081/themes/system/miolo.css">
+
+<meta http-equiv="Content-Type" content="0">
+<meta name="Generator" content="MIOLO Version Miolo 2.5; http://www.miolo.org.br">
+<script type="text/javascript"> djConfig={isDebug:true, usePlainJson:true,  parseOnLoad:true}</script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/dojoroot/dojo/dojo.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/prototype/prototype.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_miolo.js"></script>
+
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_page.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_ajax.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_encoding.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_form.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_compatibility.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_md5.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_lookup.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/x/x_win.js"></script>
+
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_grid.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_multitext2.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_multitext3.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_texttable.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_multitext4.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_validate.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_box.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/x/x_core.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/x/x_dom.js"></script>
+
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/x/x_event.js"></script>
+
+<script>
+    dojo.require("dojo.parser");
+    dojo.require("dijit.Tooltip");
+</script>
+</head>
+<body class="m-theme-body">
+<form id="frm48a4e2d122552" name="frm48a4e2d122552" method="post" action="http://127.0.0.1:8081/index.php/teste/ajax"  onSubmit="return miolo.onSubmit();" > 
+<div id="m-container">
+<div id="m-container-top">
+<div class="m-box-title"><span class="icon">
+<img src="http://127.0.0.1:8081/themes/system/images/logo_miolo.png" alt="" border="0"></span><span class="caption">&nbsp;Tutorial - A Demo Module</span></div></div><div id="m-loading-message-bg"></div><div id="m-loading-message"><div id="m-loading-message-image"><div id="m-loading-message-text">Loading...</div></div></div>
+
+<div id="m-container-module">
+<div id="m_m4" class="m-module-header"></div></div>
+<div id="m-container-topmenu">
+<div id="m_m2" class="m-topmenu-box">
+<ul >
+  <li>
+<a  class="m-topmenu-link" href="http://127.0.0.1:8081/index.php?module=common&amp;action=main">Home</a></li>
+  <li>::</li>
+  <li><span class="m-topmenu-current">Test Ajax</span></li>
+</ul></div></div>
+<div id="content" class="m-container-content-full">
+
+<div id="frm48a4e2d12ed62" class="m-form-box">
+<div id="m8" class="m-box-outer m-form-outer">
+<div class="m-box-box">
+<div class="m-box-title"><span class="caption">&nbsp;&nbsp;AJAX Sample</span></div>
+<div class="m-form-body">
+<div>
+<div class="m-form-row">    
+</div>
+<div class="m-form-row"><span class="label">
+<label  class="m-caption" for="selImage">Images:</label></span><span class="field">
+<select  id="selImage" class="m-combo" name="selImage">
+<option value="" selected >--Selecione--</option>
+<option value="controls.png">controls.png</option>
+<option value="database.png">database.png</option>
+
+<option value="datetime.png">datetime.png</option>
+<option value="forms.gif">forms.gif</option>
+<option value="forms.jpg">forms.jpg</option>
+<option value="forms.png">forms.png</option>
+<option value="globals.png">globals.png</option>
+<option value="hangman.png">hangman.png</option>
+<option value="logonet.png">logonet.png</option>
+<option value="pdf.png">pdf.png</option>
+<option value="properties_off.png">properties_off.png</option>
+
+<option value="properties_on.png">properties_on.png</option>
+<option value="save.png">save.png</option>
+<option value="session.png">session.png</option>
+<option value="tutorial-16x16.png">tutorial-16x16.png</option>
+<option value="tutorial-32x32.png">tutorial-32x32.png</option>
+<option value="validators.png">validators.png</option></select>
+<div dojoType="dijit.Tooltip" connectId="selImage" label="Images to choose. Pick one..."></div>
+
+</span></div>
+<div class="m-form-row"><span class="label">
+<label  class="m-caption-required" for="txtField">Label:</label></span><span class="field">
+<input  type="text" id="txtField" class="m-text-field" name="txtField" value="" size="30">
+<div dojoType="dijit.Tooltip" connectId="txtField" label="A toolip for a TextField"></div>
+</span></div>
+<div class="m-form-row">
+
+<button  id="btnAddValidator" type="button" class="m-button" name="btnAddValidator" value="[Add a TextField with Validator]" onclick="miolo.doSubmit('addFieldValidator','','frm48a4e2d12ed62')">[Add a TextField with Validator]</button></div>
+<div id="validator">&nbsp;</div>
+<div class="m-form-row">
+<div id="m_chkGroup1" style="width:98%">
+<fieldset  id="chkGroup1"><legend>Group Caption Label</legend>
+<div id="m_chkGroup1_opt1" style="float:left;margin-right:5px">
+<input  type="checkbox" id="chkGroup1_opt1" name="chkGroup1_opt1" value="value1"><label  for="chkGroup1_opt1" class="m-checkbox-group">label1</label></div>
+<div id="m_chkGroup1_opt2" style="float:left;margin-right:5px">
+<input  type="checkbox" id="chkGroup1_opt2" name="chkGroup1_opt2" value="value2"><label  for="chkGroup1_opt2" class="m-checkbox-group">label2</label></div>
+<div id="m_chkGroup1_opt3" style="float:left;margin-right:5px">
+<input  type="checkbox" id="chkGroup1_opt3" name="chkGroup1_opt3" value="value3"><label  for="chkGroup1_opt3" class="m-checkbox-group">label3</label></div>
+<div id="m_chkGroup1_opt4" style="float:left;margin-right:5px">
+
+<input  type="checkbox" id="chkGroup1_opt4" name="chkGroup1_opt4" value="value4"><label  for="chkGroup1_opt4" class="m-checkbox-group">label4</label></div>
+<div class="m-spacer">&nbsp;</div></fieldset></div></div>
+<div class="m-form-row">
+<!--  -->
+
+<div class="m-multitext-field">
+<div id="m_m245" style="width:98%">
+<fieldset ><legend>Exemplo - layout horizontal:</legend>
+<div class="fieldPosH" style="float:left;margin-right:5px">
+<div id="m_m235" style="width:200px">
+<div style="margin-bottom:3px"><span class="m-caption">Texto</span><br>
+<input  type="text" id="txfId" class="m-text-field" name="txfId" value="" size="20"></div>
+<div style="margin-bottom:3px">
+<div id="m_lkpTransacao" style="float:left"><span class="m-caption">Transação</span><br>
+
+<input  type="text" id="lkpTransacao" class="m-text-field" name="lkpTransacao" value="" size="20"></div><span class="m-caption">&nbsp;</span><br>
+<button  type="button" class="m-button m-button-find" name="" value="" onclick="javascript:lookup_frm48a4e2d122552_lkpTransacao.open();">&nbsp;</button></div>
+<div style="margin-bottom:3px"><span class="m-caption">Sistema</span><br>
+<select  id="selIdSistema" class="m-combo" name="selIdSistema" style="width:200px">
+<option value="" selected >--Selecione--</option>
+<option value="op1">Opção1</option>
+<option value="op2">Opção2</option>
+<option value="op3">Opção3</option>
+<option value="op4">Opção4</option>
+<option value="op5">Opção5</option></select></div></div></div>
+
+<div class="buttonPosH" style="float:left;margin-right:5px">
+<div class="label">&nbsp;</div>
+<div id="m_m234">
+<div style="margin-bottom:3px">
+<button  id="mt2_add" type="button" class="m-button button" name="mt2_add" value="Adicionar" onclick="miolo.multiTextField4.add(this.form, 'mt2','txfId,lkpTransacao,selIdSistema')">Adicionar</button></div>
+<div style="margin-bottom:3px">
+<button  id="mt2_modify" type="button" class="m-button button" name="mt2_modify" value="Modificar" onclick="miolo.multiTextField4.modify(this.form,'mt2','txfId,lkpTransacao,selIdSistema')">Modificar</button></div>
+<div style="margin-bottom:3px">
+<button  id="mt2_remove" type="button" class="m-button button" name="mt2_remove" value="Remover" onclick="miolo.multiTextField4.remove(this.form,'mt2','txfId,lkpTransacao,selIdSistema')">Remover</button></div></div></div>
+<div class="selectPosH" style="float:left;margin-right:5px">
+<div class="m-texttable" style="width:200px">
+<div class="scroll" style="height:75px;width:200px">
+<table  id="mt2_table" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody>
+
+</tbody>
+</table></div></div></div>
+<div class="m-spacer">&nbsp;</div></fieldset></div></div>
+<!--  -->
+</div>
+<div class="m-form-row">
+<span class="m-label" style="font-weight:bold">Using response_type=JSON: receives a PHP Object as response</span></div>
+<div class="m-form-row">
+<div id="m_m152">
+<div id="m_selCursoPHPJSON" style="float:left;margin-right:5px"><span class="m-caption">Curso</span><br>
+<select  id="selCursoPHPJSON" class="m-combo" name="selCursoPHPJSON">
+<option value="" selected >--Selecione--</option>
+<option value="1">Administração</option>
+
+<option value="2">Computação</option>
+<option value="3">Medicina</option>
+<option value="5">Teste1</option>
+<option value="6">Teste 2</option>
+<option value="7">teste3</option>
+<option value="8">teste4</option>
+<option value="9">teste6</option>
+<option value="10">teste5</option>
+<option value="11">curso x</option>
+
+<option value="12">teste55</option>
+<option value="13">Teste45</option>
+<option value="14">Teste46</option>
+<option value="15">CursoA</option>
+<option value="16">AAA</option>
+<option value="17">AJAX</option>
+<option value="18">AJAX</option>
+<option value="19">CursoT</option>
+<option value="20">MIOLO</option>
+
+<option value="21">Miolo 2</option>
+<option value="22">www</option>
+<option value="23"></option>
+<option value="24"></option></select></div>
+<div id="m_btnCursoPHPJSON" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnCursoPHPJSON" type="button" class="m-button" name="btnCursoPHPJSON" value="[Show data]" onclick="ajaxCursoSelectionPHPJSON.call()">[Show data]</button></div>
+<div id="m_btnCursoClearPHPJSON" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnCursoClearPHPJSON" type="button" class="m-button" name="btnCursoClearPHPJSON" value="[Clear data]" onclick="miolo.getElementById('selPHPJSON').innerHTML=''">[Clear data]</button></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+<div id="selPHPJSON"></div>
+<div class="m-form-row">
+<div id="m_m73" class="m-separator" style="border-bottom:1px solid ;line-height:0px">&nbsp;</div></div>
+<div class="m-form-row">
+
+<span class="m-label" style="font-weight:bold">Using MButtonAjax: no Javascript Code; response_type=text: receives a HTML code as response</span></div>
+<div class="m-form-row">
+<div id="m_m159">
+<div id="m_selImageName" style="float:left;margin-right:5px"><span class="m-caption">Images</span><br>
+<select  id="selImageName" class="m-combo" name="selImageName">
+<option value="" selected >--Selecione--</option>
+<option value="controls.png">controls.png</option>
+<option value="database.png">database.png</option>
+<option value="datetime.png">datetime.png</option>
+<option value="forms.gif">forms.gif</option>
+
+<option value="forms.jpg">forms.jpg</option>
+<option value="forms.png">forms.png</option>
+<option value="globals.png">globals.png</option>
+<option value="hangman.png">hangman.png</option>
+<option value="logonet.png">logonet.png</option>
+<option value="pdf.png">pdf.png</option>
+<option value="properties_off.png">properties_off.png</option>
+<option value="properties_on.png">properties_on.png</option>
+<option value="save.png">save.png</option>
+
+<option value="session.png">session.png</option>
+<option value="tutorial-16x16.png">tutorial-16x16.png</option>
+<option value="tutorial-32x32.png">tutorial-32x32.png</option>
+<option value="validators.png">validators.png</option></select></div>
+<div id="m_btnAjax" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnAjax" type="button" class="m-button" name="btnAjax" value="[Show Image]" onclick="miolo.doSubmit('ajaxBtnAjaxClick','','frm48a4e2d12ed62')">[Show Image]</button></div>
+<div id="sel6" style="float:left;margin-right:5px"></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+<div class="m-form-row">
+<div id="m_m79" class="m-separator" style="border-bottom:1px solid ;line-height:0px">&nbsp;</div></div>
+<div class="m-form-row">
+<div id="m_m164">
+
+<div id="m_btnChangeContent" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnChangeContent" type="button" class="m-button" name="btnChangeContent" value="[Change Content]" onclick="miolo.doSubmit('changeContent','','frm48a4e2d12ed62')">[Change Content]</button></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+<div class="m-form-row">
+<div id="m_m81" class="m-separator" style="border-bottom:1px solid ;line-height:0px">&nbsp;</div></div>
+<div class="m-form-row">
+<div id="m_m169">
+<div id="m_btnCallHandler" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnCallHandler" type="button" class="m-button" name="btnCallHandler" value="[Call Handler]" onclick="miolo.doGoto('http://127.0.0.1:8081/index.php?module=teste&amp;action=ajax2');">[Call Handler]</button></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+<div id="divSubmit"></div>
+<div class="m-form-row">
+<div id="m_m85" class="m-separator" style="border-bottom:1px solid ;line-height:0px">&nbsp;</div></div>
+<div class="m-form-row">
+<div id="m_m174">
+
+<div id="m_btnFill3Elements" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnFill3Elements" type="button" class="m-button" name="btnFill3Elements" value="[Fill 3 Elements]" onclick="miolo.doSubmit('fill3Elements','','frm48a4e2d12ed62')">[Fill 3 Elements]</button></div>
+<div id="element1" style="float:left;margin-right:5px"></div>
+<div id="element2" style="float:left;margin-right:5px"></div>
+<div id="element3" style="float:left;margin-right:5px"></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+<div class="m-form-row">
+<div id="m_m93" class="m-separator" style="border-bottom:1px solid ;line-height:0px">&nbsp;</div></div>
+<div class="m-form-row">
+<div id="m_m179">
+<div id="m_btnPost" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<button  id="btnPost" type="button" class="m-button" name="btnPost" value="[A Event Post Button]" onclick="miolo.doPostBack('btnPost:click','','frm48a4e2d12ed62');">[A Event Post Button]</button></div>
+<div id="m_myText" style="float:left;margin-right:5px"><span class="m-caption">&nbsp;</span><br>
+<span id="myText" class="m-label-text"></span></div>
+<div class="m-spacer">&nbsp;</div></div></div>
+
+<div id="outro"></div>
+<div class="m-form-row">
+<div class="m-form-button-box">
+<ul >
+  <li>
+<div class="m-hr"></div></li>
+  <li>
+<button  id="submit_button" type="button" class="m-button" name="submit_button" value="Enviar" onclick="miolo.doPostBack('submit_button:click','','');">Enviar</button></li>
+</ul></div></div>
+<!-- START OF HIDDEN FIELDS -->
+<input type="hidden" id="frm48a4e2d12ed62_action" name="frm48a4e2d12ed62_action" value="http://127.0.0.1:8081/index.php/teste/ajax">
+<!-- END OF HIDDEN FIELDS --></div></div></div></div></div>
+<input type="hidden" id="__VIEWSTATE" name="__VIEWSTATE" value="YToyOntzOjg6ImZ1bGxHcmlkIjthOjM6e3M6OToiZ3JpZF9wYWdlIjtpOjE7czoxMjoidXNlc2VsZWN0ZWRzIjtiOjE7czo5OiJzZWxlY3RlZHMiO2E6MTp7aToxO2E6MDp7fX19czo2OiJmaWx0cm8iO2I6MTt9">
+<input type="hidden" id="cpaint_response_type" name="cpaint_response_type" value="">
+
+<input type="hidden" id="__ISAJAXCALL" name="__ISAJAXCALL" value="">
+<input type="hidden" id="__ISPOSTBACK" name="__ISPOSTBACK" value="">
+<input type="hidden" id="__EVENTTARGETVALUE" name="__EVENTTARGETVALUE" value="">
+<input type="hidden" id="__EVENTARGUMENT" name="__EVENTARGUMENT" value="">
+<input type="hidden" id="__FORMSUBMIT" name="__FORMSUBMIT" value=""></div>
+<div id="m-container-bottom">
+<div class="m-statusbar">
+<ul >
+  <li>Usuário: -</li>
+  <li>Entrada às: --:--</li>
+  <li>Data: --/--/----</li>
+
+  <li>Miolo 2.5</li>
+  <li>Miolo Team</li>
+</ul></div></div></div>
+<div id="m-container-minbar">
+<div>&nbsp;</div></div> 
+</form>
+</body>
+</html>

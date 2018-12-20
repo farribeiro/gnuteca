@@ -1,0 +1,302 @@
+# MIOLO i18n pt_BR file.
+# Copyleft (L) 2006-2008 Solis - Cooperativa de Solucoes Livres
+# This file is distributed under the same license as the MIOLO package.
+# Vilson Cristiano Gartner <vilson@solis.coop.br>, 2006.
+# Armando Taffarel Neto <taffarel@solis.coop.br>, 2008.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-06 11:07-0300\n"
+"PO-Revision-Date: 2008-10-06 11:07-0300\n"
+"Last-Translator: Armando Taffarel Neto <taffarel@solis.coop.br>\n"
+"Language-Team: MIOLO <vilson@solis.coop.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "   Back   "
+msgstr "   Voltar   "
+
+#: ../..//classes/security/mpermsldap.class.php:63
+#: ../..//classes/security/mperms.class.php:50
+#: ../..//classes/security/mpermsmiolo.class.php:60
+msgid "   Login   "
+msgstr "   Login   "
+
+msgid "   No   "
+msgstr "   Não   "
+
+msgid "   Yes   "
+msgstr "   Sim   "
+
+msgid " Cancel "
+msgstr " Cancelar "
+
+#: ../..//classes/ui/controls/listcontrols.class.php:78
+msgid "$options needs to be an array"
+msgstr "$options precisa ser um array"
+
+#: ../..//classes/ui/controls/listcontrols.class.php:82
+#: ../..//classes/ui/controls/listcontrols.class.php:87
+msgid "--Select--"
+msgstr "--Selecione--"
+
+#: ../..//classes/flow/mexception.class.php:95
+msgid "@1 File not found: @2"
+msgstr "@1 Arquivo não encontrado: @2"
+
+#: ../..//classes/security/mpermsldap.class.php:50
+#: ../..//classes/security/mperms.class.php:39
+#: ../..//classes/security/mpermsmiolo.class.php:42
+msgid "Access Denied"
+msgstr "Acesso negado"
+
+#: ../..//classes/ui/controls/gridcontrols.class.php:1129
+msgid "Action"
+msgstr "Ação"
+
+#: ../..//classes/ui/controls/mprompt.class.php:92
+msgid "Alert"
+msgstr "Alerta"
+
+#: ../..//classes/ui/controls/mprompt.class.php:114
+msgid "Back"
+msgstr "Voltar"
+
+#: ../..//classes/ui/controls/mprompt.class.php:146
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../..//classes/persistence/phpconfigloader.class.php:40
+msgid "Class not found"
+msgstr "Classe não encontrada"
+
+#: ../..//classes/ui/controls/boxcontrols.class.php:141
+msgid "Click and drag to move"
+msgstr "Clique e arraste para mover"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:270
+msgid "Click to delete this record"
+msgstr "Clique para apagar este registro"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:295
+msgid "Click to exit this form"
+msgstr "Clique para sair deste formulário"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:277
+msgid "Click to go to search page"
+msgstr "Clique para ir à página de consulta"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:257
+msgid "Click to insert new record"
+msgstr "Clique para inserir novo registro"
+
+msgid "Click to open the calendar"
+msgstr "Clique para abrir o calendário"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:283
+msgid "Click to print"
+msgstr "Clique para imprimir"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:288
+msgid "Click to reset the form"
+msgstr "Clique para redefinir o formulário"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:263
+msgid "Click to save this record"
+msgstr "Clique para salvar este registro"
+
+#: ../..//classes/ui/controls/mprompt.class.php:140
+#: ../..//classes/ui/controls/mprompt.class.php:156
+msgid "Confirmation"
+msgstr "Confirmação"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:270
+msgid "Delete"
+msgstr "Excluir"
+
+#: ../..//classes/ui/controls/boxcontrols.class.php:141
+msgid "Double click to hide"
+msgstr "Duplo clique para esconder"
+
+#: ../..//classes/services/mlog.class.php:90
+msgid "Empty database configuration name!"
+msgstr "Nome de configuração de base de dados vazio!"
+
+#: ../..//classes/ui/controls/mprompt.class.php:105
+#: ../..//classes/persistence/phpconfigloader.class.php:40
+msgid "Error"
+msgstr "Erro"
+
+#: ../..//classes/model/mbusiness.class.php:112
+msgid "Error in Business: _db undefined! "
+msgstr "Erro no Business: _db indefinido! "
+
+#: ../..//classes/flow/mexception.class.php:30
+msgid "Error in Database [@1]: @2"
+msgstr "Erra na base de dados [@1]: @2"
+
+#: ../..//classes/flow/mexception.class.php:105
+msgid "Error in Session: "
+msgstr "Erro na seção: "
+
+#: ../..//classes/miolo.class.php:852
+msgid "Error in UsesBusiness: Class not Found! <BR>Class name: "
+msgstr "Erro em UsesBusiness: Classe não encontrada! <BR>Nome da classe: "
+
+#: ../..//classes/flow/mexception.class.php:115
+msgid "Error in getBusiness: "
+msgstr "Erro no getBusiness: "
+
+#: ../..//classes/miolo.class.php:1503
+msgid "Error in getBusiness: Class not Found! <BR>Class name: "
+msgstr "Erro no getBusiness: Classe não encontrada! <BR>Nome da classe: "
+
+#: ../..//classes/security/mauthldap.class.php:21
+msgid "Error on ldap connection!"
+msgstr "Erro na conexão LDAP"
+
+#: ../..//classes/ui/mui.class.php:166
+msgid "Error: @1 - file not found."
+msgstr "Erro: @1 - arquivo não encontrado."
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:295
+msgid "Exit"
+msgstr "Sair"
+
+#: ../..//classes/miolo.class.php:267 ../..//classes/miolo.class.php:500
+#: ../..//classes/miolo.class.php:616
+msgid "Fatal error"
+msgstr "Erro fatal"
+
+#: ../..//classes/flow/mexception.class.php:85
+msgid "File [@1] not found by Uses!"
+msgstr "Arquivo [@1] não encontrado pelo Uses!"
+
+#: ../..//classes/miolo.class.php:330
+msgid "File not found: "
+msgstr "Arquivo não encontrado: "
+
+#: ../..//classes/security/mperms.class.php:44
+#: ../..//classes/security/mpermsmiolo.class.php:55
+msgid "Groups with access rights"
+msgstr "Grupos com permissões de acesso"
+
+#: ../..//classes/ui/controls/mprompt.class.php:124
+msgid "Information"
+msgstr "Informação"
+
+#: ../..//classes/ui/controls/optionscontrol.class.php:23
+msgid "MOption::setChecked expects an boolean as parameter!"
+msgstr "MOption::setChecked espera um valor booleano como parâmetro!"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:257
+msgid "New"
+msgstr "Novo"
+
+#: ../..//classes/ui/controls/mprompt.class.php:162
+msgid "No"
+msgstr "Não"
+
+#: ../..//classes/flow/mexception.class.php:58
+msgid "No Data Found!"
+msgstr "Dados não encontrados!"
+
+#: ../..//classes/database/mconnection.class.php:92
+msgid "No valid Database connection estabilished."
+msgstr "Nenhuma conexão válida de base de dados foi estabelecida."
+
+#: ../..//classes/ui/controls/listcontrols.class.php:220
+msgid "Options must be an {single,multi}-dimensional array"
+msgstr "Options precisa ser um array {uni,multi}-dimensional"
+
+#: ../..//classes/ui/controls/pagenavigator.class.php:202
+#: ../..//classes/ui/controls/mgridnavigator.class.php:131
+msgid "Page"
+msgstr "Página"
+
+#: ../..//classes/database/mconnection.class.php:146
+msgid "Parse:"
+msgstr "Parse:"
+
+#: ../..//classes/security/mpermsldap.class.php:52
+#: ../..//classes/security/mperms.class.php:39
+#: ../..//classes/security/mpermsmiolo.class.php:44
+msgid "Please inform a valid login/password to access this content."
+msgstr "Por favor informe um login/senha válido para acessar este conteúdo."
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:283
+msgid "Print"
+msgstr "Imprimir"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:288
+msgid "Reset"
+msgstr "Redefinir"
+
+#: ../..//classes/ui/controls/boxcontrols.class.php:141
+msgid "Right click to minimize"
+msgstr "Clique com o botão direito para minimizar"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:263
+msgid "Save"
+msgstr "Salvar"
+
+#: ../..//classes/ui/controls/mtoolbar.class.php:277
+msgid "Search"
+msgstr "Procurar"
+
+#: ../..//classes/flow/mexception.class.php:125
+msgid "Session finished by timeout."
+msgstr "Sessão finalizada por timeout."
+
+#: ../..//classes/ui/controls/choicecontrols.class.php:22
+msgid "This method expects an boolean as parameter!"
+msgstr "Este método espera um valor booleano como parâmetro!"
+
+#: ../..//classes/security/mpermsldap.class.php:51
+#: ../..//classes/security/mperms.class.php:39
+#: ../..//classes/security/mpermsmiolo.class.php:43
+msgid "Transaction: "
+msgstr "Transação: "
+
+#: ../..//classes/database/mconnection.class.php:74
+msgid "Unable to estabilish database connection to host:"
+msgstr "Não foi possível estabelecer conexão com a base de dados no host:"
+
+#: ../..//classes/ui/controls/mprompt.class.php:97
+msgid "Unknown reason"
+msgstr "Razão desconhecida"
+
+#: ../..//classes/security/mpermsldap.class.php:58
+#: ../..//classes/security/mpermsmiolo.class.php:51
+msgid "Users with access rights"
+msgstr "Usuários com permissão de acesso"
+
+#: ../..//classes/ui/controls/listcontrols.class.php:218
+msgid "Values must be an single-dimensional array"
+msgstr "Values precisa ser um array uni-dimensional"
+
+#: ../..//classes/ui/controls/mprompt.class.php:161
+msgid "Yes"
+msgstr "Sim"
+
+#: ../..//classes/ui/controls/gridcontrols.class.php:1178
+msgid "[WARNING] Using scrollable table, it's necessary to inform column width. "
+msgstr "[ADVERTÊNCIA] Usando tabela rolável, é necessário informar a largura da coluna. "
+
+#: ../..//classes/ui/controls/_lookupcontrols.class.php:194
+#: ../..//classes/ui/controls/_lookupcontrols.class.php:401
+msgid "[autocomplete]: Field @1 not found!"
+msgstr "[autocomplete]: Campo @1 não encontrado!"
+
+#: ../..//classes/ui/controls/pagenavigator.class.php:202
+#: ../..//classes/ui/controls/mgridnavigator.class.php:131
+msgid "of"
+msgstr "de"
+
+#: ../..//classes/ui/controls/mform.class.php:976
+msgid "was not informed!"
+msgstr "não foi informado"

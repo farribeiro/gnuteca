@@ -1,0 +1,107 @@
+<?
+include 'alunometodo.class';
+class BusinessAdministracaoAluno extends MBusiness
+{
+
+
+	var $alunometodo;
+	var $idaluno;
+	var $idturma;
+	var $nome;
+	var $turma;
+
+	function __construct($data=null)
+	{
+		parent::__construct('badministracao', $data);
+		$alunometodo=new alunometodo();
+		$this->idaluno		='';
+		$this->idturma		='';
+		$this->nome		='';
+
+	}
+
+	function getById($id)
+	{
+		$this->idaluno = $id;
+		$this->retrieve();
+		return $this;
+	}
+
+	function setData ($data)
+	{
+		$this->idaluno		=$data->idaluno;
+		$this->idturma		=$data->idturma;
+		$this->nome		=$data->nome;
+	}
+
+	function listAll()
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addOrderAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+	function find_idaluno_descricao($parametro){
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addOrCriteria('idaluno','LIKE',"'$parametro'");
+		return $criteria->retrieveAsQuery();
+	}
+
+	function listByDescricao ($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('idaluno','LIKE',"'$parametro'");
+		$criteria->addColumnAttribute('idaluno');
+
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getturma()
+	{
+		$this->retrieveAssociation('turma');
+	}
+
+	function listar($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addColumnAttribute('idaluno');
+		$criteria->addColumnAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getidaluno()
+	{
+		return $this->idaluno;
+	}
+
+	function getidturma()
+	{
+		return $this->idturma;
+	}
+
+	function getnome()
+	{
+		return $this->nome;
+	}
+
+	function setidaluno($idaluno)
+	{
+		$this->idaluno = $idaluno;
+	}
+
+	function setidturma($idturma)
+	{
+		$this->idturma = $idturma;
+	}
+
+	function setnome($nome)
+	{
+		$this->nome = $nome;
+	}
+
+
+
+
+}
+?>

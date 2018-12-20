@@ -1,0 +1,45 @@
+<?
+class frmAluno extends MCompoundForm
+{
+	protected $objAluno;
+	protected $oid;
+	function __construct($objAluno)
+	{
+		$this->objAluno=$objAluno;
+		parent::__construct();
+		$this->SetTitle($this->aluno->nome);
+		$this->SetIcon($this->manager->GetUI()->GetImage('administracao','tools1.png'));
+		$this->SetClose($this->manager->GetActionURL('administracao','main:aluno:find'));
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $page, $module, $context, $action, $history;
+		Util::SetIfNull($this->oid,$this->objAluno->idaluno);
+		parent::CreateFields();
+		$ui = $this->manager->GetUI();
+		$form = Form::GetFormValue('form');
+		switch ($form)
+		{
+			case 'excluir':
+			$this->_form[] = $ui->GetForm('administracao','frmAlunoDel',$this->objAluno,'aluno');
+			break;
+			case 'dados':
+			$this->_form[] = $ui->GetForm('administracao','frmAlunoDados',$this->objAluno,'aluno');
+			break;
+		}
+		if ($this->_form[0])
+		{
+			$this->_form[0]->SetClose($this->manager->GetActionURL('administracao','main:aluno', $objAluno->idaluno));
+		}
+		//Panel
+		$action = $this->manager->context->action;
+		$this->_panel[0]=new ActionPanel('pnlCompound','Opções','',false);
+		$panel=$this->_panel[0];
+		$panel->SetIconType('small');
+		$panel->SetTitle('Código: ' . $this->objAluno->idaluno);
+		$panel->InsertUserAction(0,'administracao_info',A_EXECUTE,'Excluir',$ui->GetImage('administracao','del.png'),'administracao',$action, $this->oid, array("form"=>"excluir"));
+		$panel->InsertUserAction(0,'administracao_info',A_EXECUTE,'Dados de Aluno',$ui->GetImage('administracao','edit.png'),'administracao',$action, $this->oid, array("form"=>"dados"));
+	}
+}
+?>
+

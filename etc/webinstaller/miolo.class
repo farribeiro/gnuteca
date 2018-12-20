@@ -1,0 +1,60 @@
+<?php
+
+require_once($mioloClassesPath . 'miolo.class');
+
+class MyMiolo extends MIOLO
+{
+    public static function getInstance()
+    {
+        return parent::getInstance();
+    }
+}
+
+    //$MIOLO = MIOLO::GetInstance();
+    $MIOLO = MyMIOLO::getInstance();
+
+    include_once('config.php');
+
+    $MIOLO->manager = $MIOLO;
+
+    $MIOLO->autoload = $autoload = new MAutoLoad();
+    $MIOLO->request  = new MRequest();
+    $MIOLO->response = new MResponse();
+
+    require_once( $mioloClassesPath . 'security/mauthdb.class' );
+    require_once( $themePath . 'theme.class' );
+
+    $MIOLO->session = new MSession();
+    $MIOLO->session->start( $MIOLO->_REQUEST('sid') );
+
+    $MIOLO->handlers = array();
+    $MIOLO->uses     = array();
+    $MIOLO->import   = array();
+    $MIOLO->log      = new MLog();
+    $MIOLO->profile  = new MProfile();
+    //        $MIOLO->this->dump     = new MDump();
+    $MIOLO->trace    = new MTrace();
+
+    //        $MIOLO->this->profileEnter('MIOLO::Init');
+
+    $urlContext1 = 'http://' . $_SERVER['HTTP_HOST' ] . $_SERVER['REQUEST_URI'];
+    //miolo2.localhost/webinstaller/index.php' . '?module=install&action=install';
+
+    $MIOLO->context = new MContext($urlContext, 0, false);
+    //$MIOLO->context->isFile = true;
+    $MIOLO->context->setStyle( 0 );
+
+    $MIOLO->history = new MHistory($MIOLO);
+    $MIOLO->auth    = new MAuthDB();
+    //$MIOLO->perms = $MIOLO->getPerms();
+    //$MIOLO->persistence = new PersistentManagerFactory();
+    //$MIOLO->persistence->setConfigLoader('XML');
+    //$MIOLO->profileExit('MIOLO::Init');
+
+    $MIOLO->page = new MPage();
+
+    $subDir = substr($_SERVER['REQUEST_URI']  , 0 , strrpos( $_SERVER['REQUEST_URI'], '/')  );
+    $MIOLO->page->AddStyleURL($subDir . '/help.css');
+    $MIOLO->page->addScript('m_popup.js');
+
+?>

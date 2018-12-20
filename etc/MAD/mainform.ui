@@ -1,0 +1,221 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>MainForm</class>
+<widget class="QMainWindow">
+    <property name="name">
+        <cstring>MainForm</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>M.AD - Miolo ADministration Tool</string>
+    </property>
+    <property name="icon">
+        <pixmap>miolo.png</pixmap>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>This is the MAD's main window</string>
+    </property>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>pixmapLabel1</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>200</x>
+                <y>60</y>
+                <width>300</width>
+                <height>270</height>
+            </rect>
+        </property>
+        <property name="pixmap">
+            <pixmap>logo_miolo.png</pixmap>
+        </property>
+        <property name="scaledContents">
+            <bool>false</bool>
+        </property>
+    </widget>
+</widget>
+<menubar>
+    <property name="name">
+        <cstring>menubar</cstring>
+    </property>
+    <item text="&amp;Application" name="fileMenu">
+        <action name="mnuFileConfig"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </item>
+    <item text="&amp;MIOLO" name="PopupMenu_4">
+        <action name="mnuMioloOpenConf"/>
+        <separator/>
+        <action name="mnuMioloUpdate"/>
+        <action name="mnuMioloInstClasses"/>
+    </item>
+    <item text="M&amp;odules" name="PopupMenu">
+        <action name="mnuModulesConfigure"/>
+    </item>
+    <item text="&amp;Help" name="helpMenu">
+        <separator/>
+        <action name="helpAboutAction"/>
+    </item>
+</menubar>
+<toolbars>
+    <toolbar dock="2">
+        <property name="name">
+            <cstring>toolBar</cstring>
+        </property>
+        <property name="label">
+            <string>Tools</string>
+        </property>
+        <separator/>
+        <action name="helpAboutAction"/>
+        <separator/>
+        <action name="fileExitAction"/>
+    </toolbar>
+</toolbars>
+<actions>
+    <action>
+        <property name="name">
+            <cstring>fileExitAction</cstring>
+        </property>
+        <property name="text">
+            <string>Exit</string>
+        </property>
+        <property name="menuText">
+            <string>E&amp;xit</string>
+        </property>
+        <property name="toolTip">
+            <string>Exit MAD</string>
+        </property>
+        <property name="statusTip">
+            <string>Exit MAD</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>helpAboutAction</cstring>
+        </property>
+        <property name="text">
+            <string>About</string>
+        </property>
+        <property name="menuText">
+            <string>&amp;About</string>
+        </property>
+        <property name="statusTip">
+            <string>About MAD Tool</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>mnuModulesConfigure</cstring>
+        </property>
+        <property name="text">
+            <string>&amp;Configure Modules</string>
+        </property>
+        <property name="whatsThis">
+            <string>This gives you access to the configuration of the environment Modules. You can configure, delete or install new modules.</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>mnuMioloOpenConf</cstring>
+        </property>
+        <property name="text">
+            <string>&amp;Open miolo.conf</string>
+        </property>
+        <property name="toolTip">
+            <string>Open miolo.conf</string>
+        </property>
+        <property name="statusTip">
+            <string>Open MIOLO's configuration file: miolo.conf</string>
+        </property>
+        <property name="whatsThis">
+            <string>This option opens miolo configuration file</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>mnuMioloUpdate</cstring>
+        </property>
+        <property name="text">
+            <string>&amp;Update MIOLO</string>
+        </property>
+        <property name="toolTip">
+            <string>Update MIOLO</string>
+        </property>
+        <property name="statusTip">
+            <string>Update installed MIOLO version</string>
+        </property>
+        <property name="whatsThis">
+            <string>Use this option to update your installed version of MIOLO</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>mnuMioloInstClasses</cstring>
+        </property>
+        <property name="text">
+            <string>Install New &amp;Classes</string>
+        </property>
+        <property name="toolTip">
+            <string>Install New Classes</string>
+        </property>
+    </action>
+    <action>
+        <property name="name">
+            <cstring>mnuFileConfig</cstring>
+        </property>
+        <property name="text">
+            <string>&amp;Configure MAD</string>
+        </property>
+        <property name="toolTip">
+            <string>Configure MAD</string>
+        </property>
+        <property name="statusTip">
+            <string>Configure MAD</string>
+        </property>
+    </action>
+</actions>
+<connections>
+    <connection>
+        <sender>fileExitAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>fileExit()</slot>
+    </connection>
+    <connection>
+        <sender>helpAboutAction</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>helpAbout()</slot>
+    </connection>
+    <connection>
+        <sender>mnuMioloOpenConf</sender>
+        <signal>activated()</signal>
+        <receiver>MainForm</receiver>
+        <slot>editConf()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">mainform.ui.h</include>
+</includes>
+<slots>
+    <slot>fileExit()</slot>
+    <slot>helpAbout()</slot>
+    <slot>editConf()</slot>
+    <slot>newSlot()</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

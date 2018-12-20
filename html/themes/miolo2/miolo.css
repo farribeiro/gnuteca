@@ -1,0 +1,4377 @@
+/**
+ * Miolo 2 Theme
+ *
+ * @author Jonas Guilherme Dahmer [jonas@solis.coop.br]
+ * @author Rafael Spengler [rafaels@solis.coop.br] 
+ * @author Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+ *
+ * @version $Id$
+ *
+ * \b Maintainers: \n
+ * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+ *
+ * @since
+ * This css was created 2006/09/15
+ *
+ * \b Organization: \n
+ * SOLIS - Cooperativa de Soluções Livres \n
+ * The MIOLO Development Team
+ *
+ * \b CopyLeft: \n
+ * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+ *
+ * \b License: \n
+ * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+ *
+ * \b History: \n
+ * See history in repository: http://www.miolo.org.br/
+ *
+ */
+
+/******************************************************************************
+ * spacer div
+ ******************************************************************************/
+.m-spacer { 
+    	clear: both;
+	line-height: 0px; 
+	background-color:transparent;
+} 
+
+/******************************************************************************
+ * Box
+ ******************************************************************************/
+.m-box-box
+{
+  	border-top:    1px solid threedhighlight;
+  	border-right:    1px solid threedshadow;
+  	border-bottom:    1px solid threedshadow;
+  	border-left:    1px solid  threedhighlight;
+  	margin-top: auto;
+  	margin-bottom: auto;
+	border-left: 1px solid #c0c0c0;
+	border-top: 1px solid #c0c0c0;
+	background-color: #ededed;
+}
+
+.m-box-outer
+{
+  	/*border-top:    1px solid threedlightshadow;
+  	border-right:    1px solid threeddarkshadow;
+  	border-bottom:    1px solid threeddarkshadow;
+  	border-left:    1px solid  threedlightshadow;*/
+}
+
+* html .m-box-box
+{
+   	height: 1%;
+}
+
+.m-box-title
+{
+  	background: highlight;
+  	font-weight:      bold;
+  	color: highlighttext;
+  	text-decoration:  none;
+  	height:20px;
+  	vertical-align:   top;
+  	margin: 0px 0px 5px 0px;
+}
+
+.m-box-title-minimized
+{
+  	background: highlight;
+  	font-weight:      bold;
+  	color: highlighttext;
+  	text-decoration:  none;
+  	height:20px;
+  	vertical-align:   top;
+  	margin: 0px 0px 5px 0px;
+}
+
+.m-box-title .caption
+{
+  	text-align: left;
+  	padding-top:2px;
+  	float: left; 
+ 	width: 80%;
+}
+
+.m-box-title .icon
+{
+  	float: left; 
+  	padding-top:2px;
+  	padding-left:2px;
+  	width:20px;
+}
+
+.m-box-title .button
+{
+  	float: right; 
+  	padding-top:2px;
+  	padding-right: 0px;
+  	width:20px;
+  	text-align:right;
+}
+
+.m-box-content
+{
+/*  	background: #FFFFFF; */
+    	background-color: #ededed;
+  	font: caption;
+  	padding:          8px;	
+}
+
+/******************************************************************************
+ * Panel
+ ******************************************************************************/
+
+/* Tan hack for IE/Win */
+
+* html .m-panel-body
+{
+   	height: 1%;
+}
+
+.m-panel-body
+{
+   	padding:          3px;
+/*      	background-color: #ededed;  */
+ 	background-color: #FFFFFF; 
+    overflow:hidden;
+
+}
+
+.m-panel-body .m-image-link img
+{
+    opacity:1.0;
+}
+
+.m-panel-body .m-image-link img:hover
+{
+    opacity:0.6;
+}
+
+
+.m-panelcontrol-box
+{
+   	margin:          2px 2px 2px 2px;
+}
+
+#m_painel
+{
+    margin: 2px;
+    border-color:#FFF;
+    /*margin-bottom: 2px;*/
+}
+
+
+/******************************************************************************
+ * promptBox
+ ******************************************************************************/
+
+.m-prompt-box
+{
+  	width:       100%;
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+  	text-align:center;
+  	border:0 none;
+
+}
+
+.m-prompt-box-box
+{
+  	width: 310px;
+  	margin-left:auto;
+  	margin-right: auto;
+}
+
+
+.m-prompt-box-button
+{
+   	clear: left;
+   	text-align: center;
+}
+
+.m-prompt-box-button li button
+{
+	font-size: 11px; 
+	font-weight: normal;
+/*     	font: caption; */
+	width: 80px;
+/*     	margin: 5px; */
+}
+
+.m-prompt-box-button ul 
+{ 
+    	list-style: none; 
+    	padding: 0;
+    	margin: 0;
+}
+
+.m-prompt-box-button ul li
+{ 
+    	display: inline;
+}
+
+.m-prompt-box-text
+{
+   	float:left;
+   	text-align: left;
+   	padding: 5px 5px 5px 40px;
+   	font-size:        11px;
+   	font-weight:      bold;
+}
+
+.m-prompt-box-text li
+{
+   	background-image: url(../../images/bullet.gif);
+   	background-repeat: no-repeat; 
+   	background-position: 0 0.5em;
+   	margin-left: .7em;
+    	padding-left: 10px;   
+}
+
+.m-prompt-box-text ul 
+{ 
+    	list-style: none; 
+    	padding: 0;
+    	margin: 0;
+}
+
+.m-prompt-box-title
+{
+  	color:            #FFFFFF;
+  	font-weight:      bold;
+  	font-size:        12px;
+  	text-decoration:  none;
+  	vertical-align:   top;
+  	height:20px;
+  	margin: 2px 1px 0px 1px;
+}
+
+.m-prompt-box-title .caption
+{
+  	text-align: left;
+  	padding-top:2px;
+  	float: left; 
+  	width: 220px;
+}
+
+.m-prompt-box-title .icon
+{
+  	float: left; 
+  	padding-top:2px;
+  	padding-left:2px;
+  	width:20px;
+}
+
+.m-prompt-box-title .button
+{
+  	float: right; 
+  	padding-top:2px;
+  	padding-right: 2px;
+	margin: 0px;
+  	width:20px;
+  	text-align:right;
+}
+
+.m-prompt-box-title-error
+{
+ 	 background-color: #d42428;
+}
+
+.m-prompt-box-error
+{
+    	background-color: #FFFFFF; 
+   	width:       100%;
+   	background-image: url(../../images/error.png);
+   	background-repeat: no-repeat; 
+   	background-position: 5px 5px;
+}
+
+.m-prompt-box-title-information
+{
+  	background-color: #0000ff;
+}
+
+.m-prompt-box-information
+{
+    	background-color: #FFFFFF; 
+   	width:100%;
+   	background-image: url(../../images/information.png);
+   	background-repeat: no-repeat; 
+   	background-position: 5px 5px;
+}
+
+.m-prompt-box-title-confirmation
+{
+  	background-color: #006633;
+}
+
+.m-prompt-box-confirmation
+{
+    	background-color: #FFFFFF; 
+   	width:100%;
+   	background-image: url(../../images/question.png);
+   	background-repeat: no-repeat; 
+   	background-position: 5px 5px;
+}
+
+.m-prompt-box-title-question
+{
+  	background-color: #c1b746;
+}
+
+.m-prompt-box-question
+{
+    	background-color: #FFFFFF;
+   	width:100%;
+   	background-image: url(../../images/question.png);
+   	background-repeat: no-repeat; 
+   	background-position: 5px 5px;
+}
+
+/**
+ * Miolo 2 Theme
+ *
+ * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+ * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+ * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+ * 
+ * @version $Id$
+ *
+ * \b Maintainers: \n
+ * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+ *
+ * @since 
+ * This css was created 2006/09/15
+ *
+ * \b Organization: \n
+ * SOLIS - Cooperativa de Soluções Livres \n
+ * The ??? Development Team
+ * 
+ * \b CopyLeft: \n
+ * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+ *
+ * \b License: \n
+ * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+ * 
+ * \b History: \n
+ * See history in repository: http://www.miolo.org.br/
+ *
+ */
+
+/******************************************************************************
+ * Containers
+ ******************************************************************************/
+
+body
+{
+    background:  #FFFFFF;
+    font-family: verdana,  helvetica, arial, geneva, tahoma, sans-serif;
+    font-size:   70%;
+    margin:      1px;
+    padding:     0px;
+    color:       #000;
+    width:       100%;
+    text-align:  center;
+    border:      0 none;
+}
+
+h1
+{
+    font-size:   12px;
+    font-weight: bold;
+    color:       #000;
+    margin:      0px 0px 10px 0px;
+}
+
+h2
+{
+    font-size:   11px;
+    font-weight: bold;
+    color:       #000;
+    margin:      0px 0px 0px 15px;
+}
+
+h3
+{
+    font-size:   11px;
+    font-weight: normal;
+    color:       #900;
+    margin:      0px 0px 0px 35px;
+    display:     inline;
+}
+
+h4
+{
+    font-size:   10px;
+    font-weight: normal;
+    color:       #000;
+    margin:      0px 0px 0px 45px;
+    padding:     0px;
+    display:     inline;
+}
+
+fieldset
+{
+    font-size:   11px;
+    font-weight: normal;
+    margin:      0px;
+    padding:     3px;
+}
+
+#m-container
+{
+    width:        750px;
+    /*border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;*/
+    margin-left:  auto;
+    margin-right: auto;
+    text-align:   left;
+}
+
+#m-container-top
+{
+    margin:        0px;
+    padding:       0px;
+    background:    #FFF;
+    height:        60px;
+    border-bottom: 2px solid #003399;
+}
+
+#m-container-top .logo
+{
+    float:      left;
+    width:      65px;
+    margin:     0px;
+    padding:    0px;
+    background: #FFF;
+}
+
+#m-container-top .text
+{
+    float:      right;
+    width:      685px;
+    margin:     0px;
+    padding:    0px;
+    background: #FFF;
+    text-align: right;
+}
+
+#m-container-top .text h1
+{
+    font-size:   14px;
+    font-weight: bold;
+    color:       #40bbfb;
+    margin:      0px;
+}	
+
+#m-container-top .text h2
+{
+    font-size:   12px;
+    font-weight: bold;
+    color:       #8ad6fd;
+    margin:      0px;
+}	
+
+#m-container-module
+{
+    background:  #eee;
+    padding:     2px;
+    font-size:   11px;
+    font-weight: bold;
+    text-align:  right;
+}
+
+#m-container-topmenu
+{
+    background-color: highlight;
+    border-bottom:    1px solid #eee;
+    padding:          0px;
+    position:         relative; /* posistion deve ser relative */
+    z-index:          0; /* z-index deve ser menor que em mainmenuContainer */
+}
+
+#m-container-dhtmlmenu /* estilo para o mainmenuContainer -> deve ser criado */
+{
+    padding:          0px;
+    top:              0px;
+    position:         relative; /* position deve ser relative */
+    z-index:          1; /* z-index deve ser maior que em contentContainer e contentFullContainer */
+    background-color: highlight;
+    width:            100%;
+    height:           25px;
+}
+
+#m-container-menu
+{
+    float:      left;
+    background: #FFFFFF;
+    width:      150px;
+    padding:    0px;
+}
+
+#m-container-content
+{
+    float:         left;
+    width:         740px;
+    height:        auto;
+    text-align:    left;
+    margin-left:   8px;
+    margin-right:  8px;
+    margin-top:    8px;
+    margin-bottom: 8px;
+    position:      relative; /* posistion deve ser relative */
+    z-index:       0; /* z-index deve ser menor que em mainmenuContainer */
+}
+
+#m-container-content-full
+{
+    height:        auto;
+    text-align:    left;
+    margin-left:   1px;
+    margin-right:  1px;
+    margin-top:    3px;
+    margin-bottom: 5px;
+    position:      relative; /* posistion deve ser relative */
+    z-index:       0; /* z-index deve ser menor que em mainmenuContainer */
+}
+
+#m-container-bottom
+{
+    clear:      both;
+    text-align: center;
+}
+
+#m-container-minbar
+{
+ width: 750px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: left;
+ clear: both;
+ text-align: left;
+}
+
+.currentPageNumber
+{
+    color:       #ff0000;
+    font-weight: bold;
+}
+
+div.statistics
+{
+    position: absolute;
+    width:    500px;
+    left:     10px;
+    overflow: scroll;
+    height:   200px;
+}
+
+div.statistics .image
+{
+    text-align: right;
+}
+
+div.statistics .text
+{
+    background-color: #FFFFFF;
+    border-top:       solid #555555 1pt;
+    border-bottom:    solid #ffffff 1pt;
+    border-left:      solid #555555 1pt;
+    border-right:     solid #ffffff 1pt;
+    vertical-align:   top;
+    font-size:        10px;
+    font-style:       normal;
+    font-weight:      normal;
+    color:            #000055;
+    padding:          4pt;
+}
+
+#m-loading-message
+{
+    display:  none;
+    top:      1.5%;
+    right:    1%;
+    width:    100px;
+    height:   32px;
+    position: absolute;
+    border:   solid 1px #000000;
+}
+
+#m-loading-message-bg
+{
+    display:    none;
+    top:        1.5%;
+    right:      1%;
+    width:      100px;
+    height:     32px;
+    background: #ddd;
+    position:   absolute;
+    opacity:    0.5;
+    /*   IE   */
+    border:     solid 1px #000000;
+}
+
+#m-loading-message-image
+{
+    top:         0px;
+    width:       100px;
+    height:      32px;
+    opacity:     1.0;
+    background:  url("/images/loading_solis1.gif") no-repeat;
+    position:    relative;
+    margin-left: 0px;
+    margin-top:  2px;
+}
+
+#m-loading-message-text
+{
+    font-size:   10px;
+    top:         0px;
+    width:       50px;
+    opacity:     1.0;
+    padding-top: 5px;
+    position:    relative;
+    margin-top:  3px;
+    margin-left: 40px;
+}/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+/******************************************************************************
+ * hr
+ ******************************************************************************/
+.m-hr 
+{ 
+    	width: 100%; 
+    	height: 0px; 
+    	border-bottom: 1px solid #CCC; 
+	line-height: 0px; 
+    	font-size: 0px; 
+	margin: 0px;
+} 
+
+/******************************************************************************
+ * separator
+ ******************************************************************************/
+.m-separator 
+{ 
+    	width: 95%;
+    	font-size:        11px;
+    	padding:          2px;
+	margin:           0px 0px 2px 0px;
+    	font-weight:      normal;
+} 
+
+/******************************************************************************
+ * htmlArea
+ ******************************************************************************/
+#m-htmlarea 
+{ 
+    	margin: 15px;
+    	width:90%;   
+} 
+
+.m-hint
+{
+  	background-color: #f2f5f7;
+  	font-size:        9px;
+  	border:           solid #93bcd9 1px;
+  	color:            #990000;
+}
+
+.formBaseLabel
+{
+   	height: 15px;
+}
+
+.m-label
+{
+    color:            #000000;
+    font-size:        11px;
+    font-weight:      normal;
+    margin-left:      2px;
+}
+
+.m-caption
+{
+  	color:            #000000;
+  	font-size:        11px;
+	margin:           2px;
+        font-weight:      normal;
+}
+
+.m-label-text
+{
+  	color:            #000000;
+  	font-size:        11px;	
+  	font-weight:      bold;
+	margin:           2px;
+}
+
+.m-text
+{
+  	font-size:        11px;
+  	font-weight:      normal; 
+	margin:           2px;
+}
+
+.m-text-field
+{
+  	font-size:        11px;
+  	font-weight: normal; 
+	margin: 2px;
+	background: #FFFFFF;
+	border: 1px solid #93bcd9;
+}
+
+.m-text-field:focus, .m-text-field:hover
+{
+  	font-size:        11px;
+  	font-weight: normal; 
+	margin: 2px;
+	background: #FFFFFF;
+	border: 1px solid #1866b2;
+}
+
+.m-text-user-field
+{
+    padding-left:18px;
+    background-image: url(../../images/user.png);
+    background-repeat: no-repeat;
+    border: 1px solid #1866b2;
+}
+
+.m-text-passwd-field
+{
+    padding-left:18px;
+    background-image: url(../../images/keys.png);
+    background-repeat: no-repeat;
+}
+
+.m-button 
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED;
+    	border-bottom: 1px solid #333333;
+    	border-right: 1px solid #333333;
+    	border-left: 1px solid #CCCCCC;
+    	border-top: 1px solid #CCCCCC;
+	height: 19px;
+	margin:2px;
+}
+
+.m-button:hover 
+{
+    font-size: 11px; 
+    font-weight: normal; 
+    background-color: #f2f5f7;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    height: 19px;
+    margin:2px;
+}
+
+.m-button:active
+{
+    font-size: 11px;
+    font-weight: normal;
+    background-color: #f2f5f7;
+    border-bottom: 1px solid #CCCCCC;
+    border-right:  1px solid #CCCCCC;
+    border-left:   1px solid #333333;
+    border-top:    1px solid #333333;
+    height: 19px;
+    margin:2px;
+}
+
+.m-button-find 
+{
+    background-image: url(../../images/button_select.png);
+    background-repeat: no-repeat; 
+    background-color: #EDEDED;
+    margin-top: 1px;
+    border:none;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    width: 17px;
+    height: 17px;
+/* text-align: middle; */
+    vertical-align: top;
+    margin-left:1px;
+}
+
+.m-button-find:hover
+{
+    background-image:  url(../../images/button_select.png);
+    background-repeat: no-repeat; 
+    background-color:  #f5f5f7;
+    margin-top: 1px;
+    border:     none;
+    border-bottom: 1px solid #333333;
+    border-right:  1px solid #333333;
+    border-left:   1px solid #CCCCCC;
+    border-top:    1px solid #CCCCCC;
+    width:  17px;
+    height: 17px;
+/* 	text-align: middle; */
+    vertical-align: top;
+    margin-left:1px;
+}
+
+.m-button-find:active
+{
+    background-image:  url(../../images/button_select.png);
+    background-repeat: no-repeat; 
+    background-color:  #f5f5f7;
+    margin-top: 1px;
+    border:     none;
+    border-bottom: 1px solid #CCCCCC;
+    border-right:  1px solid #CCCCCC;
+    border-left:   1px solid #333333;
+    border-top:    1px solid #333333;
+    width:  17px;
+    height: 17px;
+/*  text-align: middle; */
+    vertical-align: top;
+    margin-left:1px;
+}
+
+
+.m-button-close-up 
+{  
+    	font: message-box;
+    	background-image: url(../../images/button_close_up.gif);
+    	background-repeat: no-repeat; 
+	width: 17px;
+	height: 17px;
+/* 	text-align: middle; */
+	vertical-align: top;
+	float: left;
+	margin:2px 0px 2px 1px;
+}
+
+.m-button-close-down 
+{  
+    	font: message-box;
+    	background-image: url(../../images/button_close_down.gif);
+    	background-repeat: no-repeat; 
+	width: 17px;
+	height: 17px;
+/* 	text-align: middle; */
+	vertical-align: top;
+	float: left;
+	margin:2px 0px 2px 1px;
+}
+
+.m-button-minimize-up {  
+    font: message-box;
+    background-image: url(../../images/button_minimize_up.gif);
+    background-repeat: no-repeat; 
+    width: 17px;
+    height: 17px;
+/*    text-align: center; */
+    vertical-align: top;
+	float: right;
+	margin:2px 0px 2px 1px;
+}
+
+.m-button-minimize-down {  
+    font: message-box;
+    background-image: url(../../images/button_minimize_down.gif);
+    background-repeat: no-repeat; 
+    width: 17px;
+    height: 17px;
+/*    text-align: center; */
+    vertical-align: top;
+	float: right;
+	margin:2px 0px 2px 1px;
+}
+
+
+.m-button-help-up {  
+    font: message-box;
+    background-image: url(../../images/button_help_up.png);
+    background-repeat: no-repeat; 
+    width: 17px;
+    height: 17px;
+/*    text-align: center; */
+    vertical-align: top;
+	float: right;
+	margin:2px 0px 2px 1px;
+}
+
+.m-button-help-down {  
+    font: message-box;
+    background-image: url(../../images/button_help_down.png);
+    background-repeat: no-repeat; 
+    width: 17px;
+    height: 17px;
+/*    text-align: center; */
+    vertical-align: top;
+	float: right;
+	margin:2px 0px 2px 1px;
+}
+
+
+.formField 
+{
+    font-size: 11px; 
+    font-weight: normal; 
+    /*border: 1px #CCCCCC solid;*/
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+    vertical-align: top;
+    margin:2px;
+}
+
+.m-multiline-field 
+{
+    font-size: 11px;
+    font-weight: normal;
+    border: 1px #93bcd9 solid;
+    /*border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;*/
+    background-color: #FFFFFF;
+    vertical-align: top;
+    margin:2px;
+}
+
+.formFieldErr
+{
+    color: #FF0000;
+    font-size: 11px;
+    font-weight: normal;
+    border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;
+}
+
+/*
+* RadioButton e CheckBox Stylizados
+*/
+/*
+#radioButton{
+  display: block;
+  padding:0;
+  height: 12px;
+  width: 12px;
+  color: #000;
+  font-size: 14pt;
+  background-color: #FFFFFF;
+  border: #93bcd9 solid 1px;
+  outline: 1px solid #93bcd9;
+
+}
+#radioButton:active{
+  color: #93bcd9;
+  background-color: #FFFFFF;
+  border: #93bcd9 solid 1px;
+  outline: 1px solid #93bcd9;
+
+}
+
+#radioButton:focus{
+  color: #93bcd9;
+  background-color: #93bcd9;
+  outline: 1px solid #1866b2;
+}*/
+
+input[type=checkbox]
+{
+  display: block;
+  padding:0;
+  height: 12px;
+  width: 12px;
+  color: #93bcd9;
+  font-size: 14pt;
+  background-color: #FFFFFF;
+  border: #93bcd9 solid 1px;
+  outline: 1px solid #93bcd9;
+
+}
+
+input[type=checkbox]:active
+{
+  color: #93bcd9;
+  background-color: #FFFFFF;
+  border: #93bcd9 solid 1px;
+  outline: 1px solid #93bcd9;
+}
+
+input[type=checkbox]:focus
+{
+  color: #93bcd9;
+  background-color: #FFFFFF;
+  outline: 1px solid #1866b2;
+}
+
+/*
+* Fim RadioButton e CheckBox Stylizados
+*/	
+
+
+input[type=password]
+{
+  border: 1px solid #93bcd9;
+}
+
+input[type=password]:hover, input[type=password]:focus
+{
+  border: 1px solid #1866b2;
+}
+
+input[type=text]
+{
+  border: 1px solid #93bcd9;
+}
+
+input[type=text]:hover, input[type=text]:focus
+{
+  border: 1px solid #1866b2;
+}
+
+input[type=file]
+{
+  border: 1px solid #1866b2;
+}
+
+input[type=file]:hover, input[type=file]:focus
+{
+  border: 1px solid #1866b2;
+}
+
+input[readonly], input[readonly]:hover, input[readonly]:focus
+{
+    border: 1px solid #DDDDDD;
+    color: #676767;
+}
+
+textarea
+{
+    background-color: #FFFFFF;
+    border: 1px solid #93bcd9;
+}
+
+textarea:hover, textarea:focus
+{
+    background-color: #FFFFFF;
+    border: 1px solid #1866b2;
+}
+
+legend
+{
+    font-weight: bold;
+}
+
+.m-combo
+{
+    font-size: 11px;
+    font-weight: normal;
+    background-color: #f2f5f7;
+    margin:2px;
+    border: 1px solid #93bcd9;
+}
+
+
+.m-radiobutton-group
+{
+    color:          #000000;
+    font-size:      11px;
+    font-weight:    normal; 
+    margin-top:     1px;
+    margin-bottom:  1px;
+    vertical-align: 20%;
+}
+
+.m-checkbox-group
+{
+    color:          black;
+    font-size:      11px;
+    font-weight:    normal;
+    margin-top:     2px;
+    margin-bottom:  1px;
+    vertical-align: 20%;
+}
+
+.formErrors
+{
+    background-color: #990000;
+    border:           1px solid #000000;
+    padding:          6px;
+    color:            #ffffff;
+}
+
+.m-scrollable-label
+{
+    color:            #000000;
+    font-size:        11px;
+    font-weight:      normal;
+}
+
+.m-scrollable-field
+{
+    background-color: #EDEDED; 
+    border:           solid #c0c0c0 1px;
+    overflow:auto;
+}
+
+
+.m-multitext-field
+{
+/*   position:relative;*/
+    background-color: #EDEDED;
+}
+
+.m-multitext-field .select
+{
+    font-size:   11px;
+    font-weight: normal;
+    /*border: 1px #CCCCCC solid;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-left: 1px solid #333333;
+    border-top: 1px solid #333333;*/
+    width: 180px; 
+    /*background: #FFFFFF; */
+    border: 1px solid #93bcd9;
+}
+
+.m-multitext-field .label
+{
+  	color:            #000000;
+  	font-size:        9px;
+  	margin-top:       1px;
+  	margin-bottom:    1px;
+  	vertical-align:   top;
+}
+
+.m-multitext-field .textfield 
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	/*border: 1px #CCCCCC solid;
+    	border-bottom: 1px solid #CCCCCC;
+    	border-right: 1px solid #CCCCCC;
+    	border-left: 1px solid #333333;
+    	border-top: 1px solid #333333;	*/
+/* 	background: #FFFFFF; */
+	border: 1px solid #93bcd9;
+}
+
+.m-multitext-field .combo
+{  
+	font-size: 11px; 
+	font-weight: normal; 
+	/*background-color: #EDEDED; 
+	border: 1px #CCCCCC solid;
+    	border-bottom: 1px solid #333333;
+    	border-right: 1px solid #333333;
+    	border-left: 1px solid #CCCCCC;
+    	border-top: 1px solid #CCCCCC;	*/
+/* 	background: #f2f5f7; */
+	border: 1px solid #93bcd9;
+}
+
+.m-multitext-field .button {  
+	font-size: 11px; 
+	font-weight: normal; 
+	background-color: #EDEDED;
+    	border: 1px solid #CCCCCC;
+    	border-bottom: 1px solid #333333;
+    	border-right: 1px solid #333333;
+    	border-left: 1px solid #CCCCCC;
+    	border-top: 1px solid #CCCCCC;
+    	margin: 0px 5px 5px 0px;
+	width: 70px;
+	text-align: center;
+	vertical-align:top;
+}
+
+.m-multitext-field .buttonPosH
+{  
+    	float:left;
+}
+
+.m-multitext-field .fieldPosH
+{  
+    	float:left;
+	width: 200px;
+}
+
+.m-multitext-field .selectPosH
+{  
+    	float:left;
+}
+
+.m-multitext-field .selection
+{  
+    	float:left;
+	width: 280px;
+}
+
+.m-multitext-field fieldset
+{  
+    	padding: 10px;
+	border: 1px solid #CCC;
+}
+
+/******************************************************************************
+ * TableRaw
+ ******************************************************************************/
+
+.m-tableraw
+{
+  	background-color: #359;
+  	padding:          4px;
+}
+
+.m-tableraw-title
+{ 
+  	background-color: #FFF;
+  	color:           #359;
+  	font-weight:     bold;
+  	font-size:       12px;
+  	text-decoration: none;
+  	text-align:      center;
+}
+
+.m-tableraw-column-title
+{ 
+  	background-color: #FFF;
+  	color:           #000;
+  	font-weight:     bold;
+  	font-size:       11px;
+  	text-decoration: none
+/*   	text-align:      left; */
+}
+
+.m-tableraw-row
+{
+  	background-color: #FFF;
+  	color:           #000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	text-decoration: none
+}
+
+.m-tableraw-row-0
+{
+	  background-color: #FFF;
+  	color:           #000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	text-decoration: none
+}
+
+.m-tableraw-row-1
+{
+  	background-color: #DDD;
+  	color:           #000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	text-decoration: none
+}
+
+.m-tableraw-cell
+{
+}
+
+
+/******************************************************************************
+ * pageNavigator
+ ******************************************************************************/
+
+.m-pagenavigator
+{
+  	background-color: #c0c0c0;
+  	border:           1px solid #c0c0c0;
+  	padding:          2px;
+}
+    
+.m-pagenavigator-text
+{ 	
+  	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	vertical-align: top;
+}
+    
+.m-pagenavigator-range
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       11px;
+}
+
+.m-pagenavigator-image
+{
+	border: 0;
+    	vertical-align: middle;
+	width: 17px; 
+	display:inline;
+}
+
+.m-pagenavigator-selected
+{ 
+	color:           #900;
+  	font-weight:     bold;
+  	font-size:       11px;
+  	text-decoration: none;
+  	margin-left: 5px;
+  	vertical-align: top;
+}
+
+.m-pagenavigator-link
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	text-decoration: underline;	
+  	vertical-align:   middle;
+  	margin-left: 5px;
+  	vertical-align: top;
+}	
+    
+.m-pagenavigator-link:link, .m-pagenavigator-link:visited
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	text-decoration: underline;
+}
+
+.m-pagenavigator-link:active, .m-pagenavigator-link:hover
+{
+  	color:           #990000;
+  	font-weight:     normal;
+  	text-decoration: underline;
+}
+
+/******************************************************************************
+ * Hyperlink
+ ******************************************************************************/
+
+.m-link
+{ 
+	color:           #000000;
+  	font-weight:     bold;
+  	font-size:       11px;
+  	text-decoration: underline;
+}
+
+.m-link:link
+{ 
+	color:           #000000;
+  	font-weight:     bold;
+  	text-decoration: underline;
+}
+
+.m-link:visited
+{
+  	color:           #000000;
+  	font-weight:     bold;
+  	text-decoration: underline;
+}
+
+.m-link:hover
+{
+  	color:           #990000;
+  	font-weight:     bold;
+  	text-decoration: underline;
+}
+
+.m-link:active
+{
+  	color:           #990000;
+	font-weight:     bold;	
+  	text-decoration: underline;
+}
+/******************************************************************************
+ * Images
+ ******************************************************************************/
+.m-image-centered
+{
+    	text-align:center;
+    	margin-top:0px;
+    	margin-bottom:0px;
+    	padding:0px;
+}
+
+.m-image-icon
+{
+    	vertical-align:middle;
+    	margin: 2px;
+    	padding:0px;
+	width: 16px;
+	height: 16px;
+	border: none;
+}
+
+.m-image-link
+{ 
+  	text-decoration: none;
+}
+
+.m-image-label
+{
+  	color:            #000000;
+  	font-size:        10px;
+  	text-align:       center;
+  	margin: 3px 3px 3px 3px;
+  	display:block;
+}
+
+.m-image-link-label
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       11px;
+  	text-decoration: underline;
+}
+
+.m-image-link-label:link
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	text-decoration: underline;
+}
+
+.m-image-link-label:visited
+{
+  	color:           #000000;
+  	font-weight:     normal;
+  	text-decoration: underline;
+}
+
+.m-image-link-label:hover
+{
+  	color:           #990000;
+  	font-weight:     normal;
+  	text-decoration: underline;	
+}
+
+.m-image-link-label:active
+{
+  	color:           #990000;
+  	font-weight:     normal;
+  	text-decoration: underline;
+}
+
+readonly, .m-readonly, .m-readonly:hover, .m-readonly:focus
+{
+	clear: both;
+  	color:            #000000;
+  	font-size:        11px;
+	border:           1px #999999 solid;
+	background-color: #f2f5f7;
+}
+/******************************************************************************
+ * DHTMLMenu
+ ******************************************************************************/
+/* level 0 inner */
+.m0l0iout {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+.m0l0iover {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+.m0l0idown {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+
+/* level 0 outer */
+.m0l0oout {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+.m0l0oover {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+    	background-color: #CCC;
+    	border-top:    1px solid  threedhighlight;
+    	border-right:    1px solid threeddarkshadow;
+    	border-bottom:    1px solid threeddarkshadow;
+    	border-left:    1px solid   threedhighlight;
+	font-weight:   normal;
+	text-decoration: none;
+}
+.m0l0odown {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 2px;
+	padding: 0px;
+    	border-bottom:    1px solid  threedhighlight;
+    	border-left:    1px solid threeddarkshadow;
+   	border-top:    1px solid threeddarkshadow;
+    	border-right:    1px solid   threedhighlight;
+	font-weight:   normal;
+	text-decoration: none;
+}
+
+/* level 1 inner */
+.m0l1iout {
+	color:           #000000;
+	font: menu;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+.m0l1iover {
+	color: highlighttext;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: highlight;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+}
+
+/* level 1 outer */
+.m0l1oout {
+	color:           #000000;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+    	border: 1px solid  threedshadow;
+}
+.m0l1oover {
+	color: highlighttext;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: highlight;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+    	border: 1px solid  threedshadow;
+}
+
+/* level 2 inner */
+.m0l2iover {
+	color:           #000000;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+	font-weight:   normal;
+	text-decoration: none;
+}
+
+/* level 2 outer */
+.m0l2oout {
+	color:           #000000;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+}
+.m0l2oover {
+	color:           #000000;
+	font: menu;
+	font-weight:   normal;
+	text-decoration: none;
+	background: menu;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0px;
+}
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+.ThemeGrayMenu,.ThemeGraySubMenuTable
+{
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 11px;
+
+	color: white;
+	background-color: #ffffff;
+
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeGraySubMenu
+{
+	position:	absolute;
+	display:	block;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	border:		1px outset #9C9A9C;
+	background-color: transparent;
+}
+
+.ThemeGraySubMenuTable
+{
+	border-collapse:	separate;
+	opacity:	0.9;
+	filter:Alpha(style=0,opacity=90);
+}
+
+.ThemeGrayMenuItem,.ThemeGrayMenuItemHover,.ThemeGrayMenuItemActive
+{
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeGrayMainItem,
+.ThemeGrayMenuItem
+{
+	padding:	4px 10px 4px 10px;
+
+	border:		0px solid #ffffff;
+	background-color:	#5f5f5f;
+}
+
+.ThemeGrayMainItemHover,
+.ThemeGrayMainItemActive
+{
+	padding:	4px 10px 4px 10px;
+	
+	border:		0px solid #ffffff;
+	background-color:	#444444;
+}
+
+.ThemeGrayMenuItemHover,
+.ThemeGrayMenuItemActive
+{
+	padding:	5px;
+	border:		1px solid #ffffff;
+	background-color:	#333333;
+}
+
+/* horizontal main menu sub components */
+/* panel doesn't really support horizontal menus */
+/* there are simpler approaches, but the setting here allows me to
+   set a background image for the menu without lines all over it */
+
+.ThemeGrayMainFolderLeft,
+.ThemeGrayMainItemLeft,
+.ThemeGrayMainFolderText,
+.ThemeGrayMainItemText,
+.ThemeGrayMainItemRight,
+.ThemeGrayMainFolderRight
+{
+	border: 0;
+	background-color: inherit;
+	white-space: nowrap;
+}
+
+/* sub menus sub components */
+
+.ThemeGrayMenuFolderLeft,
+.ThemeGrayMenuItemLeft
+{
+	padding:	3px 0px 3px 3px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeGrayMenuFolderText,
+.ThemeGrayMenuItemText
+{
+	padding:	3px 3px 3px 5px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeGrayMenuItemRight,
+.ThemeGrayMenuFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+/* hoover and active border */
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderLeft,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderLeft,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemLeft,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemLeft,
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderText,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderText,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemText,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemText,
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderRight,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderRight,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemRight,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemRight
+{
+	border-color:	#9C9A9C;
+}
+
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderLeft,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderLeft,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemLeft,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemLeft
+{
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	padding:	2px 0px 2px 2px;
+}
+
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderText,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderText,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemText,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemText
+{
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	padding:	2px 3px 2px 5px;
+}
+
+.ThemeGrayMenuItemHover .ThemeGrayMenuFolderRight,
+.ThemeGrayMenuItemActive .ThemeGrayMenuFolderRight,
+.ThemeGrayMenuItemHover .ThemeGrayMenuItemRight,
+.ThemeGrayMenuItemActive .ThemeGrayMenuItemRight
+{
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	padding:	2px 0px 2px 0px;
+}
+
+td.ThemeGrayMenuSplit
+{
+	padding:	0px;
+	margin:		0px;
+	height:		5px;
+	border:		0px;
+	background-color:	inherit;
+	overflow:	hidden;
+}
+
+div.ThemeGrayMenuSplit
+{
+	margin: 2px;
+	height: 1px;
+	overflow: hidden;
+	background-color: inherit;
+	border-top: 1px solid #9C9A9C;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeGrayMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeGrayMenuItemHover seq2,
+.ThemeGrayMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeGrayMenuItem .seq2,
+.ThemeGrayMenuItemHover .seq1,
+.ThemeGrayMenuItemActive .seq1
+{
+	display:	none;
+}
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+.ThemeOfficeMenu,.ThemeOfficeSubMenuTable
+{
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+
+	padding:	0;
+
+	white-space:	nowrap;
+	cursor:		default;
+}
+
+.ThemeOfficeSubMenu
+{
+	position:	absolute;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	padding:	0px;
+	border:		0px;
+
+	background-color:	transparent;
+}
+
+.ThemeOfficeSubMenuShadow
+{
+	z-index:	-1;
+	position:	absolute;
+	top:		9px;
+	left:		9px;
+	width:		100%;
+	height:		300em;
+	background-color:	black;
+	opacity:	0.15;
+	border:		0;
+	margin:		0;
+}
+
+.ThemeOfficeSubMenuTable
+{
+	border:		1px solid #ADAA9C;
+	background-color:	white;
+	padding:	1px;
+	margin:		0px 2px 2px 0px;
+}
+
+.ThemeOfficeMainItem,.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive,
+.ThemeOfficeMenuItem,.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+/* common background color to both horizontal and vertical menus */
+
+.ThemeOfficeMainItem
+{
+	background-color:	#EFEBDE;
+}
+
+.ThemeOfficeMainItemHover,.ThemeOfficeMainItemActive
+{
+	background-color:	#C6D3EF;
+}
+
+/* horizontal main menu */
+
+.ThemeOfficeMainItem
+{
+	padding:	1px;
+	border:		0;
+}
+
+td.ThemeOfficeMainItemHover,td.ThemeOfficeMainItemActive
+{
+	padding:	0px;
+	border:		1px solid #3169C6;
+}
+
+.ThemeOfficeMainFolderLeft,.ThemeOfficeMainItemLeft,
+.ThemeOfficeMainFolderText,.ThemeOfficeMainItemText,
+.ThemeOfficeMainFolderRight,.ThemeOfficeMainItemRight
+{
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+/* vertical main menu sub components */
+
+td.ThemeOfficeMainFolderLeft,
+td.ThemeOfficeMainItemLeft
+{
+	padding:	3px 2px 3px 1px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+td.ThemeOfficeMainFolderText,
+td.ThemeOfficeMainItemText
+{
+	padding:	3px 5px 3px 5px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+td.ThemeOfficeMainItemRight,
+td.ThemeOfficeMainFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderLeft,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemLeft,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemLeft
+{
+	padding:	2px 2px 2px 0px;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderText,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemText,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemText 
+{
+	padding:	2px 5px 2px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainFolderRight,
+tr.ThemeOfficeMainItemHover td.ThemeOfficeMainItemRight,
+tr.ThemeOfficeMainItemActive td.ThemeOfficeMainItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+/* sub menu sub components */
+
+.ThemeOfficeMenuItem
+{
+	background-color:	white;
+}
+
+.ThemeOfficeMenuItemHover,.ThemeOfficeMenuItemActive
+{
+	background-color:	#C6D3EF;
+}
+
+.ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemLeft
+{
+	padding:	3px 3px 3px 2px;
+	border:		0;
+
+	white-space:	nowrap;
+
+	background-color:	#EFEFDE;
+}
+
+.ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemText
+{
+	padding:	3px 5px 3px 5px;
+	border:		0;
+
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemRight
+{
+	padding:	3px 1px 3px 0px;
+	border:		0;
+
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemLeft,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemLeft
+{
+	padding:	2px 3px 2px 1px;
+
+	background-color:	#C6D3EF;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemText,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemText
+{
+	padding:	2px 5px 2px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItemHover .ThemeOfficeMenuItemRight,
+.ThemeOfficeMenuItemActive .ThemeOfficeMenuItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#3169C6;
+}
+
+/* menu splits */
+
+td.ThemeOfficeMenuSplit
+{
+	margin:		0px;
+	padding:	0px;
+	border:		0px;
+}
+
+div.ThemeOfficeMenuSplit
+{
+	margin:		3px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #C6C3BD;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOfficeMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeOfficeMenuItemHover seq2,
+.ThemeOfficeMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeOfficeMenuItem .seq2,
+.ThemeOfficeMenuItemHover .seq1,
+.ThemeOfficeMenuItemActive .seq1
+{
+	display:	none;
+}
+/* ThemeOffice2003Menu Style Sheet */
+
+.ThemeOffice2003Menu,.ThemeOffice2003SubMenuTable
+{
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+
+	padding:	0;
+
+	white-space:	nowrap;
+	cursor:		default;
+}
+
+.ThemeOffice2003SubMenu
+{
+	position:	absolute;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	padding:	1px 1px 1px 1px;
+
+	background:	#F6F6F6 url(../../images/menubg.gif) repeat-y scroll 0%;
+	background-position:	left;
+
+	border:		1px solid #002D96;
+}
+
+.ThemeOffice2003SubMenuTable
+{
+	overflow:	hidden;
+}
+
+.ThemeOffice2003MainItem,.ThemeOffice2003MainItemHover,.ThemeOffice2003MainItemActive,
+.ThemeOffice2003MenuItem,.ThemeOffice2003MenuItemHover,.ThemeOffice2003MenuItemActive
+{
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003MainItem
+{
+	background-color:	#A1C0F5;
+	color: #000000;
+}
+
+.ThemeOffice2003MainItemHover,.ThemeOffice2003MainItemActive
+{
+	background:		url(../../images/mainmenubg.gif);
+}
+
+.ThemeOffice2003MenuItem
+{
+	background-color:	transparent;
+}
+
+.ThemeOffice2003MenuItemHover,.ThemeOffice2003MenuItemActive
+{
+	background-color:	#FFEEC2;
+}
+
+
+/* horizontal main menu */
+
+.ThemeOffice2003MainItem
+{
+	padding:	1px;
+	border:		0;
+}
+
+td.ThemeOffice2003MainItemHover,td.ThemeOffice2003MainItemActive
+{
+	padding:	0px;
+	border:		1px solid #000080;
+}
+
+.ThemeOffice2003MainFolderLeft,.ThemeOffice2003MainItemLeft,
+.ThemeOffice2003MainFolderText,.ThemeOffice2003MainItemText,
+.ThemeOffice2003MainFolderRight,.ThemeOffice2003MainItemRight
+{
+	background-color:	inherit;
+}
+
+/* vertical main menu sub components */
+
+td.ThemeOffice2003MainFolderLeft,
+td.ThemeOffice2003MainFolderLeft,
+td.ThemeOffice2003MainItemLeft,
+td.ThemeOffice2003MainItemLeft
+{
+	padding:	1px 2px 1px 1px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+td.ThemeOffice2003MainFolderText,
+td.ThemeOffice2003MainFolderText,
+td.ThemeOffice2003MainItemText,
+td.ThemeOffice2003MainItemText
+{
+	padding:	1px 5px 1px 5px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+td.ThemeOffice2003MainItemRight,
+td.ThemeOffice2003MainFolderRight
+{
+	padding:	1px 1px 1px 0px;
+
+	border:		0;
+
+	background-color:	inherit;
+}
+
+
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainFolderLeft,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainFolderLeft,
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainItemLeft,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainItemLeft
+{
+	padding:	0px 2px 0px 0px;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#000080;
+
+	background-color:	inherit;
+}
+
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainFolderText,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainFolderText,
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainItemText,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainItemText
+{
+	padding:	0px 5px 0px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#000080;
+
+	background-color:	inherit;
+}
+
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainFolderRight,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainFolderRight,
+tr.ThemeOffice2003MainItemHover td.ThemeOffice2003MainItemRight,
+tr.ThemeOffice2003MainItemActive td.ThemeOffice2003MainItemRight
+{
+	padding:	0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#000080;
+
+	background-color:	inherit;
+}
+
+/* sub menu sub components */
+
+.ThemeOffice2003MenuFolderLeft,.ThemeOffice2003MenuItemLeft,
+.ThemeOffice2003MenuFolderText,.ThemeOffice2003MenuItemText,
+.ThemeOffice2003MenuFolderRight,.ThemeOffice2003MenuItemRight
+{
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+
+.ThemeOffice2003MenuFolderLeft,
+.ThemeOffice2003MenuItemLeft
+{
+	padding:	3px 3px 3px 2px;
+}
+
+.ThemeOffice2003MenuFolderText,
+.ThemeOffice2003MenuItemText
+{
+	padding:	3px 5px 3px 5px;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003MenuFolderRight,
+.ThemeOffice2003MenuItemRight
+{
+	padding:	3px 1px 3px 0px;
+}
+
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuFolderLeft,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuFolderLeft,
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuItemLeft,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuItemLeft
+{
+	padding:	2px 3px 2px 1px;
+
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuFolderText,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuFolderText,
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuItemText,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuItemText
+{
+	padding:	2px 5px 2px 5px;
+
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuFolderRight,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuFolderRight,
+.ThemeOffice2003MenuItemHover .ThemeOffice2003MenuItemRight,
+.ThemeOffice2003MenuItemActive .ThemeOffice2003MenuItemRight
+{
+	padding:	2px 0px 2px 0px;
+
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	border-color:	#000080;
+}
+
+/* menu splits */
+
+.ThemeOffice2003MenuSplit
+{
+	margin:		2px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #6A8CCB;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOffice2003MenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeOffice2003MenuItemHover seq2,
+.ThemeOffice2003MenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeOffice2003MenuItem .seq2,
+.ThemeOffice2003MenuItemHover .seq1,
+.ThemeOffice2003MenuItemActive .seq1
+{
+	display:	none;
+}
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+.ThemePanelMenu,.ThemePanelSubMenuTable
+{
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+.ThemePanelSubMenu
+{
+	z-index:	0;
+	position:	absolute;
+	visibility:	hidden;
+	display:	block;
+	overflow:	hidden;
+
+	border:		0;
+	background-color: inherit;
+}
+
+.ThemePanelSubMenuShadow
+{
+	z-index:	-1;
+	position:	absolute;
+	top:		3px;
+	left:		3px;
+	width:		100%;
+	height:		300em;
+	background-color:	black;
+	opacity:	0.5;
+	border:		0;
+	margin:		0;
+}
+
+.ThemePanelSubMenuBorder
+{
+	border:		1px solid #9C9A9C;
+	background-color:	#F7F3F7;
+	padding:	1px;
+	margin:		0px 3px 3px 0px;
+}
+
+.ThemePanelSubMenuTable
+{
+	border-collapse:	separate;
+}
+
+.ThemePanelMenuItem,.ThemePanelMenuItemHover,.ThemePanelMenuItemActive
+{
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+.ThemePanelMainItem,
+.ThemePanelMenuItem
+{
+	background-color:	#F7F3F7;
+	white-space:	nowrap;
+}
+
+.ThemePanelMainItemHover,
+.ThemePanelMainItemActive,
+.ThemePanelMenuItemHover,
+.ThemePanelMenuItemActive
+{
+	background-color:	#C6C6C3;
+	white-space:	nowrap;
+}
+
+/* horizontal main menu sub components */
+/* panel doesn't really support horizontal menus */
+/* there are simpler approaches, but the setting here allows me to
+   set a background image for the menu without lines all over it */
+
+.ThemePanelMainFolderLeft,
+.ThemePanelMainItemLeft
+{
+	padding:	3px 0px 3px 3px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemePanelMainFolderText,
+.ThemePanelMainItemText
+{
+	padding:	3px 3px 3px 5px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemePanelMainItemRight,
+.ThemePanelMainFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+/* hoover and active border */
+.ThemePanelMainItemHover .ThemePanelMainFolderLeft,
+.ThemePanelMainItemActive .ThemePanelMainFolderLeft,
+.ThemePanelMainItemHover .ThemePanelMainItemLeft,
+.ThemePanelMainItemActive .ThemePanelMainItemLeft,
+.ThemePanelMainItemHover .ThemePanelMainFolderText,
+.ThemePanelMainItemActive .ThemePanelMainFolderText,
+.ThemePanelMainItemHover .ThemePanelMainItemText,
+.ThemePanelMainItemActive .ThemePanelMainItemText,
+.ThemePanelMainItemHover .ThemePanelMainFolderRight,
+.ThemePanelMainItemActive .ThemePanelMainFolderRight,
+.ThemePanelMainItemHover .ThemePanelMainItemRight,
+.ThemePanelMainItemActive .ThemePanelMainItemRight
+{
+	border-color:	#9C9A9C;
+}
+
+.ThemePanelMainItemHover .ThemePanelMainFolderLeft,
+.ThemePanelMainItemActive .ThemePanelMainFolderLeft,
+.ThemePanelMainItemHover .ThemePanelMainItemLeft,
+.ThemePanelMainItemActive .ThemePanelMainItemLeft
+{
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	padding:	2px 0px 2px 2px;
+}
+
+.ThemePanelMainItemHover .ThemePanelMainFolderText,
+.ThemePanelMainItemActive .ThemePanelMainFolderText,
+.ThemePanelMainItemHover .ThemePanelMainItemText,
+.ThemePanelMainItemActive .ThemePanelMainItemText
+{
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	padding:	2px 3px 2px 5px;
+}
+
+.ThemePanelMainItemHover .ThemePanelMainFolderRight,
+.ThemePanelMainItemActive .ThemePanelMainFolderRight,
+.ThemePanelMainItemHover .ThemePanelMainItemRight,
+.ThemePanelMainItemActive .ThemePanelMainItemRight
+{
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	padding:	2px 0px 2px 0px;
+}
+
+/* sub menus sub components */
+
+.ThemePanelMenuFolderLeft,
+.ThemePanelMenuItemLeft
+{
+	padding:	3px 0px 3px 3px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemePanelMenuFolderText,
+.ThemePanelMenuItemText
+{
+	padding:	3px 3px 3px 5px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemePanelMenuItemRight,
+.ThemePanelMenuFolderRight
+{
+	padding:	3px 1px 3px 0px;
+
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+/* hoover and active border */
+.ThemePanelMenuItemHover .ThemePanelMenuFolderLeft,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderLeft,
+.ThemePanelMenuItemHover .ThemePanelMenuItemLeft,
+.ThemePanelMenuItemActive .ThemePanelMenuItemLeft,
+.ThemePanelMenuItemHover .ThemePanelMenuFolderText,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderText,
+.ThemePanelMenuItemHover .ThemePanelMenuItemText,
+.ThemePanelMenuItemActive .ThemePanelMenuItemText,
+.ThemePanelMenuItemHover .ThemePanelMenuFolderRight,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderRight,
+.ThemePanelMenuItemHover .ThemePanelMenuItemRight,
+.ThemePanelMenuItemActive .ThemePanelMenuItemRight
+{
+	border-color:	#9C9A9C;
+}
+
+.ThemePanelMenuItemHover .ThemePanelMenuFolderLeft,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderLeft,
+.ThemePanelMenuItemHover .ThemePanelMenuItemLeft,
+.ThemePanelMenuItemActive .ThemePanelMenuItemLeft
+{
+	border-width:	1px 0px 1px 1px;
+	border-style:	solid;
+	padding:	2px 0px 2px 2px;
+}
+
+.ThemePanelMenuItemHover .ThemePanelMenuFolderText,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderText,
+.ThemePanelMenuItemHover .ThemePanelMenuItemText,
+.ThemePanelMenuItemActive .ThemePanelMenuItemText
+{
+	border-width:	1px 0px 1px 0px;
+	border-style:	solid;
+	padding:	2px 3px 2px 5px;
+}
+
+.ThemePanelMenuItemHover .ThemePanelMenuFolderRight,
+.ThemePanelMenuItemActive .ThemePanelMenuFolderRight,
+.ThemePanelMenuItemHover .ThemePanelMenuItemRight,
+.ThemePanelMenuItemActive .ThemePanelMenuItemRight
+{
+	border-width:	1px 1px 1px 0px;
+	border-style:	solid;
+	padding:	2px 0px 2px 0px;
+}
+
+td.ThemePanelMenuSplit
+{
+	padding:	0px;
+	margin:		0px;
+	height:		7px;
+	border:		0px;
+	background-color:	inherit;
+	overflow:	hidden;
+}
+
+div.ThemePanelMenuSplit
+{
+	display:	block;
+	margin:		3px;
+	height:		1px;
+	width:		100%;
+	overflow:	hidden;
+	background-color:	inherit;
+
+	border-style:	solid;
+	border-width:	1px 0px 0px 0px;
+	border-color:	#9C9A9C;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemePanelMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemePanelMenuItemHover seq2,
+.ThemePanelMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemePanelMenuItem .seq2,
+.ThemePanelMenuItemHover .seq1,
+.ThemePanelMenuItemActive .seq1
+{
+	display:	none;
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+/******************************************************************************
+ * form
+ ******************************************************************************/
+
+.m-form-box
+{
+  width:       100%;
+  text-align: center;
+  border-right:0 none;
+  /*bordas no form*/
+  /*border-top:1px solid #c0c0c0;
+  border-left: 1px solid #c0c0c0;*/
+  background: #FFFFFF;
+}
+
+.m-form-outer
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.m-form-title
+{
+  background-color: #c0c0c0;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  padding:          2px;
+  text-decoration:  none;  
+}
+
+.m-form-body
+{
+   font-size:        11px;
+   padding:          4px;
+   font-weight:      normal;
+   background-color: #ededed;
+   text-align:left;
+}
+
+.m-form-css
+{
+   font-size:        11px;
+   font-weight:      normal;
+   background-color: #ededed;
+}
+
+fieldset{
+	border: 1px solid #c0c0c0;
+        padding: 3px;
+}
+
+.m-form-row
+{
+   clear: both;
+   padding-top: 3px;
+   width: 100%;
+}
+
+.m-form-row-0
+{
+   clear: both;
+   padding-top: 3px;
+   width: 100%;
+   background-color: #ededed;
+}
+
+.m-form-row-1
+{
+   clear: both;
+   padding-top: 3px;
+   width: 100%;
+}
+
+.m-form-row span.horizontal
+{
+  float: left;
+  padding-right: 5px; 
+}
+
+.m-form-row span.label 
+{
+  float: left;
+  padding-right: 5px; 
+  width: 15%;
+}
+
+.m-form-row span.field 
+{
+  float: left;
+  padding-left: 2px;
+  width: 80%;
+}
+
+.m-form-field-box
+{
+   padding:          2px;
+}
+
+.m-form-button-box
+{
+   padding:          3px;
+   clear: left;
+}
+
+.m-form-button-box li .hr
+{
+/*     margin: 5px 0px 5px 0px;    */
+}
+
+.m-form-button-box li button
+{
+/*     margin: 2px 10px 2px 0px;    */
+}
+
+.m-form-button-box ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.m-form-button-box ul li
+{ 
+    display: inline;
+}
+
+.m-caption-required:after
+{
+    content:'*';
+    color: #c61217;
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * KENOBI - theme.css
+ ******************************************************************************/
+
+/******************************************************************************
+ * Grid
+ ******************************************************************************/
+
+.m-grid-box
+{
+ border-top: 1px solid threedhighlight;
+ border-right: 1px solid threedshadow;
+ border-bottom: 1px solid threedshadow;
+ border-left: 1px solid threedhighlight;
+ background: threedface;
+ font-size: 11px;
+ width: 98%; 
+ text-align: left;
+ padding-left:3px;
+ padding-right:3px;
+}
+
+.m-grid-font
+{
+ color: #000;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: none;
+}
+
+.m-grid-title
+{
+ background-color: #c0c0c0;
+ color: #000;
+ font-weight: bold;
+ font-size: 11px;
+ padding: 0;
+ text-decoration: none;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.m-grid-title-caption
+{
+ text-align: left;
+ padding-top: 2px;
+ float: left; 
+ width: 80%;
+}
+
+.m-grid-title-icon
+{
+ float: left; 
+ padding-top: 2px;
+ padding-left: 2px;
+ width: 20;
+}
+
+.m-grid-title-button
+{
+ float: right; 
+ padding-right: 2px;
+ width: 20;
+ text-align: right;
+}
+
+.m-grid-link
+{ color: #000;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: underline;
+}
+
+.m-grid-detail
+{ color: #000;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: underline;
+ cursor: default; 
+}
+
+.m-grid-link-action-default
+{ 
+ text-decoration: none;
+}
+
+.m-grid-link-disable
+{ color: #999999;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: underline;
+}
+
+.m-grid-link:link
+{ color: #000;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.m-grid-link:visited
+{
+ color: #000;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.m-grid-link:hover
+{
+ color: #990000;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.m-grid-link:active
+{
+ color: #000;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.m-grid-info
+{
+ color: #000;
+ background-color: threedface;
+ font-weight: bold;
+ font-size: 11px;
+ text-decoration: none;
+}
+
+.m-grid-navigation
+{
+ background-color: threedface;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: none;
+ height: 20px;
+ line-height: 20px;
+ position: relative;
+}
+
+.m-grid-header-link
+{
+ background-color: threedface;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: none;
+ padding: 4px;
+ height: 20px;
+ text-align: center;
+}
+
+.m-grid-action
+{
+/* height: 15px;*/
+ border-bottom: 1px solid threedface;
+}
+
+.m-grid-filter
+{
+ background-color: #FFF;
+ font-weight: normal;
+ font-size: 11px;
+ text-decoration: none;
+ padding: 4px;
+ border-bottom: 1px solid #c0c0c0;
+}
+
+.m-grid-filter span
+{
+ vertical-align: top;
+}
+
+.m-grid-controls
+{
+ background-color: threedface;
+ border-top: 1px solid threedhighlight;
+ border-right: 1px solid threeddarkshadow;
+ border-bottom: 1px solid threeddarkshadow;
+ border-left: 1px solid threedhighlight;
+ font-weight: normal;
+ text-decoration: none;
+ text-align: left;
+ color: #000;
+ font-size: 11px;
+ vertical-align: middle;
+ padding:2px;
+}
+
+.m-grid-attention
+{
+ color: #990000;
+ font-weight: bold; 
+ background-color: #FFF;
+ font-size: 11px;
+ padding: 2px;
+ text-align: center;
+}
+
+/* Grid Body */
+
+.m-grid-body 
+{
+ border-bottom: 1px solid threedshadow;
+ border-top: 1px solid threedshadow;
+ border-left: 1px solid threedshadow;
+ border-right: 1px solid threedhighlight;
+}
+
+/* Grid Body - head */
+
+.m-grid-body  thead tr
+{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.m-grid-body thead tr th
+{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  padding:0px;
+  text-align: center;
+} 
+
+.m-grid-body  thead tr th.select
+{
+ text-align: center;
+ height:15px;
+  overflow:hidden;
+}
+
+.m-grid-body  thead tr th.order
+{
+ text-align: center;
+ vertical-align: middle;
+  height:15px;
+}
+
+.m-grid-body  thead tr th.action
+{
+ text-align: center;
+ height:15px;
+}
+
+.m-grid-body  thead tr th.data
+{
+ height:15px;
+}
+
+.m-grid-body thead tr th.btn
+{
+  border-left: 1px solid black;
+  width: 10px;
+} 
+
+.m-grid-body  thead tr th span
+{
+  background-color: threedface;
+  border-top: 1px solid threedhighlight;
+  border-right: 1px solid threedshadow;
+  border-left: 1px solid threedhighlight;
+  border-bottom: 1px solid threedshadow;
+  font-weight:normal;
+  display:block;
+  overflow:hidden;
+}
+
+.m-grid-body  thead tr th.data span
+{
+  padding-left: 3px; 
+}
+
+.m-grid-body  thead tr th span.tall
+{
+  height:15px;
+}
+
+.m-grid-body  thead tr th span.select
+{
+  padding-left:0px;
+  height:15px;
+}
+
+.m-grid-body  thead tr th .order
+{
+ text-decoration: underline;
+ padding:0px;
+  font-weight:normal;
+  color:#000;
+}
+
+.m-grid-body thead tr th.btn .linkbtn
+{
+  background-color: threedface;
+  border-top: 1px solid threedhighlight;
+  border-right: 1px solid threedshadow;
+  border-left: 1px solid threedhighlight;
+  border-bottom: 1px solid threedshadow;
+  font-weight:normal;
+  display:block;
+  overflow:hidden;
+  width:8px;
+}
+
+.m-grid-body thead tr th.linkbtn
+{
+  width:10px;
+}
+
+.m-grid-body thead tr th.grid_select
+{
+  width:17px;
+}
+
+/* Grid Body - body */
+
+.m-grid-body tbody tr td
+{
+  padding:0px;
+  margin:0px;
+  height:100%;
+} 
+
+.m-grid-body tbody tr td.detail
+{
+ padding: 0px;
+ width:50px;
+}
+
+.m-grid-body tbody tr td.btn
+{
+  border-left: 1px solid black;
+  border-bottom: 1px solid threeddarkshadow;
+  border-right: 1px solid threeddarkshadow;
+  border-top: 1px solid black;
+  width: 10px;
+  height:100%;
+} 
+
+.m-grid-body tbody tr td.btn .linkbtn
+{
+  background-color: threedface;
+  border-top: 1px solid threedhighlight;
+  border-right: 1px solid threedshadow;
+  border-left: 1px solid threedhighlight;
+  border-bottom: 1px solid threedshadow;
+  font-weight:normal;
+  display:block;
+  overflow:hidden;
+  width:8px;
+ }
+
+.m-grid-body tbody tr td.btn .grid_select
+{
+  background-color: threedface;
+   background-image: url(../../images/lookup_select.gif);
+ background-repeat: no-repeat; 
+  border-top: 1px solid threedhighlight;
+  border-right: 1px solid threedshadow;
+  border-left: 1px solid threedhighlight;
+  border-bottom: 1px solid threedshadow;
+  font-weight:normal;
+  display:block;
+  overflow:hidden;
+  width:15px;
+  cursor:pointer;
+}
+
+.m-grid-body tbody tr
+{
+ color: #000;
+}
+
+.m-grid-body tbody tr.row0
+{
+ background-color: #FFF;
+}
+
+.m-grid-body tbody tr.row0checked
+{
+ background-color: #9999ff;
+}
+
+.m-grid-body tbody tr.row1
+{
+ background-color: #FFF;
+}
+
+.m-grid-body tbody tr.row1checked
+{
+ background-color: #9999ff;
+}
+
+.m-grid-body tbody tr.row2
+{
+ background-color: #DDD;
+}
+
+.m-grid-body tbody tr.row2checked
+{
+ background-color: #CCCCFF;
+}
+
+.m-grid-body tbody td.action
+{
+ padding: 0px 1px 0px 1px;
+ border-bottom: 1px solid threedface;
+}
+
+.m-grid-body tbody td.select
+{
+ padding: 0px;
+ text-align: center;
+ border-right: 1px solid threedface;
+}
+
+.m-grid-body tbody td.data
+{
+ padding: 0px 2px 0px 3px;
+ border-bottom: 1px solid threedface;
+ border-right: 1px solid threedface;
+}
+
+.m-grid-body tbody td div.detail
+{
+ padding: 0px;
+ width:45px;
+}
+
+.m-grid-body tbody tr.detail
+{
+   padding: 0px;
+   height:0px;
+}
+
+/* end m-grid-body */
+
+.m-grid-column-order
+{
+ text-decoration: underline;
+ text-align: center;
+ color: #000;
+ font-size: 11px;
+ vertical-align: middle;
+ height: 15px;
+}
+
+.m-grid-column-link
+{
+ font-weight: normal;
+ font-size: 11px;
+ padding: 1px;
+ color: #000;
+ text-decoration: underline;
+}
+
+.m-grid-footer
+{
+ background-color: threedface;
+ border-top: 1px solid threedhighlight;
+ border-right: 1px solid threeddarkshadow;
+ border-bottom: 1px solid threeddarkshadow;
+ border-left: 1px solid threedhighlight;
+ font-weight: normal;
+ text-decoration: none;
+ text-align: left;
+ color: #000;
+ font-size: 11px;
+ vertical-align: middle;
+ height: 18px;
+}
+
+.m-grid-action-icon
+{
+ border: 0; 
+ margin-left: 1px;
+ padding-left: 1px; 
+ display: block;
+ text-decoration: none;
+}
+
+.m-grid-action-icon-detail
+{
+ border: 0; 
+ margin: 0;
+ padding: 0;
+}
+#help_window {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    right: 6%;
+    top: 50px;
+}
+
+#header {
+    position:relative;
+    display:block;
+    background-image: url("/images/help_top_midlle.png");
+    height: 24px;
+    cursor: move;
+    color: white;
+    vertical-align: middle;
+}
+
+#left_header {
+    float:left;
+    position:relative;
+    width:32px;
+    left:0px;
+}
+
+#right_header {
+    float:right;
+    position:relative;
+    width:24px;
+    right:0px;
+}
+
+#center_header {
+    margin-left:32px;
+    margin-right:32px;
+    position:relative;
+    display:block;
+    height:1%;
+}
+
+#content {
+    position:relative;
+    display:block;
+    background: #efefe7;
+    border-left: #183484 solid 2px;
+    border-right: #183484 solid 1px;
+    border-bottom: #183484 solid 2px;
+    height:100%;
+    overflow: auto;
+}/******************************************************************************
+ * Icons
+ ******************************************************************************/
+.icon-edit-on
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/button_edit.png);
+}
+
+.icon-edit-off
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/button_noedit.png);
+}
+
+.icon-delete-on
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/button_drop.png);
+}
+
+.icon-delete-off
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/button_noempty.png);
+}
+
+.icon-select-on
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/button_select.png);
+}
+
+.icon-detail-on
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/plus.gif);
+}
+
+.icon-detail-off
+{
+ background-image: url(index.php/miolo/themes/miolo2/images/minus.gif);
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+
+.m-tabpage {
+   width: 100%;
+   height: 24px;
+   background-color: white;
+   float:left;
+}
+
+.m-tabpage .space {
+   width: 2px;
+   height: 24px;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.m-tabpage .vertical1A {
+   width: 1px;
+   height: 23px;
+   background-color: black;
+   border-top: 2px solid #EEE;
+   float:left;
+}
+
+.m-tabpage .vertical2A {
+   width: 1px;
+   height: 23px;
+   background-color: #EEE;
+   border-top: 1px solid black;
+   float:left;
+   margin-top:1px;
+}
+
+.m-tabpage .vertical3A {
+   width: 1px;
+   height: 23px;
+   background-color: black;
+   border-top: 1px solid #EEE;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.m-tabpage .vertical4A {
+   width: 1px;
+   height: 22px;
+   background-color: #CCC;
+   float:left;
+   border-bottom: 1px solid black;
+   margin-top:2px;
+}
+
+.m-tabpage .vertical1B {
+   width: 1px;
+   height: 22px;
+   background-color: #CCC;
+   margin-top: 2px;
+   border-bottom: 1px solid black;
+   float:left;
+}
+
+.m-tabpage .vertical2B {
+   width: 1px;
+   height: 22px;
+   background-color: #EEE;
+   border-top: 1px solid #CCC;
+   float:left;
+   margin-top:1px;
+   border-bottom: 1px solid black;
+}
+
+.m-tabpage .contentA {
+   width: 100px;
+   height: 24px;
+   background-color: #E0E0E0;
+   border-top: 1px solid black;
+   text-align: center;
+   vertical-align: middle; 
+   float:left;
+}
+
+.m-tabpage .contentB {
+   width: 100px;
+   height: 23px;
+   background-color: #EEE;
+   border-top: 1px solid #CCC;
+   border-bottom: 1px solid black;
+   text-align: center;
+   vertical-align: baseline; 
+   float:left;
+}
+
+.m-tabpage .contentC {
+   width:auto;
+   border-top: 24px solid white;
+   border-bottom: 1px solid black;
+   margin:0;
+   padding:0;
+}
+
+.m-tabpage-link
+{ color:           #000000;
+  font-weight:     bold;
+  font-size:       9pt;
+  text-decoration: none
+/*   vertical-align: middle;  */
+}
+    
+.m-tabpage-link-disable
+{ color:           #999999;
+  font-weight:     bold;
+  font-size:       9pt;
+  text-decoration: none
+/*   vertical-align: middle;  */
+}
+
+.m-tabpage-link:link
+{ color:           #666666;
+  font-weight:     bold;
+  text-decoration: none;
+}
+
+.m-tabpage-link:visited
+{ color:           #666666;
+  font-weight:     bold;
+  text-decoration: none;
+}
+
+.m-tabpage-link:hover
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.m-tabpage-link:active
+{
+  color:           #990000;
+  font-weight:     bold;
+  text-decoration: underline;
+}
+
+.m-tabform-box
+{
+  background-color: #ffffff;
+  padding:          1px;
+  width:            95%; 
+}
+
+.m-tabform-body
+{
+  background-color: #FFFFFF;
+  border-left:      solid #000000 1pt;
+  border-right:     solid #000000 3pt;
+  border-bottom:    solid #000000 3pt;
+}
+
+.m-tabform-text
+{
+  color:            #000000;
+  font-size:        11px;
+  margin-top:       3px;
+  margin-bottom:    3px;
+  vertical-align:   top;
+}
+
+.m-tabform-title
+{
+  color:            #000000;
+  font-size:        12px;
+  font-weight:      bold;
+  margin-top:       2px;
+  margin-bottom:    2px;
+  vertical-align:   top;
+}
+
+.m-tabform-color-0
+{
+  background-color:           #ffffff;
+}
+
+.m-tabform-color-1
+{
+  background-color:           #cccccc;
+}
+
+.m-tabform-color-2
+{
+  background-color:           #333333;
+}
+
+.m-tabform-color-3
+{
+  background-color:           #e0e0e0;
+}
+
+.m-tabform-color-4
+{
+  background-color:           #000000;
+}
+
+/*
+Javascript
+*/
+
+.m-collapsible {
+  margin:0; padding:0;
+  overflow:hidden;
+  display:block;
+}
+
+.m-tabform-panel-group {
+  position:relative; overflow:hidden;
+  margin:10px; padding:0;
+}
+.m-tabform-panel {
+  position:absolute; overflow:auto;
+  margin:0; padding:10px;
+  color:#000; background:#ededed;
+  border-left:1px solid #000;
+  border-right:1px solid #000;
+  border-bottom:1px solid #000;
+}
+.m-tabform-group {
+  position:absolute; overflow:hidden;
+  margin:0; padding:0;
+}
+.m-tabform-default {
+  position:absolute; overflow:hidden;
+  cursor:pointer;
+  color:           #666666;
+  font-size:       9pt;
+  font-weight:     bold;
+  text-decoration: none;
+  text-align:center;
+  border-top:1px solid #DDD;
+  border-left:1px solid #DDD;
+  border-right:1px solid #DDD;
+  border-bottom:1px solid #000;
+  margin:0; padding:2px;
+  background: #f2f5f7;
+}
+
+.m-tabform-default:hover {
+  position:absolute; overflow:hidden;
+  cursor:pointer;
+  color:           #666666;
+  font-size:       9pt;
+  font-weight:     bold;
+  text-decoration: none;
+  text-align:center;
+  border-top:1px solid #DDD;
+  border-left:1px solid #DDD;
+  border-right:1px solid #DDD;
+  border-bottom:1px solid #000;
+  margin:0; padding:2px;
+  background: #c7c7c7;
+}
+
+.m-tabform-selected {
+  position:absolute; overflow:hidden;
+  cursor:pointer;
+  color:           #000000;
+  font-weight:     bold;
+  font-size:       9pt;
+  text-decoration: none;
+  text-align:center;
+  border-top:1px solid #000;
+  border-right:1px solid #000;
+  /*border-bottom:1px solid #DDD;*/
+  border-left:1px solid #000;
+  margin:0; padding:2px;
+  color:#000; background:#ededed;
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+/******************************************************************************
+ * TabPanel
+ ******************************************************************************/
+
+.tabPanelGroup {
+  position:relative; overflow:hidden;
+}
+.tabPanel {
+  position:absolute; overflow:auto;
+}
+.tabGroup {
+  position:absolute; overflow:hidden;
+}
+.tabDefault {
+  position:absolute; overflow:hidden;
+  cursor:pointer;
+  text-align:center;
+  border-top:none;
+  border-left:1px solid #CFD4E6;
+  border-right:1px solid #CFD4E6;
+  border-bottom:1px solid #596380;
+}
+.tabSelected {
+  position:absolute; overflow:hidden;
+  cursor:pointer;
+  text-align:center;
+  border-top:1px solid #596380;
+  border-right:1px solid #596380;
+  border-bottom:1px solid #CFD4E6;
+  border-left:1px solid #596380;
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+/******************************************************************************
+ * TabPanel1
+ ******************************************************************************/
+ 
+.tabPanelGroup {
+  margin:10px; padding:0;
+  border:1px solid #CFD4E6;
+}
+.tabPanel {
+  margin:0; padding:10px;
+  color:#000; background:#CFD4E6;
+}
+.tabGroup {
+  margin:0; padding:0;
+}
+.tabDefault {
+  margin:0; padding:2px;
+  background:transparent;
+}
+.tabSelected {
+  margin:0; padding:2px;
+  color:#000; background:#CFD4E6;
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Jonas Guilherme Dahmer [jonas@solis.coop.br] 
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+/******************************************************************************
+ * topMenu
+ ******************************************************************************/
+
+.m-topmenu-box
+{
+  background-color: #f2f5f7;
+  background-image: none;
+  padding:         2px;
+  margin: 0px;
+  font-size:       10px;
+  font-weight:     normal;
+  color:           #900;
+  text-align:    left;
+}
+
+.m-topmenu-box li
+{
+    padding-left: 5px;   
+}
+
+.m-topmenu-box ul 
+{ 
+    list-style: none; 
+    padding: 0px;
+    margin: 0px;
+}
+
+.m-topmenu-box ul li
+{ 
+    display: inline;
+}
+
+.m-topmenu-current
+{
+  background-color: #f2f5f7;
+  padding:         2px;
+  font-size:       10px;
+  font-weight:     bold;
+  color:           #900;
+}
+
+.m-topmenu-link
+{ 	
+  text-decoration: none;  
+  color:           #900;
+}
+    
+.m-topmenu-link:link, .m-topmenu-link:visited
+{ 
+  color:           #900;
+}
+
+.m-topmenu-link:active, .m-topmenu-link:hover
+{
+  color:           #900;
+  text-decoration: underline;
+}
+
+/******************************************************************************
+ * Menu e submenu
+ ******************************************************************************/
+
+.m-menu-box
+{
+	margin: 0px;
+	padding: 3px 0px 3px 0px;
+    	background-color: #f2f5f7;
+	width:		   100%;
+}
+
+.m-menu-box li a.m-menu-link
+{
+	padding-left: 14px;
+    	background-image: url(../../images/bullet.gif);
+    	background-repeat: no-repeat; 
+    	background-position: .5em .5em;
+ 	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: none;
+}
+
+.m-menu-box li div.m-menu-title
+{ 
+	color:            #000000;
+  	font-weight:      bold;
+  	font-size:        11px;
+  	text-align:       center; 
+  	background-color: highlight;
+  	padding: 2px;   
+  	border-top:    2px solid #999;
+}
+
+.m-menu-box li div.hr
+{ 
+  	background-color: #999;
+}
+
+.m-menu-box ul li 
+{ 
+	width: 100%;
+    	margin: 1px 0px 1px 0px;
+}
+
+.m-menu-box ul 
+{ 
+    	list-style: none; 
+    	padding: 0;
+    	margin: 0;
+}
+
+.m-menu-box li a.m-menu-link:link
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: none
+}
+
+.m-menu-box li a.m-menu-link:visited
+{
+  	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: none
+}
+
+.m-menu-box li a.m-menu-link:hover
+{
+  	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: underline
+}
+
+.m-menu-box li a.m-menu-link:active
+{
+  	color:           #ff0000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: underline
+}
+
+.m-submenu-box
+{
+	margin-left: 15px;
+	padding: 0px;
+    	background-color: #EEE;
+}
+
+.m-submenu-box li a.m-menu-link
+{
+    padding-left: 10px;   
+    background-image: url(../../images/seta.jpg);
+    background-repeat: no-repeat; 
+    background-position: 0 .3em;
+}
+
+.m-submenu-box ul 
+{ 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.m-submenu-title
+{ 
+	color:            #000000;
+ 	font-weight:      bold;
+  	font-size:        10px;
+  	text-decoration:  none;
+  	text-align:       center; 
+  	background-color: #CCC;
+  	vertical-align:   top;
+}
+
+.m-submenu-text
+{ 
+	color:           #000000;
+  	font-weight:     normal;
+  	font-size:       10px;
+  	text-decoration: none
+/*  	margin-left:     16px;  */
+}
+
+/******************************************************************************
+ * statusBar
+ ******************************************************************************/
+
+.m-statusbar
+{
+  background-color: #dcdcdc;
+  width: 750px;
+  margin-top:    10px;
+  border-top:    1px solid #999999;
+  border-bottom:    2px solid #003399;
+}
+
+.m-statusbar li
+{
+  background-color: #dcdcdc;
+  text-align:   center;
+  border-right:      solid #555555 1px;
+  border-left:     solid #555555 1px;
+  font-size:        10px;
+  font-weight:      normal;  
+  color:            black;
+  margin: 0px 0px 0px 0px;;
+  padding: 2px 4px 4px 4px;
+}
+
+.m-statusbar ul 
+{ 
+    list-style: none; 
+    padding: 0px;
+    margin: 0px;
+    text-align:   center;
+    height: 19px;
+}
+
+.m-statusbar ul li
+{ 
+    display: inline;
+}
+
+/******************************************************************************
+ * moduleHeader
+ ******************************************************************************/
+
+.m-module-header
+{
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-decoration:  none;
+  text-align:right;
+}
+/******************************************************************************
+ * contentHeader
+ ******************************************************************************/
+
+.m-content-header
+{
+  background-color: #FFFFFF;
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        13px;
+  margin:           2px 0px 5px 0px;
+  text-decoration:  none;
+}
+/******************************************************************************
+ * Theme
+ ******************************************************************************/
+
+.m-theme-body
+{
+  font-size:        12px;
+  margin:           0px;
+  padding:          0px;
+}
+
+.themePage
+{
+}
+
+.m-theme-content
+{
+  font-size:        11px;
+  color:           #000000;
+  font-weight:     normal;
+  width:            100%;
+  vertical-align:   top;
+  text-align:       center;
+}
+
+.m-theme-box
+{
+  background-color: #dddddd;
+  border: 1px #CCCCCC solid;
+}
+
+.m-theme-box .title
+{
+  color:            #000000;
+  font-weight:      bold;
+  font-size:        11px;
+  text-decoration:  none;
+  height: 15px;
+  display: block;
+}
+
+* html .m-theme-box .title
+{
+  margin-right: -3px;
+}
+
+.m-theme-box .content
+{
+  background-color: #ffffff;
+  font-size:        11px;
+  font-weight:      normal;
+  margin:          1px;
+  padding:          5px;
+}
+
+/******************************************************************************
+ * ThemeTable
+ ******************************************************************************/
+
+.themeTableTitle
+{
+}
+
+.themeTableBody
+{
+  background-color: #ffffff;
+}
+
+.themeTable
+{ 
+  color:           #000000;
+  font-weight:     normal;
+  font-size:       11px;
+  text-decoration: none
+}
+
+.themeTableRow
+{
+}
+
+.themeTableCell
+{
+}
+/**
+   * Miolo 2 Theme
+   *
+   * @author Author's Jonas Guilherme Dahmer [jonas@solis.coop.br]
+   * @author Another Rafael Spengler [rafaels@solis.coop.br] 
+   * @author Another Vilson Cristiano Gärtner [vilson@miolo.org.br] 
+   * 
+   * @version $Id$
+   *
+   * \b Maintainers: \n
+   * Mantainer Vilson Cristiano Gärtner [vilson@miolo.org.br]
+   *
+   * @since 
+   * This css was created 2006/09/15
+   *
+   * \b Organization: \n
+   * SOLIS - Cooperativa de Soluções Livres \n
+   * The ??? Development Team
+   * 
+   * \b CopyLeft: \n
+   * CopyLeft (L) 2005 SOLIS - Cooperativa de Soluções Livres \n
+   *
+   * \b License: \n
+   * Licensed under GPL (for further details read the COPYING file or http://www.gnu.org/copyleft/gpl.html )
+   * 
+   * \b History: \n
+   * See history in repository: http://www.miolo.org.br/
+   * 
+   */
+
+/******************************************************************************
+ * gtkTheme - theme.css
+ ******************************************************************************/
+/******************************************************************************
+ * TreeMenu
+ ******************************************************************************/
+
+.t0i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t0i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t1i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t1i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t2i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t2i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+.t3i
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: none
+}
+
+.t3i:hover
+{
+   font-size:        11px;
+   font-weight:      normal;
+   color: #000;
+   text-decoration: underline;
+}
+
+

@@ -1,0 +1,31 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkprofessor');
+class gridProfessor extends MDataGrid2
+{
+	function gridProfessor()
+	{
+		global $MIOLO;
+		$this->SetFilter(false);
+		$filterNome = Form::GetFormValue('nome');
+		$nome = Util::NVL($filterNome, 'A Definir');
+		$this->AddFilterText('nome','Nome',$nome);
+		$this->SetIndex(1);
+		$objProfessor = $MIOLO->GetBusiness('administracao','professor');
+		$query = $objProfessor->listbyDescricao($nome);
+		$linkProfessor = new LinkProfessor('linkProfessor','%0%');
+		$column = new MDataGridControl($linkProfessor,'','Código','right',true,'100%');
+		$columns = array(
+			$column,
+		);
+		$href_grid = $MIOLO->GetCurrentURL();
+		parent::__construct($query, $columns, $href_grid, 25);
+		$this->SetLinkType('hyperlink');
+	}
+	function GenerateFooter()
+	{
+		if(!$this->data)
+			$footer[] = $this->GenerateEmptyMsg();
+		return $footer;
+	}
+}
+?>

@@ -1,0 +1,41 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkprofessor');
+class frmProfessorFind extends Form
+{
+	var $professor;
+	function frmProfessorFind()
+	{
+		global $MIOLO;
+		$this->Form('professor');
+		$this->SetClose($MIOLO->GetActionURL($module,'main'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $module, $page;
+		$ui = $MIOLO->GetUI();
+		$grid = $ui->GetGrid('administracao','gridProfessor'); 
+		$grid->SetTitle(NULL);
+		$btnFind = new ButtonFind('');
+		$newLink = new LinkProfessor('lnkNew',FALSE);
+		$newLink->setNew();
+		$fields = array(
+				array(
+					new MTextField('nome','','Código ou Título',45),
+					$btnFind,
+				),
+				$newLink,
+				$grid
+			);
+		$this->SetFields($fields);
+		$this->defaultButton = false;
+	}
+	function btnFind_click()
+	{
+		global $MIOLO,$professor ;
+		$ui = $MIOLO->GetUI();
+		$professor = $this->getFormValue('nome',$value=NULL);
+	}
+}
+?>
+

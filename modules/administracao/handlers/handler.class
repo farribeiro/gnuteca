@@ -1,0 +1,9 @@
+<?php
+class HandlerAdministracao extends MHandler
+{
+	function init()
+	{
+		parent::init();
+	}
+}
+?>

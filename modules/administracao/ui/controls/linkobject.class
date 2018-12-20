@@ -1,0 +1,95 @@
+<?php
+abstract class LinkObject extends MFormControl
+{
+	protected $object = null;
+	protected $image;
+
+	protected $imagelink;
+
+	protected $hyperlink;
+
+	protected $isNewLink = FALSE;
+
+	const MODULE = 'ditex';
+	const HANDLER = 'main';
+
+	public function __construct($name='', $object, $imageFile)
+	{
+		global $MIOLO;
+		parent::__construct($name);
+		$this->action = $MIOLO->GetActionURL(self::MODULE,self::HANDLER,null);
+		$this->object = $object;
+		$this->hyperlink = new HyperLink($this->name,'ERRO');
+		$this->hyperlink->SetAction(self::MODULE,self::HANDLER);
+		$this->image = $this->setImage($imageFile);
+		$this->SetValue($object);
+	}
+
+	public function setImage($imageFile)
+	{
+		global $MIOLO;
+		$this->image = $MIOLO->GetUI()->GetImage(self::MODULE,$imageFile);
+		$this->imagelink = new ImageLink('image'.$this->name,'ERRO',$this->action,$this->image,$attrs=NULL);
+		$this->imagelink->_addStyle('vertical-align','middle');
+		$this->imagelink->_addStyle('margin-right','2px');
+	}
+
+	public function Generate()
+	{
+		$this->setObject($this->getValue());
+		$html = $this->imagelink->Generate();
+		//$html .= '&nbsp;';
+		$html .= $this->hyperlink->Generate();
+		return $html;
+	}
+
+	public function __clone()
+	{
+		$this->hyperlink = clone($this->hyperlink);
+		$this->imagelink = clone($this->imagelink);
+	}
+
+	public function setObject($value)
+	{
+		global $MIOLO;
+		if($this->isNewLink())
+		{
+			return true;
+		}
+		if (is_object($value))
+		{
+			$this->object = $value;
+		}
+		else
+		{
+			$this->setObjectByValue($value);
+		}
+		$this->setAction();
+		$this->setText();
+	}
+
+	abstract function setObjectByValue($value);
+	abstract function setAction();
+	abstract function setText();
+	abstract function setNew();
+
+	public function SetName($name)
+	{
+		$this->name = $name;
+		$this->hyperlink->SetName($name);
+		$this->imagelink->SetName('image'.$name);
+	}
+
+	public function SetValue($value)
+	{
+		parent::SetValue($value);
+	}
+
+	public function isNewLink()
+	{
+		return $this->isNewLink;
+	}
+
+
+}
+?>

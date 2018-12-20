@@ -1,0 +1,144 @@
+<?php
+
+    class Requisites
+    {
+        private static $requisites;
+        private static $count = 0;
+        private static $dataArray;
+        private static $fatal;
+
+        public static $content;
+
+        public static function addRequisite($label, $evalCondition = null, $expected = ' ' , $additional = ' ', $is_fatal = false)
+        {
+            if ( is_array($evalCondition) )
+            {
+                $conditionTest   = $evalCondition[0];
+                $conditionResult = $evalCondition[1];
+            }
+            else
+            {
+                $conditionTest   = $evalCondition;
+                $conditionResult = null;
+            }
+
+            self::$requisites[self::$count++] = array( $label, $conditionTest, $conditionResult, $expected, $additional, $is_fatal);
+        }
+
+        public static function processRequisites()
+        {
+            $falseValue = new MSpan( '', "<img src='images/no1.png'> No" );
+
+            $falseFatalValue = new MSpan( '', "<img src='images/no.png'> No - FATAL Error" );
+            $falseFatalValue->addStyle( 'color', 'red' );
+
+            $trueValue = new MSpan( '', "<img src='images/yes.png'> Yes" );
+            $trueValue->addStyle( 'color', 'blue' );
+
+            $result      = true;
+            self::$fatal = false;
+
+            $count = (int) 0;
+
+            foreach ( self::$requisites as $req )
+            {
+                $count++;
+
+                //var_dump($req);
+
+                if ( $req[1] != null ) // expression to test
+                {
+                    $condition = "\$rs = $req[1] ? true : false ;";
+                    //echo $condition;
+                    eval( $condition );
+
+                    if ( ! $rs ) // false
+                    {
+                        if ( ! $req[5] ) // fatal error?
+                        {
+                            $result = false;
+                            $rsDescription = $falseValue;
+                        }
+                        else
+                        {
+                            self::$fatal   = true;
+                            $rsDescription = $falseFatalValue;
+                        }
+                    }
+                    else
+                    {
+                        $rsDescription = $trueValue;
+                    }
+                }
+
+                if ( $req[2] != null ) // show other value than true/false
+                {
+                        $condition = "\$rs = $req[2];";
+                        //echo $condition;
+                        eval( $condition );
+
+                        $rsDescription = $rs;
+                }
+
+                if ( $req[4] && $req[4] != ' ' )
+                {
+                    $div = new MDiv('', "<img src='images/help.png'>");
+                    $div->addStyle('textAlign', 'center');
+                    $div->addStyle('cursor', 'help');
+                    $attributes = array( 'onmousedown' => "return ! miolo.popup.showPopup('DivHelp$count', event);" );
+                    $div->setBoxAttributes($attributes);
+
+                    $divHelp = new MDiv("DivHelp$count", $req[4],'help-box');
+                    //$attributes = array( 'onclick' => 'event.cancelBubble = true;' );
+                    $attributes = array( 'onclick' => 'miolo.popup.hideCurrentPopup()' );
+                    $divHelp->setBoxAttributes($attributes);
+
+
+                    //$div->setBoxAttributes('onmousedown=alert(\''.$addInfo.'\');');
+                    //$div->addAttribute('onmousedown','alert(\'teste..\');');
+
+                    $additionalDescription[] = $div; 
+                    $additionalDescription[] = $divHelp; 
+                }
+
+                self::$dataArray[] = array( $req[0], $req[3], $rsDescription, $additionalDescription );
+                unset($additionalDescription);
+            }
+
+            // Header labels
+            $lblRequisite = new MDiv('', '&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;Requisite&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp' );
+            $lblRequisite->addStyle( 'textAlign', 'center' );
+
+            $lblExpected = new MDiv('', _M('Expected') );
+            $lblExpected->addStyle( 'textAlign', 'center' );
+
+            $lblFound = new MDiv('', _M('Found?') );
+            $lblFound->addStyle( 'textAlign', 'center' );
+
+            $lblAdditional = new MDiv('', _M('Additional Info') );
+            $lblAdditional->addStyle( 'textAlign', 'center' );
+
+            $colTitle = array( $lblRequisite, $lblExpected, $lblFound, $lblAdditional);
+
+            $table = new MTableRaw('Server Environment', self::$dataArray, $colTitle);
+
+            $content = new MDiv('',$table);
+            $content->addStyle( 'float', 'center' );
+
+            self::$content = $content;
+
+            return $result;
+        }
+
+        public static function getContent()
+        {
+            return self::$content;
+        }
+
+        public static function hasFatalError()
+        {
+            return self::$fatal;
+        }
+    }
+
+?>

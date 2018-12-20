@@ -1,0 +1,7 @@
+<conf>
+    <db>
+       <miolo>
+           <password>admin</password>
+       </miolo>
+    </db>
+</conf>

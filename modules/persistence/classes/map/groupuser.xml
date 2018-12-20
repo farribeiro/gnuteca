@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>groupuser</className>
+   <tableName>tb_grpusuario</tableName>
+   <databaseName>persistence</databaseName>
+
+   <attribute>
+      <attributeName>idUser</attributeName>
+	  <columnName>idusuario</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>idGroup</attributeName>
+	  <columnName>idgrupo</columnName>
+   </attribute>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>user</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>users</target>
+	  <retrieveAutomatic>true</retrieveAutomatic>
+	  <saveAutomatic>true</saveAutomatic>
+	  <entry>
+	     <fromAttribute>idUser</fromAttribute>
+	     <toAttribute>idUser</toAttribute>
+      </entry>
+   </association>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>group</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>groups</target>
+	  <retrieveAutomatic>true</retrieveAutomatic>
+	  <saveAutomatic>true</saveAutomatic>
+	  <entry>
+	     <fromAttribute>idGroup</fromAttribute>
+	     <toAttribute>idGroup</toAttribute>
+      </entry>
+   </association>
+
+</map>

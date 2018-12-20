@@ -1,0 +1,51 @@
+<?
+class frmAlunoDados extends MformAJAX
+{
+	protected $aluno;
+	function __construct($aluno)
+	{
+		$this->aluno=$aluno;
+		parent::__construct('Dados do Aluno');
+		$this->registerMethod('onSelectImage');
+		//$this->registerMethod('ajax_btnAnoChegada');
+		//$this->page->AddJsCode(file_get_contents(dirname(__FILE__) . '/js/frmDadosPessoaisAjax.js'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $action;
+		$fields=array(
+			new MTextField('idturma','','Idturma','25'),
+			new MTextField('nome','','Nome','25')
+		);
+		$this->SetFields($fields);
+		$this->SetFieldAttr('idaluno','readonly',true);
+		$buttons=array(new MButton('btnSalvar','Enviar'));
+		$this->SetButtons($buttons);
+		$validators=array(new MRequiredValidator('idaluno','idturma','nome'),);
+		$this->SetValidators($validators);
+		$this->SetData();
+	}
+	function SetData()
+	{
+		$data=$this->aluno;
+		$this->SetFieldValue('idaluno',$data->idaluno);
+		$this->SetFieldValue('idturma',$data->idturma);
+		$this->SetFieldValue('nome',$data->nome);
+	}
+	function btnSalvar_click()
+	{
+		$this->aluno->SetData($this->GetData());
+		try
+		{
+			$this->aluno->save();
+			$this->AddInfo("dados cadastrados com sucesso");
+		}
+		catch (Exception $e)
+		{
+			$this->AddError($e->GetMessage());
+		}
+	}
+}
+?>
+

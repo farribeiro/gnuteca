@@ -1,0 +1,49 @@
+<?
+class frmProfessorDados extends MformAJAX
+{
+	protected $professor;
+	function __construct($professor)
+	{
+		$this->professor=$professor;
+		parent::__construct('Dados do Professor');
+		$this->registerMethod('onSelectImage');
+		//$this->registerMethod('ajax_btnAnoChegada');
+		//$this->page->AddJsCode(file_get_contents(dirname(__FILE__) . '/js/frmDadosPessoaisAjax.js'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $action;
+		$fields=array(
+			new MTextField('titulo','','Titulo','25')
+		);
+		$this->SetFields($fields);
+		$this->SetFieldAttr('idprofessor','readonly',true);
+		$buttons=array(new MButton('btnSalvar','Enviar'));
+		$this->SetButtons($buttons);
+		$validators=array(new MRequiredValidator('idprofessor','titulo'),);
+		$this->SetValidators($validators);
+		$this->SetData();
+	}
+	function SetData()
+	{
+		$data=$this->professor;
+		$this->SetFieldValue('idprofessor',$data->idprofessor);
+		$this->SetFieldValue('titulo',$data->titulo);
+	}
+	function btnSalvar_click()
+	{
+		$this->professor->SetData($this->GetData());
+		try
+		{
+			$this->professor->save();
+			$this->AddInfo("dados cadastrados com sucesso");
+		}
+		catch (Exception $e)
+		{
+			$this->AddError($e->GetMessage());
+		}
+	}
+}
+?>
+

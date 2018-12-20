@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>UFJF - SIGA</title>
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8081/scripts/dojoroot/dijit/themes/tundra/tundra.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8081/themes/system/miolo.css">
+
+
+<meta http-equiv="Content-Type" content="0">
+<meta name="Generator" content="MIOLO Version Miolo 2.5; http://www.miolo.org.br">
+<script type="text/javascript"> djConfig={isDebug:true, usePlainJson:true,  parseOnLoad:true}</script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/dojoroot/dojo/dojo.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/prototype/prototype.js"></script>
+
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_miolo.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_page.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_ajax.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_encoding.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_form.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_compatibility.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_md5.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/tigra/menu.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/x/x_core.js"></script>
+
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/window/window.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_window.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:8081/scripts/m_box.js"></script>
+
+<script type="text/javascript"> dojo.require("dojo.parser")</script>
+<script type="text/javascript"> dojo.require("miolo.Dialog")</script>
+
+<script type="text/javascript">
+
+      function showDialog() {
+        dijit.byId('dialog1').show();
+      }
+
+      function showDialog2() {
+    	miolo.page.getWindow('dialog2','http://127.0.0.1:8081/index.php?module=teste&action=ajax2')
+      }
+
+miolo.onSubmit = function ()
+{
+    this.submit();
+    var result = true;
+    return result;
+}
+window.onload = function () {
+miolo.winWindow = new Miolo.window('winWindow', {title: "", url: "http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:windows:window&windowid=winWindow&themelayout=popup", parent: document.getElementsByTagName("body").item(0), top: 50, width: 400, resizable: false, minimizable: false, maximizable: false, closable: true, draggable: true, opacity: 1, className: 'window', zIndex: 0 });
+miolo.winWindow.setStatusBar("<span class=\"m-label\">Status Bar</span>");
+miolo.winModal1 = new Miolo.window('winModal1', {title: "Window 1", url: "http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:windows:windowmodal&amp;item=1&windowid=winModal1&themelayout=popup", parent: document.getElementsByTagName("body").item(0), top: 50, width: 400, resizable: false, minimizable: false, maximizable: false, closable: true, draggable: true, opacity: 1, className: 'window', zIndex: 0 });
+miolo.winModal2 = new Miolo.window('winModal2', {title: "Window 2", url: "http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:windows:windowmodal&amp;item=2&windowid=winModal2&themelayout=popup", parent: document.getElementsByTagName("body").item(0), top: 50, width: 400, resizable: false, minimizable: false, maximizable: false, closable: true, draggable: true, opacity: 1, className: 'window', zIndex: 0 });
+miolo.winModal3 = new Miolo.window('winModal3', {title: "Window 3", url: "http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:windows:windowmodal&amp;item=3&windowid=winModal3&themelayout=popup", parent: document.getElementsByTagName("body").item(0), top: 50, width: 400, resizable: false, minimizable: false, maximizable: false, closable: true, draggable: true, opacity: 1, className: 'window', zIndex: 0 });
+miolo.winModal1.setStatusBar("<a  id=\"lnk1\" class=\"m-link\" href=\"javascript:miolo.getWindow(\'winModal2\').open(true,false);\">Open Window 2</a>");
+miolo.winModal2.setStatusBar("<a  id=\"lnk2\" class=\"m-link\" href=\"javascript:miolo.windows.base.miolo.getWindow(\'winModal3\').open(true,false);\">Open Window 3</a>");
+miolo.winModal3.setStatusBar("<a  id=\"lnk3\" class=\"m-link\" href=\"javascript:miolo.getWindow(\'winModal2\').field(\'txtField\',\'new value\')\">Change Value of TextField on Window 2: new value</a>");
+   miolo.setTitle('UFJF - SIGA');
+miolo.setForm('frm48a7a41844b8e');
+miolo.box.setBoxPositions();
+}
+var MENU_ITEMS_0 = [ ['Tutorial',null,null,['Controls','http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:controls',null,],['Forms','http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:forms',1,],['ezPDF','http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:ezpdf',2,],],];
+ var MENU_POS_0 = [
+        {
+          // item sizes
+          'height':  16,
+          'width':  120,
+          // menu block offset from the origin:
+          //	for root level origin is upper left corner of the page
+          //	for other levels origin is upper left corner of parent item
+          'block_top': 0,
+          'block_left': 0,
+          // offsets between items of the same level
+          'top':  0,
+          'left':  5,
+          // time in milliseconds before menu is hidden after cursor has gone out
+          // of any items
+          'hide_delay':  200,
+          'expd_delay':  -200
+,
+          'css' : {
+            'outer': ['m0l0oout', 'm0l0oover', 'm0l0odown'],
+            'inner': ['m0l0iout', 'm0l0iover', 'm0l0idown']
+          }
+        },
+        {
+          'height':  20,
+          'width':  150,
+          'block_top':  15,
+          'block_left':  0,
+          'top':  20,
+          'left':  0,
+          'css': {
+            'outer' : ['m0l1oout', 'm0l1oover'],
+            'inner' : ['m0l1iout', 'm0l1iover']
+          }
+        },
+        {
+          'block_top':  5,
+          'block_left':  140,
+          'css': {
+            'outer': ['m0l2oout', 'm0l2oover'],
+            'inner': ['m0l1iout', 'm0l2iover']
+          }
+        }
+        ];
+
+//-->
+</script>
+
+</head>
+<body class="tundra">
+
+<form id="frm48a7a41844b8e" name="frm48a7a41844b8e" method="post" action="http://127.0.0.1:8081/index.php?module=tutorial&action=main:windows"  onSubmit="return miolo.onSubmit();" > 
+<div id="m-container">
+<div id="m-container-top">
+<div class="m-box-title"><span class="icon">
+<img src="http://127.0.0.1:8081/themes/mystica/images/icon_miolo.gif" alt="" border="0"></span><span class="caption">&nbsp;Tutorial - A Demo Module</span></div></div>
+<div id="m-container-dhtmlmenu"><script type="text/javascript" language="JavaScript"><!--
+new menu (MENU_ITEMS_0, MENU_POS_0);
+//--></script></div>
+<div id="m-container-topmenu">
+<div id="m_m5" class="m-topmenu-box">
+<ul >
+  <li>
+<a  class="m-topmenu-link" href="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main">Tutorial</a></li>
+  <li>::</li>
+
+  <li><span class="m-topmenu-current">Windows</span></li>
+</ul></div></div>
+<div id="m-container-content-full">
+<div id="m87" class="m-box-outer">
+<div class="m-box-box">
+<div class="m-box-title"><span class="icon">
+<img src="http://127.0.0.1:8081/images/button_edit.png" alt="" border="0"></span><span class="caption">Windows</span></div>
+<div id="pnlWindows" class="m-panel-body">
+<div id="m_m94" class="m-panelcontrol-box" style="width:70px;height:68px;float:left">
+<a  class="m-image-link" href="javascript:showDialog();">
+<div class="m-image-centered">
+<img src="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=html:images:forms.png" alt="Window" border="0"></div><span class="m-image-link-label m-image-label">Window</span></a></div>
+<div id="m_m941" class="m-panelcontrol-box" style="width:70px;height:68px;float:left">
+<a  class="m-image-link" href="javascript:showDialog2();">
+<div class="m-image-centered">
+<img src="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=html:images:forms.png" alt="Window" border="0"></div><span class="m-image-link-label m-image-label">Window</span></a></div>
+<div id="m_m103" class="m-panelcontrol-box" style="width:70px;height:68px;float:left">
+
+<a  class="m-image-link" href="javascript:miolo.windows.base.miolo.getWindow('winModal1').open(true,false);">
+<div class="m-image-centered">
+<img src="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=html:images:forms.png" alt="MultiModal" border="0"></div><span class="m-image-link-label m-image-label">MultiModal</span></a></div>
+<div id="m_m106" class="m-panelcontrol-box" style="width:70px;height:68px;float:left">
+<a  class="m-image-link" href="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=main:windows:modal_ajax">
+<div class="m-image-centered">
+<img src="http://127.0.0.1:8081/index.php?module=tutorial&amp;action=html:images:forms.png" alt="Modal_Ajax" border="0"></div><span class="m-image-link-label m-image-label">Modal_Ajax</span></a></div></div></div></div>
+<input type="hidden" id="__VIEWSTATE" name="__VIEWSTATE" value="">
+<input type="hidden" id="cpaint_response_type" name="cpaint_response_type" value="">
+<input type="hidden" id="__ISAJAXCALL" name="__ISAJAXCALL" value="">
+<input type="hidden" id="__ISPOSTBACK" name="__ISPOSTBACK" value="">
+<input type="hidden" id="__EVENTTARGETVALUE" name="__EVENTTARGETVALUE" value="">
+<input type="hidden" id="__EVENTARGUMENT" name="__EVENTARGUMENT" value="">
+<input type="hidden" id="__FORMSUBMIT" name="__FORMSUBMIT" value=""></div>
+<div id="m-container-bottom">
+
+<div class="m-statusbar">
+<ul >
+  <li>Usuário: -</li>
+  <li>Entrada às: --:--</li>
+  <li>Data: --/--/----</li>
+  <li>Miolo 2.5</li>
+  <li>Miolo Team</li>
+
+</ul></div></div></div> 
+
+<div dojoType="miolo.Dialog" id="dialog1" title="Login"  href="http://127.0.0.1:8081/index.php?module=teste&action=ajax2">
+</div>
+<div dojoType="miolo.Dialog" id="dialog2" title="Title of Dialog2">
+</div>
+</form>
+</body>
+</html>

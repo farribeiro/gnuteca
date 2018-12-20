@@ -1,0 +1,93 @@
+<?
+include 'professormetodo.class';
+class BusinessAdministracaoProfessor extends MBusiness
+{
+
+
+	var $professormetodo;
+	var $idprofessor;
+	var $titulo;
+	var $turmas;
+
+	function __construct($data=null)
+	{
+		parent::__construct('badministracao', $data);
+		$professormetodo=new professormetodo();
+		$this->idprofessor		='';
+		$this->titulo		='';
+
+	}
+
+	function getById($id)
+	{
+		$this->idprofessor = $id;
+		$this->retrieve();
+		return $this;
+	}
+
+	function setData ($data)
+	{
+		$this->idprofessor		=$data->idprofessor;
+		$this->titulo		=$data->titulo;
+	}
+
+	function listAll()
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addOrderAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+	function find_idprofessor_descricao($parametro){
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addOrCriteria('idprofessor','LIKE',"'$parametro'");
+		return $criteria->retrieveAsQuery();
+	}
+
+	function listByDescricao ($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('idprofessor','LIKE',"'$parametro'");
+		$criteria->addColumnAttribute('idprofessor');
+
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getturmas()
+	{
+		$this->retrieveAssociation('turmas');
+	}
+
+	function listar($parametro)
+	{
+		$criteria = $this->getCriteria();
+		$criteria->addCriteria('descricao','LIKE',"'%$parametro%'");
+		$criteria->addColumnAttribute('idprofessor');
+		$criteria->addColumnAttribute('descricao');
+		return $criteria->retrieveAsQuery();
+	}
+
+	function getidprofessor()
+	{
+		return $this->idprofessor;
+	}
+
+	function gettitulo()
+	{
+		return $this->titulo;
+	}
+
+	function setidprofessor($idprofessor)
+	{
+		$this->idprofessor = $idprofessor;
+	}
+
+	function settitulo($titulo)
+	{
+		$this->titulo = $titulo;
+	}
+
+
+
+}
+?>

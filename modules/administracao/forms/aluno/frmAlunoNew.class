@@ -1,0 +1,47 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkaluno');
+class frmAlunoNew extends Form
+{
+	protected $aluno;
+	function __construct()
+	{
+		global $MIOLO, $page, $item;
+		$this->aluno  = $MIOLO->GetBusiness('administracao','aluno');
+		parent::__construct('Incluir Novo Aluno');
+		$this->SetClose($MIOLO->GetActionURL(administracao,'main'));
+		$this->SetIcon($MIOLO->GetUI()->GetImage('administracao','area_mini.png'));	}
+	function CreateFields()
+	{
+		$fields=array(
+			new MTextField('idturma','','Idturma','25'),
+			new MTextField('nome','','Nome','25')
+		);
+		$this->SetFields($fields);
+		$buttons=array(
+new FormButton('btnCreate','Criar'),
+		);
+		$this->SetButtons($buttons);
+		$this->defaultButton = false;
+		$this->SetButtonAttr('btnNew','visible',false);
+		$validators = array();
+		$this->EventHandler();
+	}
+	function btnCreate_click()
+	{
+		global $MIOLO,$page,$module;
+		$data=$this->GetData();
+		$aluno=$MIOLO->GetBusiness($module,'aluno');
+		$aluno->SetData($data);
+		try
+		{
+			$aluno->save();
+			$go=$MIOLO->GetActionURL('administracao','main:aluno',$aluno->idaluno);
+			$page->Redirect($go);
+		}
+		catch (Exception $e)
+		{
+			$this->AddError($e->GetMessage());
+		}
+	}
+}
+?>

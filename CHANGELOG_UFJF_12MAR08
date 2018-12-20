@@ -1,0 +1,19 @@
+MIOLO versão 2.5
+
+Revisão - 12/03/2008
+------------------------
+
+. classes/database/mdatabase.class.php
+	- linha 193: retorna $query e não $query->result
+
+. remover classes/extensions/spaw
+
+. classes/database/mdatabase.class.php
+. classes/database/mconnection.class.php
+. persistence/converter/converterfactory.class.php
+. persistence/persistentmanagerfactory.class.php
+	- mudança de extensão em referencias internas
+
+. ui/mui.class.php
+	- alteração do método getForm para testar extensão .php
+

@@ -1,0 +1,87 @@
+MIOLO versão 2 - beta 1
+
+Revisão 358 - 10/02/2007
+------------------------
+
+- Atualização da infraestrutura para Ajax
+	. Atualização das bibliotecas CPaint e Prototype
+	. Atualização da Documentação
+
+- Log
+	. Correção para gravar o Ip do Remote Host no arquivo de Log SQL
+
+- Novas Classes
+	. MBTemplate: classe para parse de templates HTML (exemplo no módulo Tutorial)
+
+- DOMPDF
+	. Workaround para erros encontrados nas classes DOMPDF
+	. Reformulação dos exemplos (módulo Tutorial)
+
+- miolo.class
+	. Correção nos profiles
+
+Revisão 352 - 05/12/2006
+------------------------
+
+- miolo.conf e module.conf (para cada módulo):
+  - inclusão de novas chaves (visando compatibilidade com Miolo-Solis):    
+  <options>
+           <loading>
+               <show>false</show>
+               <generating>false</generating>
+           </loading>
+           <performance>
+               <uri_images>true</uri_images>
+               <uri_themes>true</uri_themes>
+           </performance>
+  </options>
+      
+      .options.loading.show: não usado (compatibilidade com Miolo-Solis)
+      .options.loading.generating: não usado (compatibilidade com Miolo-Solis)
+      .options.performance: melhoria de desempenho no carregamento de imagens e arquivos CSS de um
+tema. Atualmente os temas estão colocados dentro do diretório <miolo>/ui/themes ou 
+<module>/ui/themes. Estas opções permitem que os temas sejam colocados no diretorio <miolo>/html/themes,
+possibilitando acesso direto pelo Apache e melhorando o desempenho (permitindo inclusive o cache 
+dos arquivos). Nesta revisao o tema "system" está sendo colocado no diretório <miolo>/ui/themes/system.
+
+- Novos Controles (exemplos no módulo Tutorial)
+  - MDragDrop
+  - MAccordion
+  - MWindow
+  - MButtonImage
+
+- miolo.class
+  - alterações devido às mudanças no miolo.conf
+
+- classes/persistence/criteria/persistentcriteria
+  - método addAssociation: argumento para passar o alias da associação.
+  - método addJoinCriteria: mudança para permitir que a mesma tabela, com aliases diferentes seja
+    incluida mais de uma vez.
+
+- classes/ui/controls/mtheme.class
+  - novo método: getCSSFileContent (para ler o conteúdo de arquivos CSS, permitindo que sejam
+feitas configurações para controles com dependência do tema - ex. MDHTMLMenu)
+
+- classes/ui/controls/mform.class
+  - novo atributo winId: para uso com o controle MWindow
+
+- classes/ui/controls/mpage.class
+  - extends de MControl (e não mais de MWindow)
+  - testa as seguintes variáveis no _request:
+    - themelayout: permite mudar o layout do tema (ex. popup) para uma página específica
+    - winid: usado no controle de janelas MWindow
+
+- classes/ui/mui.class
+  - alterações devido às mudanças no miolo.conf
+
+- tema system
+  - alterações no layout do tema system, diminuindo o elemento top
+
+- classes/util/mkrono.class (exemplo no módulo Tutorial)
+  - novo método: getMonthByNumber($month) - obtém o nome do mês a partir do número
+  - novo método: getLastDayOfMonth($month, $year) - obtém o último dia do mês (contrib. Daniel Schmitz)
+
+- html/scripts/m_miolo.js
+  - alteraçoes para tratamento do controle MWindow
+
+ 

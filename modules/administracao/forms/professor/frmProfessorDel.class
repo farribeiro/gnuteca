@@ -1,0 +1,36 @@
+<?
+class frmProfessorDel extends Mform
+{
+	protected $objProfessor;
+	function __construct($objProfessor)
+	{
+		$this->objProfessor=$objProfessor;
+		parent::__construct('Excluir Professor');
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO;
+		$professorId = $this->objProfessor->idprofessor;
+		$action_sim = $MIOLO->GetActionURL('administracao','main:professor',$this->objProfessor->idprofessor,array('form'=>'excluir','conf'=>'sim'));
+		$action_nao = $MIOLO->GetActionURL('administracao','main:professor',$this->objProfessor->idprofessor);
+		$conf=$this->GetFormValue('conf');
+		if ($conf=='sim')
+		{
+			try
+			{
+				$this->objProfessor->Delete();
+				$MIOLO->Information('Professor excluido com sucesso',$MIOLO->GetActionURL('administracao','main:professor:find'));
+			}
+			catch (Exception $e)
+			{
+				$MIOLO->Error($e->GetMessage(),$MIOLO->GetActionURL('administracao','main:professor',$this->objProfessor->idprofessor));
+			}
+		}else
+		{
+			$MIOLO->Question("Tem certeza que deseja excluir o professor [{$this->objProfessor->nome}]?",$action_sim,$action_nao);
+		}
+	}
+}
+?>
+

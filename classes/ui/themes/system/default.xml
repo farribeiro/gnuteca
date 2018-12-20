@@ -1,0 +1,9 @@
+<body class="m-theme-body">
+   <container id="m-container">
+       <top id="m-container-top"/>
+       <menus id="m-container-top"/>
+       <content id="m-container-content-full"/>
+       <bottom id="m-container-bottom"/>
+   </container>
+   <minbar class='m-container-minbar'/>
+</body>

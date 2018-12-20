@@ -1,0 +1,46 @@
+<?
+MIOLO::Import('modules::administracao::controls::linkprofessor');
+class frmProfessorNew extends Form
+{
+	protected $professor;
+	function __construct()
+	{
+		global $MIOLO, $page, $item;
+		$this->professor  = $MIOLO->GetBusiness('administracao','professor');
+		parent::__construct('Incluir Novo Professor');
+		$this->SetClose($MIOLO->GetActionURL(administracao,'main'));
+		$this->SetIcon($MIOLO->GetUI()->GetImage('administracao','area_mini.png'));	}
+	function CreateFields()
+	{
+		$fields=array(
+			new MTextField('titulo','','Titulo','25')
+		);
+		$this->SetFields($fields);
+		$buttons=array(
+new FormButton('btnCreate','Criar'),
+		);
+		$this->SetButtons($buttons);
+		$this->defaultButton = false;
+		$this->SetButtonAttr('btnNew','visible',false);
+		$validators = array();
+		$this->EventHandler();
+	}
+	function btnCreate_click()
+	{
+		global $MIOLO,$page,$module;
+		$data=$this->GetData();
+		$professor=$MIOLO->GetBusiness($module,'professor');
+		$professor->SetData($data);
+		try
+		{
+			$professor->save();
+			$go=$MIOLO->GetActionURL('administracao','main:professor',$professor->idprofessor);
+			$page->Redirect($go);
+		}
+		catch (Exception $e)
+		{
+			$this->AddError($e->GetMessage());
+		}
+	}
+}
+?>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>user</className>
+   <tableName>tb_usuario</tableName>
+   <databaseName>persistence</databaseName>
+
+   <attribute>
+      <attributeName>idUser</attributeName>
+	  <columnName>idusuario</columnName>
+	  <key>primary</key>
+	  <idgenerator>seq_tb_usuario</idgenerator>
+   </attribute>
+   <attribute>
+      <attributeName>login</attributeName>
+	  <columnName>login</columnName>
+	  <proxy>true</proxy>
+   </attribute>
+   <attribute>
+      <attributeName>password</attributeName>
+	  <columnName>password</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>nick</attributeName>
+	  <columnName>nick</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>idPerson</attributeName>
+	  <columnName>idpessoa</columnName>
+	  <proxy>true</proxy>
+   </attribute>
+   <attribute>
+      <attributeName>idSector</attributeName>
+	  <columnName>idsetor</columnName>
+	  <proxy>true</proxy>
+   </attribute>
+
+   <attribute>
+      <attributeName>person</attributeName>
+   </attribute>
+   <attribute>
+      <attributeName>groups</attributeName>
+   </attribute>
+   <attribute>
+      <attributeName>sector</attributeName>
+   </attribute>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>person</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>person</target>
+	  <retrieveAutomatic>true</retrieveAutomatic>
+	  <saveAutomatic>true</saveAutomatic>
+	  <inverse>true</inverse>
+	  <entry>
+	     <fromAttribute>idPerson</fromAttribute>
+	     <toAttribute>idPerson</toAttribute>
+      </entry>
+   </association>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>group</toClassName>
+      <associativeClassModule>persistence</associativeClassModule>
+      <associativeClassName>groupuser</associativeClassName>
+      <cardinality>manyToMany</cardinality>
+      <target>groups</target>
+	  <retrieveAutomatic>false</retrieveAutomatic>
+	  <saveAutomatic>false</saveAutomatic>
+	  <direction>
+	     <fromAttribute>users</fromAttribute>
+	     <toAttribute>groups</toAttribute>
+      </direction>
+   </association>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>sector</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>sector</target>
+	  <retrieveAutomatic>false</retrieveAutomatic>
+	  <saveAutomatic>false</saveAutomatic>
+	  <entry>
+	     <fromAttribute>idSector</fromAttribute>
+	     <toAttribute>id</toAttribute>
+      </entry>
+   </association>
+
+</map>

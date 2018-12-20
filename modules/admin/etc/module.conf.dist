@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<conf>
+    <namespace>
+        <business>/db</business>
+    </namespace>
+    <options>
+       <startup>admin</startup>
+    </options>
+    <db>
+        <admin>
+            <system>postgres</system>
+            <host>192.168.100.6</host>
+            <port>5432</port>
+            <name>gnuteca3_pesquisa</name>
+            <user>postgres</user>
+            <password></password>
+        </admin>
+    </db>
+</conf>

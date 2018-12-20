@@ -1,0 +1,36 @@
+<?
+class frmAlunoDel extends Mform
+{
+	protected $objAluno;
+	function __construct($objAluno)
+	{
+		$this->objAluno=$objAluno;
+		parent::__construct('Excluir Aluno');
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO;
+		$alunoId = $this->objAluno->idaluno;
+		$action_sim = $MIOLO->GetActionURL('administracao','main:aluno',$this->objAluno->idaluno,array('form'=>'excluir','conf'=>'sim'));
+		$action_nao = $MIOLO->GetActionURL('administracao','main:aluno',$this->objAluno->idaluno);
+		$conf=$this->GetFormValue('conf');
+		if ($conf=='sim')
+		{
+			try
+			{
+				$this->objAluno->Delete();
+				$MIOLO->Information('Aluno excluido com sucesso',$MIOLO->GetActionURL('administracao','main:aluno:find'));
+			}
+			catch (Exception $e)
+			{
+				$MIOLO->Error($e->GetMessage(),$MIOLO->GetActionURL('administracao','main:aluno',$this->objAluno->idaluno));
+			}
+		}else
+		{
+			$MIOLO->Question("Tem certeza que deseja excluir o aluno [{$this->objAluno->nome}]?",$action_sim,$action_nao);
+		}
+	}
+}
+?>
+

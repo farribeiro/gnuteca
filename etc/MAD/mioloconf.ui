@@ -1,0 +1,1765 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>FormMioloConf</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>FormMioloConf</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Edit miolo.conf</string>
+    </property>
+    <property name="icon">
+        <pixmap>configure.png</pixmap>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>btnLoad</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>12</x>
+                <y>440</y>
+                <width>130</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Load miolo.conf</string>
+        </property>
+        <property name="iconSet">
+            <iconset>fileimport.png</iconset>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Load miolo.conf</string>
+        </property>
+    </widget>
+    <widget class="QProgressBar">
+        <property name="name">
+            <cstring>progressBar</cstring>
+        </property>
+        <property name="enabled">
+            <bool>false</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>151</x>
+                <y>441</y>
+                <width>201</width>
+                <height>22</height>
+            </rect>
+        </property>
+        <property name="lineWidth">
+            <number>0</number>
+        </property>
+        <property name="totalSteps">
+            <number>133</number>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>btnCancel</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>450</x>
+                <y>440</y>
+                <width>82</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Cancel</string>
+        </property>
+        <property name="iconSet">
+            <iconset>button_cancel.png</iconset>
+        </property>
+    </widget>
+    <widget class="QTabWidget">
+        <property name="name">
+            <cstring>tabWidget</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>580</width>
+                <height>420</height>
+            </rect>
+        </property>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Home Settings</string>
+            </attribute>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupURL</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>270</y>
+                        <width>540</width>
+                        <height>100</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>URL Related</string>
+                </property>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editUrl</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>80</x>
+                            <y>30</y>
+                            <width>390</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editUrl_Themes</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>80</x>
+                            <y>60</y>
+                            <width>390</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblUrl</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>28</x>
+                            <y>30</y>
+                            <width>50</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Site URL</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblUrl_Themes</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>12</x>
+                            <y>60</y>
+                            <width>66</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>themes URL</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupHome</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>20</y>
+                        <width>540</width>
+                        <height>230</height>
+                    </rect>
+                </property>
+                <property name="paletteForegroundColor">
+                    <color>
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="title">
+                    <string>Directory Settings</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblHtml</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>8</x>
+                            <y>150</y>
+                            <width>121</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Html (Browser visible)</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLogs</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>120</y>
+                            <width>120</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Directory for the logs</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblThemes</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>180</y>
+                            <width>120</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Path of the themes</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblModules</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>20</x>
+                            <y>60</y>
+                            <width>110</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Modules Directory</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblMiolo</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>40</x>
+                            <y>30</y>
+                            <width>89</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>MIOLO Classes</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editModules</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>60</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editEtc</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>90</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editLogs</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>120</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editHtml</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>150</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editThemes</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>180</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblEtc</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>90</y>
+                            <width>120</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>etc Directory</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnClasses</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>30</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="on">
+                        <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnModules</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>60</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="flat">
+                        <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnEtc</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>90</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnLogs</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>120</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnHtml</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>150</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>btnThemes</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>470</x>
+                            <y>180</y>
+                            <width>30</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>folder_blue_open.png</pixmap>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select directory</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editClasses</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>130</x>
+                            <y>30</y>
+                            <width>340</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Directory where the MIOLO Classes 
+are located.</string>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>DB &amp;&amp; Password Settings</string>
+            </attribute>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupBisDB</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>20</y>
+                        <width>280</width>
+                        <height>200</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>BIS Database Configuration</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblHost</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>30</x>
+                            <y>60</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Host</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblHost_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>30</x>
+                            <y>90</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Name</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblHost_3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>30</x>
+                            <y>120</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>User</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblHost_4</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>30</x>
+                            <y>150</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Password</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDBHost</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>60</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDBName</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>90</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDBUser</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>120</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDBPassword</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>150</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDB</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>20</x>
+                            <y>30</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>System Type</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>postgres</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>pgsql.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>mysql</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>mysql.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>oracle</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>oracle.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbDBSystem</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>30</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupLogin</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>310</x>
+                        <y>20</y>
+                        <width>250</width>
+                        <height>120</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Login Settings</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLoginCheck_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>20</x>
+                            <y>50</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Shared Login</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLoginCheck</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>20</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Always Check</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLoginCheck_3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>20</x>
+                            <y>80</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Auto Login</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbLoginCheck</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>20</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbLoginShared</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>50</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbLoginAuto</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>110</x>
+                            <y>80</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>Other Options</string>
+            </attribute>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupDump</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>310</x>
+                        <y>150</y>
+                        <width>250</width>
+                        <height>210</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Dump Options</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>50</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Dump Peer</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>20</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Show Debug?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump_2_2_3</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>140</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Trace?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump_2_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>80</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Dump Profile?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump_2_2_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>110</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Uses Info?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDump_2_2_3_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>170</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Handlers?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDump_Peer</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>50</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbProfile</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>80</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbUses</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>110</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbTrace</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>140</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbHandlers</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>170</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbDebug</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>20</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupTheme</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>310</x>
+                        <y>20</y>
+                        <width>250</width>
+                        <height>100</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Theme Settings</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lbllookupTheme</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>60</y>
+                            <width>80</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>LookUp theme</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblmainTheme</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>20</x>
+                            <y>30</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Main theme</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editThemeMain</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>30</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editThemeLookUp</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>60</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupTrace</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>280</y>
+                        <width>270</width>
+                        <height>100</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Trace Options</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblmainTheme_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>30</y>
+                            <width>70</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Trace Port</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editTrace_Port</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>90</x>
+                            <y>30</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupOptions</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>20</y>
+                        <width>270</width>
+                        <height>150</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>Misc. Options</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDispatcher</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>50</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Dispatcher</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblDispatcher_2</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>80</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Index File</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblScramble</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>110</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Scramble URL?</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editStartUp</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>20</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editDispatch</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>50</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editIndex</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>80</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>true</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>ok.png</pixmap>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>false</string>
+                        </property>
+                        <property name="pixmap">
+                            <pixmap>no.png</pixmap>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbScramble</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>110</y>
+                            <width>120</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblStartUp</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>20</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Startup Module</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QGroupBox">
+                <property name="name">
+                    <cstring>groupI18n</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>20</x>
+                        <y>178</y>
+                        <width>270</width>
+                        <height>90</height>
+                    </rect>
+                </property>
+                <property name="title">
+                    <string>i18n</string>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLocale</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>7</x>
+                            <y>50</y>
+                            <width>93</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Locale Directory</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>editLocale</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>50</y>
+                            <width>160</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                    <property name="lineWidth">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>lblLanguage</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>20</y>
+                            <width>90</width>
+                            <height>20</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Language</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignVCenter|AlignRight</set>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>pt_BR</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>en</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>cbLanguage</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>100</x>
+                            <y>20</y>
+                            <width>140</width>
+                            <height>22</height>
+                        </rect>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QWidget">
+            <property name="name">
+                <cstring>tab</cstring>
+            </property>
+            <attribute name="title">
+                <string>View File</string>
+            </attribute>
+            <widget class="QTextEdit">
+                <property name="name">
+                    <cstring>confEdit</cstring>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>1</x>
+                        <y>1</y>
+                        <width>570</width>
+                        <height>390</height>
+                    </rect>
+                </property>
+                <property name="lineWidth">
+                    <number>0</number>
+                </property>
+                <property name="readOnly">
+                    <bool>true</bool>
+                </property>
+                <property name="tabStopWidth">
+                    <number>4</number>
+                </property>
+            </widget>
+        </widget>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>btnSave</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>360</x>
+                <y>440</y>
+                <width>82</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>&amp;Save</string>
+        </property>
+        <property name="iconSet">
+            <iconset>filesaveas.png</iconset>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>btnCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>FormMioloConf</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>btnLoad</sender>
+        <signal>clicked()</signal>
+        <receiver>FormMioloConf</receiver>
+        <slot>btnLoad_clicked()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>tabWidget</tabstop>
+    <tabstop>editClasses</tabstop>
+    <tabstop>btnClasses</tabstop>
+    <tabstop>editModules</tabstop>
+    <tabstop>btnModules</tabstop>
+    <tabstop>editEtc</tabstop>
+    <tabstop>btnEtc</tabstop>
+    <tabstop>editLogs</tabstop>
+    <tabstop>btnLogs</tabstop>
+    <tabstop>editHtml</tabstop>
+    <tabstop>btnHtml</tabstop>
+    <tabstop>editThemes</tabstop>
+    <tabstop>btnThemes</tabstop>
+    <tabstop>editUrl</tabstop>
+    <tabstop>editUrl_Themes</tabstop>
+    <tabstop>cbDBSystem</tabstop>
+    <tabstop>editDBHost</tabstop>
+    <tabstop>editDBName</tabstop>
+    <tabstop>editDBUser</tabstop>
+    <tabstop>editDBPassword</tabstop>
+    <tabstop>editThemeMain</tabstop>
+    <tabstop>editThemeLookUp</tabstop>
+    <tabstop>editStartUp</tabstop>
+    <tabstop>editDispatch</tabstop>
+    <tabstop>editIndex</tabstop>
+    <tabstop>cbScramble</tabstop>
+    <tabstop>editTrace_Port</tabstop>
+    <tabstop>cbDebug</tabstop>
+    <tabstop>cbProfile</tabstop>
+    <tabstop>cbUses</tabstop>
+    <tabstop>cbTrace</tabstop>
+    <tabstop>cbHandlers</tabstop>
+    <tabstop>btnLoad</tabstop>
+    <tabstop>btnSave</tabstop>
+    <tabstop>btnCancel</tabstop>
+    <tabstop>confEdit</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">mioloconf.ui.h</include>
+</includes>
+<slots>
+    <slot>btnLoad_clicked()</slot>
+</slots>
+<functions>
+    <function returnType="QString">getConfigOption( QString &amp; line )</function>
+    <function returnType="QString">getConfigValue( QString &amp; line )</function>
+    <function returnType="QString">getNextWord( QString &amp; line )</function>
+</functions>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

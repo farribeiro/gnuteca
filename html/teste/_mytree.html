@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Order Tree</title>
+    <style type="text/css">
+        @import "/scripts/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/scripts/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dijit.Tree");
+
+       var teste_Store = new dojo.data.ItemFileReadStore(
+		{
+			data: { 
+				identifier: 'id', 
+				label: 'description', 
+				items: [ 
+					{ description:'Control1',id:'1',
+					  children: [
+						{ description:'Control11',id:'6',
+						  children: [ 
+							{description:'Control111',id:'11'}, 
+							{description:'Control112',id:'12'},
+							{description:'Control113',id:'13'}
+						  ]
+						},
+						{ description:'Control12',id:'14',
+						  children: [ 
+						    {description:'Control121',id:'15'}
+						  ]
+						}
+					  ]
+					}
+				]
+			}
+		});
+       var teste_Model = new dijit.tree.ForestStoreModel({
+			rootLabel: 'BaseControl',
+			store: teste_Store
+		});
+		dojo.addOnLoad(function(){
+//		alert('bbbb');
+		 new dijit.Tree({'model': teste_Model},dojo.byId("myTree"));
+//		 var myTree = dijit.byId("myTree");
+//		alert(myTree);
+		/*
+         myTree.getIconClass = function (item) {
+			alert('hhh');
+            if (dijit.byId("myTree").isItem(item)){
+               return "dijitTreeIcon"; 
+			}
+		 }
+		 */
+
+		});
+
+
+
+		/*
+		teste_Show = function() {
+          var placeHolder = dojo.byId("myTree");
+		  placeHolder.replaceChild(teste_Tree.domNode,placeHolder);
+		};
+		*/
+//		dojo.addOnLoad(teste_Show);
+
+     </script>
+</head>
+<body class="m-theme-body">
+   
+   <div id="myTree"></div>
+
+   
+</body></html>        

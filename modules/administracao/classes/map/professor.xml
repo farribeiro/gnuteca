@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<map>
+	<moduleName>administracao</moduleName>
+	<className>professor</className>
+	<tableName>adm_professor</tableName>
+	<databaseName>badministracao</databaseName>
+	<attribute>
+		<attributeName>idprofessor</attributeName>
+		<columnName>idprofessor</columnName>
+		<key>primary</key>
+		<idgenerator>seq_adm_professor</idgenerator>
+	</attribute>
+	<attribute>
+		<attributeName>titulo</attributeName>
+		<columnName>titulo</columnName>
+	</attribute>
+	<attribute>
+		<attributeName>turmas</attributeName>
+	</attribute>
+	<association>
+		<toClassModule>administracao</toClassModule>
+		<toClassName>turma</toClassName>
+		<toAssociativeClassModule>administracao</toAssociativeClassModule>
+		<toAssociativeClassName>turmaprofessor</toAssociativeClassName>
+		<cardinality>manyToMany</cardinality>
+		<target>turmas</target>
+		<retrieveAutomatic>false</retrieveAutomatic>
+		<saveAutomatic>false</saveAutomatic>
+		<deleteAutomatic>false</deleteAutomatic>
+		<direction>
+			<fromAttribute>professores</fromAttribute>
+			<toAttribute>turmas</toAttribute>
+		</direction>
+	</association>
+</map>

@@ -1,0 +1,40 @@
+<?php
+MIOLO::Import('modules::administracao::controls::linkobject');class LinkAluno extends LinkObject
+{
+	public function __construct($name='', $aluno)
+	{
+		global $MIOLO;
+		$MIOLO->UsesBusiness('administracao','aluno');
+		parent::__construct($name,$aluno,'area_mini.png');
+	}
+
+	public function setObjectByValue($value)
+	{
+		global $MIOLO;
+		$this->object = $MIOLO->GetBusiness('administracao','aluno');
+		$this->object->GetById((int)$value);
+	}
+
+	public function setAction()
+	{
+		$this->hyperlink->SetAction('administracao','main:aluno',$this->object->idaluno);
+		$this->imagelink->SetAction('administracao','main:aluno',$this->object->idaluno);
+	}
+
+	public function setText()
+	{
+		$this->hyperlink->SetText($this->object->idaluno);
+		$this->hyperlink->SetText($this->object->idaluno);
+	}
+
+	public function setNew()
+	{
+		$this->isNewLink = TRUE;
+		$this->hyperlink->SetAction('administracao','main:aluno:new');
+		$this->hyperlink->SetText('Inserir Nova Aluno');
+		$this->imagelink->SetAction('administracao','main:aluno:new');
+	}
+
+
+}
+?>

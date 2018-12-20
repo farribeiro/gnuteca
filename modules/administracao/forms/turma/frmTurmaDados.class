@@ -1,0 +1,49 @@
+<?
+class frmTurmaDados extends MformAJAX
+{
+	protected $turma;
+	function __construct($turma)
+	{
+		$this->turma=$turma;
+		parent::__construct('Dados do Turma');
+		$this->registerMethod('onSelectImage');
+		//$this->registerMethod('ajax_btnAnoChegada');
+		//$this->page->AddJsCode(file_get_contents(dirname(__FILE__) . '/js/frmDadosPessoaisAjax.js'));
+		$this->EventHandler();
+	}
+	function CreateFields()
+	{
+		global $MIOLO, $action;
+		$fields=array(
+			new MTextField('descricao','','Descricao','25'),
+		);
+		$this->SetFields($fields);
+		$this->SetFieldAttr('idturma','readonly',true);
+		$buttons=array(new MButton('btnSalvar','Enviar'));
+		$this->SetButtons($buttons);
+		$validators=array(new MRequiredValidator('descricao','idturma'),);
+		$this->SetValidators($validators);
+		$this->SetData();
+	}
+	function SetData()
+	{
+		$data=$this->turma;
+		$this->SetFieldValue('descricao',$data->descricao);
+		$this->SetFieldValue('idturma',$data->idturma);
+	}
+	function btnSalvar_click()
+	{
+		$this->turma->SetData($this->GetData());
+		try
+		{
+			$this->turma->save();
+			$this->AddInfo("dados cadastrados com sucesso");
+		}
+		catch (Exception $e)
+		{
+			$this->AddError($e->GetMessage());
+		}
+	}
+}
+?>
+

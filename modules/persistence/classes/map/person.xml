@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>person</className>
+   <tableName>tb_pessoa</tableName>
+   <databaseName>persistence</databaseName>
+
+   <attribute>
+      <attributeName>idPerson</attributeName>
+	  <columnName>idpessoa</columnName>
+	  <key>primary</key>
+	  <idgenerator>seq_tb_pessoa</idgenerator>
+   </attribute>
+   <attribute>
+      <attributeName>name</attributeName>
+	  <columnName>nome</columnName>
+	  <converterClass>ConverterUpperCase</converterClass>
+   </attribute>
+
+</map>

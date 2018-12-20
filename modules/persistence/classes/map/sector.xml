@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?> 
+<map>
+   <moduleName>persistence</moduleName>
+   <className>sector</className>
+   <tableName>tb_setor</tableName>
+   <databaseName>persistence</databaseName>
+
+   <attribute>
+      <attributeName>id</attributeName>
+	  <columnName>idsetor</columnName>
+	  <key>primary</key>
+	  <idgenerator>seq_tb_setor</idgenerator>
+   </attribute>
+   <attribute>
+      <attributeName>nick</attributeName>
+	  <columnName>sigla</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>name</attributeName>
+	  <columnName>nome</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>type</attributeName>
+	  <columnName>tipo</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>idParent</attributeName>
+	  <columnName>idsetorpai</columnName>
+   </attribute>
+   <attribute>
+      <attributeName>users</attributeName>
+   </attribute>
+   <attribute>
+      <attributeName>parent</attributeName>
+   </attribute>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>user</toClassName>
+      <cardinality>oneToMany</cardinality>
+      <target>users</target>
+	  <retrieveAutomatic>false</retrieveAutomatic>
+	  <saveAutomatic>false</saveAutomatic>
+	  <deleteAutomatic>true</deleteAutomatic>
+	  <inverse>true</inverse> 
+	  <entry>
+	     <fromAttribute>idSector</fromAttribute>
+	     <toAttribute>id</toAttribute>
+      </entry>
+   </association>
+
+   <association>
+      <toClassModule>persistence</toClassModule>
+      <toClassName>sector</toClassName>
+      <cardinality>oneToOne</cardinality>
+      <target>parent</target>
+	  <retrieveAutomatic>false</retrieveAutomatic>
+	  <saveAutomatic>false</saveAutomatic>
+	  <deleteAutomatic>false</deleteAutomatic>
+	  <entry>
+	     <fromAttribute>idParent</fromAttribute>
+	     <toAttribute>id</toAttribute>
+      </entry>
+   </association>
+
+</map>
